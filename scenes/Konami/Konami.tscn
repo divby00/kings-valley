@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "animate"
+
+[node name="Konami" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.580392, 0.627451, 0.92549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/animate = SubResource( 1 )

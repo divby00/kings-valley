@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resources/fonts/joystix.tres" type="DynamicFont" id=1]
+
+[node name="Score" type="CanvasLayer"]
+
+[node name="BottomColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -320.0
+margin_right = 320.0
+margin_bottom = 20.0
+color = Color( 0.133333, 0.117647, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -318.0
+margin_top = -3.0
+margin_right = 318.0
+margin_bottom = 22.0
+custom_constants/separation = 22
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer"]
+margin_top = 1.0
+margin_right = 180.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "SCORE-000000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreLabel" type="Label" parent="HBoxContainer"]
+margin_left = 202.0
+margin_top = 1.0
+margin_right = 337.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "HI-000000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestLabel" type="Label" parent="HBoxContainer"]
+margin_left = 359.0
+margin_top = 1.0
+margin_right = 464.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "REST-00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PyramidLabel" type="Label" parent="HBoxContainer"]
+margin_left = 486.0
+margin_top = 1.0
+margin_right = 636.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "PYRAMID-00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
