@@ -1,13 +1,23 @@
 extends Node
 
+const JewelTypes = ["", "rosa", "azul_clara", "azul_oscura", "naranja", "amarilla", "blanca", "verde"]
 
 var scenes = {
 	"joya": {
 		"offset": Vector2(0, 16),
-		"scene": load("res://scenes/Jewel/Jewel.tscn")
+		"scene": load("res://scenes/Jewel/Jewel.tscn"),
+		"sprites": {
+			"blanca": load("res://resources/sprites/jewel00.png"),
+			"azul_clara": load("res://resources/sprites/jewel01.png"),
+			"verde": load("res://resources/sprites/jewel02.png"),
+			"rosa": load("res://resources/sprites/jewel03.png"),
+			"naranja": load("res://resources/sprites/jewel04.png"),
+			"amarilla": load("res://resources/sprites/jewel05.png"),
+			"azul_oscura": load("res://resources/sprites/jewel06.png"),
+		}
 	},
-	"door": {
-		"offset": Vector2(0, 0),
+	"puerta": {
+		"offset": Vector2(16, 48),
 		"scene": load("res://scenes/Door/Door.tscn")
 	}
 }
@@ -27,10 +37,9 @@ func post_import(scene):
 		elif node is Node2D:
 			for object in node.get_children():
 				# Assume all objects have a custom property named "type" and get its value
-				var type = object.get_meta("type")
+				var objtype = object.get_meta("type")
 				var objname = object.get_meta("name")
-				print(objname)
-
+				print("Object found: name: " + objname + ", type: " + objtype)
 				var node_to_clone = null
 				var node_offset = Vector2(0, 0)
 				if objname in scenes:
@@ -42,6 +51,7 @@ func post_import(scene):
 					new_instance.position = object.position + node_offset
 					scene.add_child(new_instance)
 					new_instance.set_owner(scene)
+					set_jewel_details(new_instance, objname, objtype)
 			# After you processed all the objects, remove objetos and dinamico layers
 			node.queue_free()
 			var objetos = scene.get_node("objetos")
@@ -50,3 +60,11 @@ func post_import(scene):
 			#scene.remove_child(dinamico)
 	# You must return the modified scene
 	return scene
+
+
+func set_jewel_details(new_instance, objname, objtype):
+	if objname == "joya":
+		if JewelTypes.has(objtype):
+			new_instance.sprite_texture = scenes[objname].sprites[objtype]
+		else:
+			print('Error: Unknown jewel type detected!: ' + objtype)

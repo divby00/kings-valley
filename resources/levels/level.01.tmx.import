@@ -12,7 +12,7 @@ dest_files=[ "res://.import/level.01.tmx-a1abc934098b2e5b281eb844a3a8a032.scn" ]
 [params]
 
 custom_properties=true
-tile_metadata=true
+tile_metadata=false
 uv_clip=true
 image_flags=0
 collision_layer=1

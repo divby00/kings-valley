@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="Kings Valley"
 run/main_scene="res://scenes/World/World.tscn"
-boot_splash/image="res://resources/sprites/splash.png"
 config/icon="res://kvicon.png"
 
 [autoload]

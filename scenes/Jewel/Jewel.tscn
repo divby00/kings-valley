@@ -2,10 +2,10 @@
 
 [ext_resource path="res://scenes/Jewel/Jewel.gd" type="Script" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -32,9 +32,9 @@ hframes = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 8, -8 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "animate"
-anims/animate = SubResource( 3 )
+anims/animate = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_Jewel_body_entered"]

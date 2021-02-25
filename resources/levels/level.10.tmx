@@ -54,63 +54,63 @@
 </data>
   </layer>
   <objectgroup id="4" name="objetos" locked="1">
-    <object id="1" name="joya" x="600" y="10" width="16" height="16"/>
-    <object id="2" name="joya" x="460" y="100" width="16" height="16"/>
-    <object id="3" name="joya" x="340" y="70" width="16" height="16"/>
-    <object id="4" name="joya" x="170" y="70" width="16" height="16"/>
-    <object id="5" name="joya" x="130" y="120" width="16" height="16"/>
-    <object id="6" name="joya" x="30" y="120" width="16" height="16"/>
-    <object id="7" name="escalera" type="baja-derecha" x="50" y="20" width="16" height="16"/>
-    <object id="8" name="escalera" type="baja-derecha" x="20" y="50" width="16" height="16"/>
-    <object id="9" name="escalera" type="baja-derecha" x="60" y="130" width="16" height="16"/>
-    <object id="10" name="escalera" type="baja-derecha" x="50" y="170" width="16" height="16"/>
-    <object id="11" name="escalera" type="baja-derecha" x="390" y="40" width="16" height="16"/>
-    <object id="12" name="escalera" type="baja-derecha" x="350" y="160" width="16" height="16"/>
-    <object id="13" name="escalera" type="baja-derecha" x="570" y="150" width="16" height="16"/>
-    <object id="14" name="escalera" type="baja-derecha" x="560" y="20" width="16" height="16"/>
-    <object id="15" name="escalera" type="baja-izquierda" x="530" y="50" width="16" height="16"/>
-    <object id="16" name="escalera" type="baja-izquierda" x="560" y="90" width="16" height="16"/>
-    <object id="17" name="escalera" type="baja-izquierda" x="370" y="80" width="16" height="16"/>
-    <object id="18" name="escalera" type="baja-izquierda" x="280" y="40" width="16" height="16"/>
-    <object id="19" name="escalera" type="baja-izquierda" x="280" y="160" width="16" height="16"/>
-    <object id="20" name="escalera" type="sube-izquierda" x="90" y="60" width="16" height="16"/>
-    <object id="21" name="escalera" type="sube-izquierda" x="50" y="80" width="16" height="16"/>
-    <object id="22" name="escalera" type="sube-izquierda" x="90" y="160" width="16" height="16"/>
-    <object id="23" name="escalera" type="sube-izquierda" x="80" y="200" width="16" height="16"/>
-    <object id="24" name="escalera" type="sube-izquierda" x="420" y="70" width="16" height="16"/>
-    <object id="25" name="escalera" type="sube-izquierda" x="380" y="190" width="16" height="16"/>
-    <object id="26" name="escalera" type="sube-izquierda" x="580" y="40" width="16" height="16"/>
-    <object id="27" name="escalera" type="sube-izquierda" x="610" y="190" width="16" height="16"/>
-    <object id="28" name="daga" x="610" y="80" width="16" height="16"/>
-    <object id="31" name="daga" x="450" y="150" width="16" height="16"/>
-    <object id="32" name="daga" x="10" y="200" width="16" height="16"/>
-    <object id="33" name="pico" x="20" y="10" width="16" height="16"/>
-    <object id="34" name="pico" x="10" y="100" width="16" height="16"/>
-    <object id="35" name="pico" x="50" y="140" width="16" height="16"/>
-    <object id="36" name="pico" x="290" y="50" width="16" height="16"/>
-    <object id="37" name="pico" x="380" y="50" width="16" height="16"/>
-    <object id="38" name="pico" x="540" y="60" width="16" height="16"/>
-    <object id="39" name="escalera" type="sube-derecha" x="240" y="200" width="16" height="16"/>
-    <object id="40" name="escalera" type="sube-derecha" x="250" y="70" width="16" height="16"/>
-    <object id="41" name="escalera" type="sube-derecha" x="350" y="100" width="16" height="16"/>
-    <object id="42" name="escalera" type="sube-derecha" x="500" y="80" width="16" height="16"/>
-    <object id="43" name="escalera" type="sube-derecha" x="510" y="140" width="16" height="16"/>
-    <object id="44" name="puerta" type="salida" x="130" y="180" width="40" height="30"/>
-    <object id="45" name="puerta" type="entrada" x="530" y="170" width="40" height="30"/>
-    <object id="46" name="momia" type="naranja" x="410" y="30" width="16" height="16"/>
-    <object id="47" name="momia" type="amarilla" x="510" y="190" width="16" height="16"/>
-    <object id="48" name="momia" type="roja" x="180" y="160" width="16" height="16"/>
-    <object id="49" name="muro" x="360" y="40" width="16" height="40">
+    <object id="1" name="joya" type="amarilla" x="960" y="16" width="16" height="16"/>
+    <object id="2" name="joya" type="verde" x="736" y="160" width="16" height="16"/>
+    <object id="3" name="joya" type="azul_oscura" x="544" y="112" width="16" height="16"/>
+    <object id="4" name="joya" type="verde" x="272" y="112" width="16" height="16"/>
+    <object id="5" name="joya" type="azul_clara" x="208" y="192" width="16" height="16"/>
+    <object id="6" name="joya" type="rosa" x="48" y="192" width="16" height="16"/>
+    <object id="7" name="escalera" type="baja-derecha" x="80" y="32" width="16" height="16"/>
+    <object id="8" name="escalera" type="baja-derecha" x="32" y="80" width="16" height="16"/>
+    <object id="9" name="escalera" type="baja-derecha" x="96" y="208" width="16" height="16"/>
+    <object id="10" name="escalera" type="baja-derecha" x="80" y="272" width="16" height="16"/>
+    <object id="11" name="escalera" type="baja-derecha" x="624" y="64" width="16" height="16"/>
+    <object id="12" name="escalera" type="baja-derecha" x="560" y="256" width="16" height="16"/>
+    <object id="13" name="escalera" type="baja-derecha" x="912" y="240" width="16" height="16"/>
+    <object id="14" name="escalera" type="baja-derecha" x="896" y="32" width="16" height="16"/>
+    <object id="15" name="escalera" type="baja-izquierda" x="848" y="80" width="16" height="16"/>
+    <object id="16" name="escalera" type="baja-izquierda" x="896" y="144" width="16" height="16"/>
+    <object id="17" name="escalera" type="baja-izquierda" x="592" y="128" width="16" height="16"/>
+    <object id="18" name="escalera" type="baja-izquierda" x="448" y="64" width="16" height="16"/>
+    <object id="19" name="escalera" type="baja-izquierda" x="448" y="256" width="16" height="16"/>
+    <object id="20" name="escalera" type="sube-izquierda" x="144" y="96" width="16" height="16"/>
+    <object id="21" name="escalera" type="sube-izquierda" x="80" y="128" width="16" height="16"/>
+    <object id="22" name="escalera" type="sube-izquierda" x="144" y="256" width="16" height="16"/>
+    <object id="23" name="escalera" type="sube-izquierda" x="128" y="320" width="16" height="16"/>
+    <object id="24" name="escalera" type="sube-izquierda" x="672" y="112" width="16" height="16"/>
+    <object id="25" name="escalera" type="sube-izquierda" x="608" y="304" width="16" height="16"/>
+    <object id="26" name="escalera" type="sube-izquierda" x="928" y="64" width="16" height="16"/>
+    <object id="27" name="escalera" type="sube-izquierda" x="976" y="304" width="16" height="16"/>
+    <object id="28" name="daga" x="976" y="128" width="16" height="16"/>
+    <object id="31" name="daga" x="720" y="240" width="16" height="16"/>
+    <object id="32" name="daga" x="16" y="320" width="16" height="16"/>
+    <object id="33" name="pico" x="32" y="16" width="16" height="16"/>
+    <object id="34" name="pico" x="16" y="160" width="16" height="16"/>
+    <object id="35" name="pico" x="80" y="224" width="16" height="16"/>
+    <object id="36" name="pico" x="464" y="80" width="16" height="16"/>
+    <object id="37" name="pico" x="608" y="80" width="16" height="16"/>
+    <object id="38" name="pico" x="864" y="96" width="16" height="16"/>
+    <object id="39" name="escalera" type="sube-derecha" x="384" y="320" width="16" height="16"/>
+    <object id="40" name="escalera" type="sube-derecha" x="400" y="112" width="16" height="16"/>
+    <object id="41" name="escalera" type="sube-derecha" x="560" y="160" width="16" height="16"/>
+    <object id="42" name="escalera" type="sube-derecha" x="800" y="128" width="16" height="16"/>
+    <object id="43" name="escalera" type="sube-derecha" x="816" y="224" width="16" height="16"/>
+    <object id="44" name="puerta" type="salida" x="208" y="288" width="64" height="48"/>
+    <object id="45" name="puerta" type="entrada" x="848" y="272" width="64" height="48"/>
+    <object id="46" name="momia" type="naranja" x="656" y="48" width="16" height="16"/>
+    <object id="47" name="momia" type="amarilla" x="816" y="304" width="16" height="16"/>
+    <object id="48" name="momia" type="roja" x="288" y="256" width="16" height="16"/>
+    <object id="49" name="muro" x="576" y="64" width="16" height="64">
       <properties>
         <property name="activacion" value="37"/>
       </properties>
     </object>
-    <object id="50" name="muro" x="600" y="20" width="16" height="70">
+    <object id="50" name="muro" x="960" y="32" width="16" height="112">
       <properties>
         <property name="activacion" value="61"/>
       </properties>
     </object>
-    <object id="51" name="muro" x="30" y="170" width="16" height="40">
+    <object id="51" name="muro" x="48" y="272" width="16" height="64">
       <properties>
         <property name="activacion" value="4"/>
       </properties>

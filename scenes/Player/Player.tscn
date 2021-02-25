@@ -1,7 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://resources/sprites/player_walks.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Player/Player.gd" type="Script" id=2]
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/player_walks.png-005909dbd5b999832f4174e21cce72a6.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 15 )
@@ -51,7 +53,7 @@ ACCELERATION = 200
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -16 )
-texture = ExtResource( 1 )
+texture = SubResource( 5 )
 hframes = 5
 frame = 3
 

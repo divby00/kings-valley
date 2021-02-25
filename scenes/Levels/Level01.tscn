@@ -1,6 +1,11 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://scenes/Jewel/Jewel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/sprites/jewel01.png" type="Texture" id=2]
+[ext_resource path="res://resources/sprites/jewel03.png" type="Texture" id=3]
+[ext_resource path="res://resources/sprites/jewel02.png" type="Texture" id=4]
+[ext_resource path="res://resources/sprites/jewel06.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Door/Door.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Image" id=61]
 data = {
@@ -3668,308 +3673,6 @@ __meta__ = {
 "imageheight": 176,
 "imagewidth": 320,
 "name": "tileset",
-"tile_meta": {
-2: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-3: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-4: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-5: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-6: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-7: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-8: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-9: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-10: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-11: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-12: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-13: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-14: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-15: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-16: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-17: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-18: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-19: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-21: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-22: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-23: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-24: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-25: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-26: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-27: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-28: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-29: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-30: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-31: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-32: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-33: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-34: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-35: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-36: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-41: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-42: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-43: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-44: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-45: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-46: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-47: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-48: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-49: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-50: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-51: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-52: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-53: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-54: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-55: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-56: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-114: {
-"name": "joya",
-"type": "verde"
-},
-134: {
-"name": "joya",
-"type": "azul_oscuro"
-},
-141: {
-"name": "joya",
-"type": "esmeralda"
-},
-148: {
-"name": "joya",
-"type": "rosa"
-},
-155: {
-"name": "joya",
-"type": "blanco"
-},
-162: {
-"name": "joya",
-"type": "amarillo"
-},
-169: {
-"name": "joya",
-"type": "azul_claro"
-},
-176: {
-"name": "daga"
-},
-177: {
-"name": "pico"
-},
-181: {
-"name": "puerta_sentido_unico"
-},
-201: {
-"name": "palanca"
-},
-203: {
-"height": 0,
-"visible": true,
-"width": 0
-},
-204: {
-"height": 0,
-"visible": true,
-"width": 0
-}
-},
 "tilecount": 220,
 "tiledversion": "1.3.2",
 "tileheight": 16,
@@ -4023,6 +3726,7 @@ __meta__ = {
 }
 
 [node name="dinamico" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource( 60 )
 cell_size = Vector2( 16, 16 )
 cell_tile_origin = 2
@@ -4040,12 +3744,19 @@ __meta__ = {
 
 [node name="Jewel" parent="." instance=ExtResource( 1 )]
 position = Vector2( 448, 48 )
+sprite_texture = ExtResource( 5 )
 
 [node name="Jewel2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 48, 48 )
+sprite_texture = ExtResource( 4 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
+position = Vector2( 240, 160 )
 
 [node name="Jewel3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 416, 240 )
+sprite_texture = ExtResource( 3 )
 
 [node name="Jewel4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 320 )
+sprite_texture = ExtResource( 2 )
