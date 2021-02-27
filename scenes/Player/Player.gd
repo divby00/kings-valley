@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-onready var sprite = $Sprite
-onready var animation_player = $AnimationPlayer
-
 enum Facing {
 	LEFT, RIGHT
 }
@@ -13,11 +10,9 @@ enum Status {
 	JUMP
 }
 
-var animations = {
-	Status.IDLE: "idle",
-	Status.WALK: "walk",
-	Status.JUMP: "jump",
-}
+onready var sprite = $Sprite
+onready var animation_player = $AnimationPlayer
+onready var remote_transform = $RemoteTransform2D
 
 export(int) var GRAVITY = 400
 export(int) var MAX_SPEED = 64
@@ -26,10 +21,15 @@ export(int) var ACCELERATION = 512
 export(int) var MAX_SLOPE_ANGLE = 46
 export(float) var FRICTION = .25
 
+var animations = {
+	Status.IDLE: "idle",
+	Status.WALK: "walk",
+	Status.JUMP: "jump",
+}
 var status = Status.IDLE
 var motion = Vector2.ZERO
 var snap_vector = Vector2.ZERO
-var facing = Facing.RIGHT
+var facing = Facing.LEFT
 
 func _process(_delta):
 	if Input.is_action_pressed("primary"):
@@ -79,5 +79,11 @@ func apply_gravity(delta):
 		motion.y = min(motion.y, JUMP_FORCE)
 
 func update_animation(_input_vector):
+	if _input_vector == Vector2(0, 0):
+		animation_player.play("idle")
+	else:
+		animation_player.play("walk")
 	sprite.scale.x = -1 if facing == Facing.LEFT else 1
-	animation_player.play(animation_player.current_animation)
+
+func on_trigger_pressed(door):
+	print('Pressed')

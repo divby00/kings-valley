@@ -1,13 +1,14 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
-[ext_resource path="res://scenes/Jewel/Jewel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://resources/sprites/jewel01.png" type="Texture" id=2]
+[ext_resource path="res://resources/sprites/jewel01.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Jewel/Jewel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/sprites/jewel03.png" type="Texture" id=3]
 [ext_resource path="res://resources/sprites/jewel02.png" type="Texture" id=4]
-[ext_resource path="res://resources/sprites/jewel06.png" type="Texture" id=5]
-[ext_resource path="res://scenes/Door/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Door/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/sprites/jewel00.png" type="Texture" id=6]
+[ext_resource path="res://resources/sprites/jewel04.png" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="Image" id=63]
@@ -19,35 +20,11 @@ data = {
 "width": 320
 }
 
-[sub_resource type="ImageTexture" id=3]
+[sub_resource type="ImageTexture" id=2]
 flags = 0
 flags = 0
 image = SubResource( 63 )
 size = Vector2( 320, 176 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 8, 8 )
@@ -76,7 +53,34 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 8, 8 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8, 8 )
+
 [sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=61]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=22]
@@ -103,6 +107,9 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 8, 8 )
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
+
 [sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 8, 8 )
 
@@ -122,6 +129,9 @@ extents = Vector2( 8, 8 )
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=37]
@@ -151,17 +161,20 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=45]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=46]
+[sub_resource type="ConcavePolygonShape2D" id=46]
+segments = PoolVector2Array( 0, 0, -16, 16, -16, 16, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0 )
+
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="ConcavePolygonShape2D" id=49]
+[sub_resource type="ConcavePolygonShape2D" id=48]
 segments = PoolVector2Array( 0, 0, -16, 16, -16, 16, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( -16, 16, 0, 0, 0, 16 )
 
 [sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 8, 8 )
@@ -169,40 +182,28 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="ConcavePolygonShape2D" id=52]
-segments = PoolVector2Array( 0, 0, -16, 16, -16, 16, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=53]
-points = PoolVector2Array( -16, 16, 0, 0, 0, 16 )
-
-[sub_resource type="RectangleShape2D" id=54]
+[sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=55]
+[sub_resource type="RectangleShape2D" id=53]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=56]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=57]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=58]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=59]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=60]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=61]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="TileSet" id=62]
 resource_name = "tileset"
 1/name = ""
-1/texture = SubResource( 3 )
+1/texture = SubResource( 2 )
 1/tex_offset = Vector2( 0, -16 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 16, 16 )
@@ -211,19 +212,19 @@ resource_name = "tileset"
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 8, -8 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-1/shape = SubResource( 1 )
+1/shape = SubResource( 3 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 1/z_index = 0
 2/name = ""
-2/texture = SubResource( 3 )
+2/texture = SubResource( 2 )
 2/tex_offset = Vector2( 0, -16 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 16, 0, 16, 16 )
@@ -232,19 +233,19 @@ resource_name = "tileset"
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 8, -8 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-2/shape = SubResource( 13 )
+2/shape = SubResource( 4 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 13 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 2/z_index = 0
 3/name = ""
-3/texture = SubResource( 3 )
+3/texture = SubResource( 2 )
 3/tex_offset = Vector2( 0, -16 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 32, 0, 16, 16 )
@@ -253,19 +254,19 @@ resource_name = "tileset"
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 8, -8 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-3/shape = SubResource( 31 )
+3/shape = SubResource( 5 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 31 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 3/z_index = 0
 4/name = ""
-4/texture = SubResource( 3 )
+4/texture = SubResource( 2 )
 4/tex_offset = Vector2( 0, -16 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 48, 0, 16, 16 )
@@ -274,19 +275,19 @@ resource_name = "tileset"
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 8, -8 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-4/shape = SubResource( 39 )
+4/shape = SubResource( 6 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 39 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 4/z_index = 0
 5/name = ""
-5/texture = SubResource( 3 )
+5/texture = SubResource( 2 )
 5/tex_offset = Vector2( 0, -16 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 64, 0, 16, 16 )
@@ -295,19 +296,19 @@ resource_name = "tileset"
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 8, -8 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-5/shape = SubResource( 50 )
+5/shape = SubResource( 7 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 50 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 5/z_index = 0
 6/name = ""
-6/texture = SubResource( 3 )
+6/texture = SubResource( 2 )
 6/tex_offset = Vector2( 0, -16 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 80, 0, 16, 16 )
@@ -316,19 +317,19 @@ resource_name = "tileset"
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 8, -8 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-6/shape = SubResource( 58 )
+6/shape = SubResource( 8 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 58 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 6/z_index = 0
 7/name = ""
-7/texture = SubResource( 3 )
+7/texture = SubResource( 2 )
 7/tex_offset = Vector2( 0, -16 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 96, 0, 16, 16 )
@@ -337,19 +338,19 @@ resource_name = "tileset"
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 8, -8 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-7/shape = SubResource( 59 )
+7/shape = SubResource( 9 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 59 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 7/z_index = 0
 8/name = ""
-8/texture = SubResource( 3 )
+8/texture = SubResource( 2 )
 8/tex_offset = Vector2( 0, -16 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 112, 0, 16, 16 )
@@ -358,19 +359,19 @@ resource_name = "tileset"
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 8, -8 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-8/shape = SubResource( 60 )
+8/shape = SubResource( 10 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 60 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 8/z_index = 0
 9/name = ""
-9/texture = SubResource( 3 )
+9/texture = SubResource( 2 )
 9/tex_offset = Vector2( 0, -16 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 128, 0, 16, 16 )
@@ -379,19 +380,19 @@ resource_name = "tileset"
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 8, -8 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-9/shape = SubResource( 61 )
+9/shape = SubResource( 11 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 61 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 9/z_index = 0
 10/name = ""
-10/texture = SubResource( 3 )
+10/texture = SubResource( 2 )
 10/tex_offset = Vector2( 0, -16 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 144, 0, 16, 16 )
@@ -400,19 +401,19 @@ resource_name = "tileset"
 10/navigation_offset = Vector2( 0, 0 )
 10/shape_offset = Vector2( 8, -8 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-10/shape = SubResource( 4 )
+10/shape = SubResource( 12 )
 10/shape_one_way = false
 10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 10/z_index = 0
 11/name = ""
-11/texture = SubResource( 3 )
+11/texture = SubResource( 2 )
 11/tex_offset = Vector2( 0, -16 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 160, 0, 16, 16 )
@@ -421,19 +422,19 @@ resource_name = "tileset"
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 8, -8 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-11/shape = SubResource( 5 )
+11/shape = SubResource( 13 )
 11/shape_one_way = false
 11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 11/z_index = 0
 12/name = ""
-12/texture = SubResource( 3 )
+12/texture = SubResource( 2 )
 12/tex_offset = Vector2( 0, -16 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 176, 0, 16, 16 )
@@ -442,19 +443,19 @@ resource_name = "tileset"
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 8, -8 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-12/shape = SubResource( 6 )
+12/shape = SubResource( 14 )
 12/shape_one_way = false
 12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 12/z_index = 0
 13/name = ""
-13/texture = SubResource( 3 )
+13/texture = SubResource( 2 )
 13/tex_offset = Vector2( 0, -16 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 192, 0, 16, 16 )
@@ -463,19 +464,19 @@ resource_name = "tileset"
 13/navigation_offset = Vector2( 0, 0 )
 13/shape_offset = Vector2( 8, -8 )
 13/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-13/shape = SubResource( 7 )
+13/shape = SubResource( 15 )
 13/shape_one_way = false
 13/shape_one_way_margin = 1.0
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 13/z_index = 0
 14/name = ""
-14/texture = SubResource( 3 )
+14/texture = SubResource( 2 )
 14/tex_offset = Vector2( 0, -16 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 208, 0, 16, 16 )
@@ -484,19 +485,19 @@ resource_name = "tileset"
 14/navigation_offset = Vector2( 0, 0 )
 14/shape_offset = Vector2( 8, -8 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-14/shape = SubResource( 8 )
+14/shape = SubResource( 16 )
 14/shape_one_way = false
 14/shape_one_way_margin = 1.0
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 14/z_index = 0
 15/name = ""
-15/texture = SubResource( 3 )
+15/texture = SubResource( 2 )
 15/tex_offset = Vector2( 0, -16 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 224, 0, 16, 16 )
@@ -505,19 +506,19 @@ resource_name = "tileset"
 15/navigation_offset = Vector2( 0, 0 )
 15/shape_offset = Vector2( 8, -8 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-15/shape = SubResource( 9 )
+15/shape = SubResource( 17 )
 15/shape_one_way = false
 15/shape_one_way_margin = 1.0
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 15/z_index = 0
 16/name = ""
-16/texture = SubResource( 3 )
+16/texture = SubResource( 2 )
 16/tex_offset = Vector2( 0, -16 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 240, 0, 16, 16 )
@@ -526,19 +527,19 @@ resource_name = "tileset"
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 8, -8 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-16/shape = SubResource( 10 )
-16/shape_one_way = true
-16/shape_one_way_margin = 10.0
+16/shape = SubResource( 18 )
+16/shape_one_way = false
+16/shape_one_way_margin = 1.0
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"one_way_margin": 10.0,
-"shape": SubResource( 10 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 16/z_index = 0
 17/name = ""
-17/texture = SubResource( 3 )
+17/texture = SubResource( 2 )
 17/tex_offset = Vector2( 0, -16 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 256, 0, 16, 16 )
@@ -547,19 +548,19 @@ resource_name = "tileset"
 17/navigation_offset = Vector2( 0, 0 )
 17/shape_offset = Vector2( 8, -8 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-17/shape = SubResource( 11 )
-17/shape_one_way = true
-17/shape_one_way_margin = 10.0
+17/shape = SubResource( 19 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
 17/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"one_way_margin": 10.0,
-"shape": SubResource( 11 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 17/z_index = 0
 18/name = ""
-18/texture = SubResource( 3 )
+18/texture = SubResource( 2 )
 18/tex_offset = Vector2( 0, -16 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 272, 0, 16, 16 )
@@ -568,19 +569,19 @@ resource_name = "tileset"
 18/navigation_offset = Vector2( 0, 0 )
 18/shape_offset = Vector2( 8, -8 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-18/shape = SubResource( 12 )
-18/shape_one_way = true
-18/shape_one_way_margin = 10.0
+18/shape = SubResource( 20 )
+18/shape_one_way = false
+18/shape_one_way_margin = 1.0
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"one_way_margin": 10.0,
-"shape": SubResource( 12 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 18/z_index = 0
 19/name = ""
-19/texture = SubResource( 3 )
+19/texture = SubResource( 2 )
 19/tex_offset = Vector2( 0, -16 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 288, 0, 16, 16 )
@@ -594,7 +595,7 @@ resource_name = "tileset"
 19/shapes = [  ]
 19/z_index = 0
 20/name = ""
-20/texture = SubResource( 3 )
+20/texture = SubResource( 2 )
 20/tex_offset = Vector2( 0, -16 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 304, 0, 16, 16 )
@@ -608,7 +609,7 @@ resource_name = "tileset"
 20/shapes = [  ]
 20/z_index = 0
 21/name = ""
-21/texture = SubResource( 3 )
+21/texture = SubResource( 2 )
 21/tex_offset = Vector2( 0, -16 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 16, 16, 16 )
@@ -617,19 +618,19 @@ resource_name = "tileset"
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 8, -8 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-21/shape = SubResource( 14 )
+21/shape = SubResource( 21 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 14 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 21/z_index = 0
 22/name = ""
-22/texture = SubResource( 3 )
+22/texture = SubResource( 2 )
 22/tex_offset = Vector2( 0, -16 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 16, 16, 16, 16 )
@@ -638,19 +639,19 @@ resource_name = "tileset"
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 8, -8 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-22/shape = SubResource( 23 )
+22/shape = SubResource( 22 )
 22/shape_one_way = false
 22/shape_one_way_margin = 1.0
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 22/z_index = 0
 23/name = ""
-23/texture = SubResource( 3 )
+23/texture = SubResource( 2 )
 23/tex_offset = Vector2( 0, -16 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 32, 16, 16, 16 )
@@ -659,19 +660,19 @@ resource_name = "tileset"
 23/navigation_offset = Vector2( 0, 0 )
 23/shape_offset = Vector2( 8, -8 )
 23/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-23/shape = SubResource( 24 )
+23/shape = SubResource( 23 )
 23/shape_one_way = false
 23/shape_one_way_margin = 1.0
 23/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 23/z_index = 0
 24/name = ""
-24/texture = SubResource( 3 )
+24/texture = SubResource( 2 )
 24/tex_offset = Vector2( 0, -16 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 48, 16, 16, 16 )
@@ -680,19 +681,19 @@ resource_name = "tileset"
 24/navigation_offset = Vector2( 0, 0 )
 24/shape_offset = Vector2( 8, -8 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-24/shape = SubResource( 25 )
+24/shape = SubResource( 24 )
 24/shape_one_way = false
 24/shape_one_way_margin = 1.0
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 24/z_index = 0
 25/name = ""
-25/texture = SubResource( 3 )
+25/texture = SubResource( 2 )
 25/tex_offset = Vector2( 0, -16 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 64, 16, 16, 16 )
@@ -701,19 +702,19 @@ resource_name = "tileset"
 25/navigation_offset = Vector2( 0, 0 )
 25/shape_offset = Vector2( 8, -8 )
 25/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-25/shape = SubResource( 26 )
+25/shape = SubResource( 25 )
 25/shape_one_way = false
 25/shape_one_way_margin = 1.0
 25/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 25/z_index = 0
 26/name = ""
-26/texture = SubResource( 3 )
+26/texture = SubResource( 2 )
 26/tex_offset = Vector2( 0, -16 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 80, 16, 16, 16 )
@@ -722,19 +723,19 @@ resource_name = "tileset"
 26/navigation_offset = Vector2( 0, 0 )
 26/shape_offset = Vector2( 8, -8 )
 26/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-26/shape = SubResource( 27 )
+26/shape = SubResource( 26 )
 26/shape_one_way = false
 26/shape_one_way_margin = 1.0
 26/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 26 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 26/z_index = 0
 27/name = ""
-27/texture = SubResource( 3 )
+27/texture = SubResource( 2 )
 27/tex_offset = Vector2( 0, -16 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 96, 16, 16, 16 )
@@ -743,19 +744,19 @@ resource_name = "tileset"
 27/navigation_offset = Vector2( 0, 0 )
 27/shape_offset = Vector2( 8, -8 )
 27/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-27/shape = SubResource( 28 )
+27/shape = SubResource( 27 )
 27/shape_one_way = false
 27/shape_one_way_margin = 1.0
 27/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 27 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 27/z_index = 0
 28/name = ""
-28/texture = SubResource( 3 )
+28/texture = SubResource( 2 )
 28/tex_offset = Vector2( 0, -16 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 112, 16, 16, 16 )
@@ -764,19 +765,19 @@ resource_name = "tileset"
 28/navigation_offset = Vector2( 0, 0 )
 28/shape_offset = Vector2( 8, -8 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-28/shape = SubResource( 29 )
+28/shape = SubResource( 28 )
 28/shape_one_way = false
 28/shape_one_way_margin = 1.0
 28/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 28/z_index = 0
 29/name = ""
-29/texture = SubResource( 3 )
+29/texture = SubResource( 2 )
 29/tex_offset = Vector2( 0, -16 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 128, 16, 16, 16 )
@@ -785,19 +786,19 @@ resource_name = "tileset"
 29/navigation_offset = Vector2( 0, 0 )
 29/shape_offset = Vector2( 8, -8 )
 29/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-29/shape = SubResource( 30 )
+29/shape = SubResource( 29 )
 29/shape_one_way = false
 29/shape_one_way_margin = 1.0
 29/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 30 ),
+"shape": SubResource( 29 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 29/z_index = 0
 30/name = ""
-30/texture = SubResource( 3 )
+30/texture = SubResource( 2 )
 30/tex_offset = Vector2( 0, -16 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 144, 16, 16, 16 )
@@ -806,19 +807,19 @@ resource_name = "tileset"
 30/navigation_offset = Vector2( 0, 0 )
 30/shape_offset = Vector2( 8, -8 )
 30/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-30/shape = SubResource( 32 )
+30/shape = SubResource( 30 )
 30/shape_one_way = false
 30/shape_one_way_margin = 1.0
 30/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 32 ),
+"shape": SubResource( 30 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 30/z_index = 0
 31/name = ""
-31/texture = SubResource( 3 )
+31/texture = SubResource( 2 )
 31/tex_offset = Vector2( 0, -16 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 160, 16, 16, 16 )
@@ -827,19 +828,19 @@ resource_name = "tileset"
 31/navigation_offset = Vector2( 0, 0 )
 31/shape_offset = Vector2( 8, -8 )
 31/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-31/shape = SubResource( 33 )
+31/shape = SubResource( 31 )
 31/shape_one_way = false
 31/shape_one_way_margin = 1.0
 31/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 33 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 31/z_index = 0
 32/name = ""
-32/texture = SubResource( 3 )
+32/texture = SubResource( 2 )
 32/tex_offset = Vector2( 0, -16 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 176, 16, 16, 16 )
@@ -848,19 +849,19 @@ resource_name = "tileset"
 32/navigation_offset = Vector2( 0, 0 )
 32/shape_offset = Vector2( 8, -8 )
 32/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-32/shape = SubResource( 34 )
+32/shape = SubResource( 32 )
 32/shape_one_way = false
 32/shape_one_way_margin = 1.0
 32/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 34 ),
+"shape": SubResource( 32 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 32/z_index = 0
 33/name = ""
-33/texture = SubResource( 3 )
+33/texture = SubResource( 2 )
 33/tex_offset = Vector2( 0, -16 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 192, 16, 16, 16 )
@@ -869,19 +870,19 @@ resource_name = "tileset"
 33/navigation_offset = Vector2( 0, 0 )
 33/shape_offset = Vector2( 8, -8 )
 33/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-33/shape = SubResource( 35 )
+33/shape = SubResource( 33 )
 33/shape_one_way = false
 33/shape_one_way_margin = 1.0
 33/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 35 ),
+"shape": SubResource( 33 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 33/z_index = 0
 34/name = ""
-34/texture = SubResource( 3 )
+34/texture = SubResource( 2 )
 34/tex_offset = Vector2( 0, -16 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 208, 16, 16, 16 )
@@ -890,19 +891,19 @@ resource_name = "tileset"
 34/navigation_offset = Vector2( 0, 0 )
 34/shape_offset = Vector2( 8, -8 )
 34/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-34/shape = SubResource( 36 )
+34/shape = SubResource( 34 )
 34/shape_one_way = false
 34/shape_one_way_margin = 1.0
 34/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 36 ),
+"shape": SubResource( 34 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 34/z_index = 0
 35/name = ""
-35/texture = SubResource( 3 )
+35/texture = SubResource( 2 )
 35/tex_offset = Vector2( 0, -16 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 224, 16, 16, 16 )
@@ -911,19 +912,19 @@ resource_name = "tileset"
 35/navigation_offset = Vector2( 0, 0 )
 35/shape_offset = Vector2( 8, -8 )
 35/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-35/shape = SubResource( 37 )
+35/shape = SubResource( 35 )
 35/shape_one_way = false
 35/shape_one_way_margin = 1.0
 35/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 37 ),
+"shape": SubResource( 35 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 35/z_index = 0
 36/name = ""
-36/texture = SubResource( 3 )
+36/texture = SubResource( 2 )
 36/tex_offset = Vector2( 0, -16 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 240, 16, 16, 16 )
@@ -932,19 +933,19 @@ resource_name = "tileset"
 36/navigation_offset = Vector2( 0, 0 )
 36/shape_offset = Vector2( 8, -8 )
 36/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-36/shape = SubResource( 38 )
+36/shape = SubResource( 36 )
 36/shape_one_way = false
 36/shape_one_way_margin = 1.0
 36/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 38 ),
+"shape": SubResource( 36 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 36/z_index = 0
 37/name = ""
-37/texture = SubResource( 3 )
+37/texture = SubResource( 2 )
 37/tex_offset = Vector2( 0, -16 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 256, 16, 16, 16 )
@@ -958,7 +959,7 @@ resource_name = "tileset"
 37/shapes = [  ]
 37/z_index = 0
 38/name = ""
-38/texture = SubResource( 3 )
+38/texture = SubResource( 2 )
 38/tex_offset = Vector2( 0, -16 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 272, 16, 16, 16 )
@@ -972,7 +973,7 @@ resource_name = "tileset"
 38/shapes = [  ]
 38/z_index = 0
 39/name = ""
-39/texture = SubResource( 3 )
+39/texture = SubResource( 2 )
 39/tex_offset = Vector2( 0, -16 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 288, 16, 16, 16 )
@@ -986,7 +987,7 @@ resource_name = "tileset"
 39/shapes = [  ]
 39/z_index = 0
 40/name = ""
-40/texture = SubResource( 3 )
+40/texture = SubResource( 2 )
 40/tex_offset = Vector2( 0, -16 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 304, 16, 16, 16 )
@@ -1000,7 +1001,7 @@ resource_name = "tileset"
 40/shapes = [  ]
 40/z_index = 0
 41/name = ""
-41/texture = SubResource( 3 )
+41/texture = SubResource( 2 )
 41/tex_offset = Vector2( 0, -16 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 0, 32, 16, 16 )
@@ -1009,19 +1010,19 @@ resource_name = "tileset"
 41/navigation_offset = Vector2( 0, 0 )
 41/shape_offset = Vector2( 8, -8 )
 41/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-41/shape = SubResource( 40 )
+41/shape = SubResource( 37 )
 41/shape_one_way = false
 41/shape_one_way_margin = 1.0
 41/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 40 ),
+"shape": SubResource( 37 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 41/z_index = 0
 42/name = ""
-42/texture = SubResource( 3 )
+42/texture = SubResource( 2 )
 42/tex_offset = Vector2( 0, -16 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 16, 32, 16, 16 )
@@ -1030,19 +1031,19 @@ resource_name = "tileset"
 42/navigation_offset = Vector2( 0, 0 )
 42/shape_offset = Vector2( 8, -8 )
 42/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-42/shape = SubResource( 41 )
+42/shape = SubResource( 38 )
 42/shape_one_way = false
 42/shape_one_way_margin = 1.0
 42/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 41 ),
+"shape": SubResource( 38 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 42/z_index = 0
 43/name = ""
-43/texture = SubResource( 3 )
+43/texture = SubResource( 2 )
 43/tex_offset = Vector2( 0, -16 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 32, 32, 16, 16 )
@@ -1051,19 +1052,19 @@ resource_name = "tileset"
 43/navigation_offset = Vector2( 0, 0 )
 43/shape_offset = Vector2( 8, -8 )
 43/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-43/shape = SubResource( 42 )
+43/shape = SubResource( 39 )
 43/shape_one_way = false
 43/shape_one_way_margin = 1.0
 43/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 42 ),
+"shape": SubResource( 39 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 43/z_index = 0
 44/name = ""
-44/texture = SubResource( 3 )
+44/texture = SubResource( 2 )
 44/tex_offset = Vector2( 0, -16 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 48, 32, 16, 16 )
@@ -1072,19 +1073,19 @@ resource_name = "tileset"
 44/navigation_offset = Vector2( 0, 0 )
 44/shape_offset = Vector2( 8, -8 )
 44/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-44/shape = SubResource( 43 )
+44/shape = SubResource( 40 )
 44/shape_one_way = false
 44/shape_one_way_margin = 1.0
 44/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 43 ),
+"shape": SubResource( 40 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 44/z_index = 0
 45/name = ""
-45/texture = SubResource( 3 )
+45/texture = SubResource( 2 )
 45/tex_offset = Vector2( 0, -16 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 64, 32, 16, 16 )
@@ -1093,25 +1094,25 @@ resource_name = "tileset"
 45/navigation_offset = Vector2( 0, 0 )
 45/shape_offset = Vector2( 8, -8 )
 45/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-45/shape = SubResource( 44 )
+45/shape = SubResource( 41 )
 45/shape_one_way = false
 45/shape_one_way_margin = 1.0
 45/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 44 ),
+"shape": SubResource( 41 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 45 ),
+"shape": SubResource( 42 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 45/z_index = 0
 46/name = ""
-46/texture = SubResource( 3 )
+46/texture = SubResource( 2 )
 46/tex_offset = Vector2( 0, -16 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 80, 32, 16, 16 )
@@ -1120,19 +1121,19 @@ resource_name = "tileset"
 46/navigation_offset = Vector2( 0, 0 )
 46/shape_offset = Vector2( 8, -8 )
 46/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-46/shape = SubResource( 46 )
+46/shape = SubResource( 43 )
 46/shape_one_way = false
 46/shape_one_way_margin = 1.0
 46/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 46 ),
+"shape": SubResource( 43 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 46/z_index = 0
 47/name = ""
-47/texture = SubResource( 3 )
+47/texture = SubResource( 2 )
 47/tex_offset = Vector2( 0, -16 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 96, 32, 16, 16 )
@@ -1141,19 +1142,19 @@ resource_name = "tileset"
 47/navigation_offset = Vector2( 0, 0 )
 47/shape_offset = Vector2( 8, -8 )
 47/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-47/shape = SubResource( 47 )
+47/shape = SubResource( 44 )
 47/shape_one_way = false
 47/shape_one_way_margin = 1.0
 47/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 47 ),
+"shape": SubResource( 44 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 47/z_index = 0
 48/name = ""
-48/texture = SubResource( 3 )
+48/texture = SubResource( 2 )
 48/tex_offset = Vector2( 0, -16 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 112, 32, 16, 16 )
@@ -1162,19 +1163,19 @@ resource_name = "tileset"
 48/navigation_offset = Vector2( 0, 0 )
 48/shape_offset = Vector2( 8, -8 )
 48/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-48/shape = SubResource( 48 )
+48/shape = SubResource( 45 )
 48/shape_one_way = false
 48/shape_one_way_margin = 1.0
 48/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 48 ),
+"shape": SubResource( 45 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 48/z_index = 0
 49/name = ""
-49/texture = SubResource( 3 )
+49/texture = SubResource( 2 )
 49/tex_offset = Vector2( 0, -16 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 128, 32, 16, 16 )
@@ -1183,19 +1184,19 @@ resource_name = "tileset"
 49/navigation_offset = Vector2( 0, 0 )
 49/shape_offset = Vector2( 16, -16 )
 49/shape_transform = Transform2D( 1, 0, 0, 1, 16, -16 )
-49/shape = SubResource( 49 )
+49/shape = SubResource( 46 )
 49/shape_one_way = false
 49/shape_one_way_margin = 1.0
 49/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 49 ),
+"shape": SubResource( 46 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, -16 )
 } ]
 49/z_index = 0
 50/name = ""
-50/texture = SubResource( 3 )
+50/texture = SubResource( 2 )
 50/tex_offset = Vector2( 0, -16 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 144, 32, 16, 16 )
@@ -1204,19 +1205,19 @@ resource_name = "tileset"
 50/navigation_offset = Vector2( 0, 0 )
 50/shape_offset = Vector2( 8, -8 )
 50/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-50/shape = SubResource( 51 )
+50/shape = SubResource( 47 )
 50/shape_one_way = false
 50/shape_one_way_margin = 1.0
 50/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 51 ),
+"shape": SubResource( 47 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 50/z_index = 0
 51/name = ""
-51/texture = SubResource( 3 )
+51/texture = SubResource( 2 )
 51/tex_offset = Vector2( 0, -16 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 160, 32, 16, 16 )
@@ -1225,19 +1226,19 @@ resource_name = "tileset"
 51/navigation_offset = Vector2( 0, 0 )
 51/shape_offset = Vector2( 16, -16 )
 51/shape_transform = Transform2D( 1, 0, 0, 1, 16, -16 )
-51/shape = SubResource( 52 )
+51/shape = SubResource( 48 )
 51/shape_one_way = false
 51/shape_one_way_margin = 1.0
 51/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 52 ),
+"shape": SubResource( 48 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, -16 )
 } ]
 51/z_index = 0
 52/name = ""
-52/texture = SubResource( 3 )
+52/texture = SubResource( 2 )
 52/tex_offset = Vector2( 0, -16 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 176, 32, 16, 16 )
@@ -1246,19 +1247,19 @@ resource_name = "tileset"
 52/navigation_offset = Vector2( 0, 0 )
 52/shape_offset = Vector2( 16, -16 )
 52/shape_transform = Transform2D( 1, 0, 0, 1, 16, -16 )
-52/shape = SubResource( 53 )
+52/shape = SubResource( 49 )
 52/shape_one_way = false
 52/shape_one_way_margin = 1.0
 52/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 53 ),
+"shape": SubResource( 49 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, -16 )
 } ]
 52/z_index = 0
 53/name = ""
-53/texture = SubResource( 3 )
+53/texture = SubResource( 2 )
 53/tex_offset = Vector2( 0, -16 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 192, 32, 16, 16 )
@@ -1267,19 +1268,19 @@ resource_name = "tileset"
 53/navigation_offset = Vector2( 0, 0 )
 53/shape_offset = Vector2( 8, -8 )
 53/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-53/shape = SubResource( 54 )
+53/shape = SubResource( 50 )
 53/shape_one_way = false
 53/shape_one_way_margin = 1.0
 53/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 54 ),
+"shape": SubResource( 50 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 53/z_index = 0
 54/name = ""
-54/texture = SubResource( 3 )
+54/texture = SubResource( 2 )
 54/tex_offset = Vector2( 0, -16 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 208, 32, 16, 16 )
@@ -1288,19 +1289,19 @@ resource_name = "tileset"
 54/navigation_offset = Vector2( 0, 0 )
 54/shape_offset = Vector2( 8, -8 )
 54/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-54/shape = SubResource( 55 )
+54/shape = SubResource( 51 )
 54/shape_one_way = false
 54/shape_one_way_margin = 1.0
 54/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 55 ),
+"shape": SubResource( 51 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 54/z_index = 0
 55/name = ""
-55/texture = SubResource( 3 )
+55/texture = SubResource( 2 )
 55/tex_offset = Vector2( 0, -16 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 224, 32, 16, 16 )
@@ -1309,19 +1310,19 @@ resource_name = "tileset"
 55/navigation_offset = Vector2( 0, 0 )
 55/shape_offset = Vector2( 8, -8 )
 55/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-55/shape = SubResource( 56 )
+55/shape = SubResource( 52 )
 55/shape_one_way = false
 55/shape_one_way_margin = 1.0
 55/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 52 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 55/z_index = 0
 56/name = ""
-56/texture = SubResource( 3 )
+56/texture = SubResource( 2 )
 56/tex_offset = Vector2( 0, -16 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 240, 32, 16, 16 )
@@ -1330,19 +1331,19 @@ resource_name = "tileset"
 56/navigation_offset = Vector2( 0, 0 )
 56/shape_offset = Vector2( 8, -8 )
 56/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-56/shape = SubResource( 57 )
+56/shape = SubResource( 53 )
 56/shape_one_way = false
 56/shape_one_way_margin = 1.0
 56/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 57 ),
+"shape": SubResource( 53 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 56/z_index = 0
 57/name = ""
-57/texture = SubResource( 3 )
+57/texture = SubResource( 2 )
 57/tex_offset = Vector2( 0, -16 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 256, 32, 16, 16 )
@@ -1356,7 +1357,7 @@ resource_name = "tileset"
 57/shapes = [  ]
 57/z_index = 0
 58/name = ""
-58/texture = SubResource( 3 )
+58/texture = SubResource( 2 )
 58/tex_offset = Vector2( 0, -16 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 272, 32, 16, 16 )
@@ -1370,7 +1371,7 @@ resource_name = "tileset"
 58/shapes = [  ]
 58/z_index = 0
 59/name = ""
-59/texture = SubResource( 3 )
+59/texture = SubResource( 2 )
 59/tex_offset = Vector2( 0, -16 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 288, 32, 16, 16 )
@@ -1384,7 +1385,7 @@ resource_name = "tileset"
 59/shapes = [  ]
 59/z_index = 0
 60/name = ""
-60/texture = SubResource( 3 )
+60/texture = SubResource( 2 )
 60/tex_offset = Vector2( 0, -16 )
 60/modulate = Color( 1, 1, 1, 1 )
 60/region = Rect2( 304, 32, 16, 16 )
@@ -1398,7 +1399,7 @@ resource_name = "tileset"
 60/shapes = [  ]
 60/z_index = 0
 61/name = ""
-61/texture = SubResource( 3 )
+61/texture = SubResource( 2 )
 61/tex_offset = Vector2( 0, -16 )
 61/modulate = Color( 1, 1, 1, 1 )
 61/region = Rect2( 0, 48, 16, 16 )
@@ -1412,7 +1413,7 @@ resource_name = "tileset"
 61/shapes = [  ]
 61/z_index = 0
 62/name = ""
-62/texture = SubResource( 3 )
+62/texture = SubResource( 2 )
 62/tex_offset = Vector2( 0, -16 )
 62/modulate = Color( 1, 1, 1, 1 )
 62/region = Rect2( 16, 48, 16, 16 )
@@ -1426,7 +1427,7 @@ resource_name = "tileset"
 62/shapes = [  ]
 62/z_index = 0
 63/name = ""
-63/texture = SubResource( 3 )
+63/texture = SubResource( 2 )
 63/tex_offset = Vector2( 0, -16 )
 63/modulate = Color( 1, 1, 1, 1 )
 63/region = Rect2( 32, 48, 16, 16 )
@@ -1440,7 +1441,7 @@ resource_name = "tileset"
 63/shapes = [  ]
 63/z_index = 0
 64/name = ""
-64/texture = SubResource( 3 )
+64/texture = SubResource( 2 )
 64/tex_offset = Vector2( 0, -16 )
 64/modulate = Color( 1, 1, 1, 1 )
 64/region = Rect2( 48, 48, 16, 16 )
@@ -1454,7 +1455,7 @@ resource_name = "tileset"
 64/shapes = [  ]
 64/z_index = 0
 65/name = ""
-65/texture = SubResource( 3 )
+65/texture = SubResource( 2 )
 65/tex_offset = Vector2( 0, -16 )
 65/modulate = Color( 1, 1, 1, 1 )
 65/region = Rect2( 64, 48, 16, 16 )
@@ -1468,7 +1469,7 @@ resource_name = "tileset"
 65/shapes = [  ]
 65/z_index = 0
 66/name = ""
-66/texture = SubResource( 3 )
+66/texture = SubResource( 2 )
 66/tex_offset = Vector2( 0, -16 )
 66/modulate = Color( 1, 1, 1, 1 )
 66/region = Rect2( 80, 48, 16, 16 )
@@ -1482,7 +1483,7 @@ resource_name = "tileset"
 66/shapes = [  ]
 66/z_index = 0
 67/name = ""
-67/texture = SubResource( 3 )
+67/texture = SubResource( 2 )
 67/tex_offset = Vector2( 0, -16 )
 67/modulate = Color( 1, 1, 1, 1 )
 67/region = Rect2( 96, 48, 16, 16 )
@@ -1496,7 +1497,7 @@ resource_name = "tileset"
 67/shapes = [  ]
 67/z_index = 0
 68/name = ""
-68/texture = SubResource( 3 )
+68/texture = SubResource( 2 )
 68/tex_offset = Vector2( 0, -16 )
 68/modulate = Color( 1, 1, 1, 1 )
 68/region = Rect2( 112, 48, 16, 16 )
@@ -1510,7 +1511,7 @@ resource_name = "tileset"
 68/shapes = [  ]
 68/z_index = 0
 69/name = ""
-69/texture = SubResource( 3 )
+69/texture = SubResource( 2 )
 69/tex_offset = Vector2( 0, -16 )
 69/modulate = Color( 1, 1, 1, 1 )
 69/region = Rect2( 128, 48, 16, 16 )
@@ -1524,7 +1525,7 @@ resource_name = "tileset"
 69/shapes = [  ]
 69/z_index = 0
 70/name = ""
-70/texture = SubResource( 3 )
+70/texture = SubResource( 2 )
 70/tex_offset = Vector2( 0, -16 )
 70/modulate = Color( 1, 1, 1, 1 )
 70/region = Rect2( 144, 48, 16, 16 )
@@ -1538,7 +1539,7 @@ resource_name = "tileset"
 70/shapes = [  ]
 70/z_index = 0
 71/name = ""
-71/texture = SubResource( 3 )
+71/texture = SubResource( 2 )
 71/tex_offset = Vector2( 0, -16 )
 71/modulate = Color( 1, 1, 1, 1 )
 71/region = Rect2( 160, 48, 16, 16 )
@@ -1552,7 +1553,7 @@ resource_name = "tileset"
 71/shapes = [  ]
 71/z_index = 0
 72/name = ""
-72/texture = SubResource( 3 )
+72/texture = SubResource( 2 )
 72/tex_offset = Vector2( 0, -16 )
 72/modulate = Color( 1, 1, 1, 1 )
 72/region = Rect2( 176, 48, 16, 16 )
@@ -1566,7 +1567,7 @@ resource_name = "tileset"
 72/shapes = [  ]
 72/z_index = 0
 73/name = ""
-73/texture = SubResource( 3 )
+73/texture = SubResource( 2 )
 73/tex_offset = Vector2( 0, -16 )
 73/modulate = Color( 1, 1, 1, 1 )
 73/region = Rect2( 192, 48, 16, 16 )
@@ -1580,7 +1581,7 @@ resource_name = "tileset"
 73/shapes = [  ]
 73/z_index = 0
 74/name = ""
-74/texture = SubResource( 3 )
+74/texture = SubResource( 2 )
 74/tex_offset = Vector2( 0, -16 )
 74/modulate = Color( 1, 1, 1, 1 )
 74/region = Rect2( 208, 48, 16, 16 )
@@ -1594,7 +1595,7 @@ resource_name = "tileset"
 74/shapes = [  ]
 74/z_index = 0
 75/name = ""
-75/texture = SubResource( 3 )
+75/texture = SubResource( 2 )
 75/tex_offset = Vector2( 0, -16 )
 75/modulate = Color( 1, 1, 1, 1 )
 75/region = Rect2( 224, 48, 16, 16 )
@@ -1608,7 +1609,7 @@ resource_name = "tileset"
 75/shapes = [  ]
 75/z_index = 0
 76/name = ""
-76/texture = SubResource( 3 )
+76/texture = SubResource( 2 )
 76/tex_offset = Vector2( 0, -16 )
 76/modulate = Color( 1, 1, 1, 1 )
 76/region = Rect2( 240, 48, 16, 16 )
@@ -1622,7 +1623,7 @@ resource_name = "tileset"
 76/shapes = [  ]
 76/z_index = 0
 77/name = ""
-77/texture = SubResource( 3 )
+77/texture = SubResource( 2 )
 77/tex_offset = Vector2( 0, -16 )
 77/modulate = Color( 1, 1, 1, 1 )
 77/region = Rect2( 256, 48, 16, 16 )
@@ -1636,7 +1637,7 @@ resource_name = "tileset"
 77/shapes = [  ]
 77/z_index = 0
 78/name = ""
-78/texture = SubResource( 3 )
+78/texture = SubResource( 2 )
 78/tex_offset = Vector2( 0, -16 )
 78/modulate = Color( 1, 1, 1, 1 )
 78/region = Rect2( 272, 48, 16, 16 )
@@ -1650,7 +1651,7 @@ resource_name = "tileset"
 78/shapes = [  ]
 78/z_index = 0
 79/name = ""
-79/texture = SubResource( 3 )
+79/texture = SubResource( 2 )
 79/tex_offset = Vector2( 0, -16 )
 79/modulate = Color( 1, 1, 1, 1 )
 79/region = Rect2( 288, 48, 16, 16 )
@@ -1664,7 +1665,7 @@ resource_name = "tileset"
 79/shapes = [  ]
 79/z_index = 0
 80/name = ""
-80/texture = SubResource( 3 )
+80/texture = SubResource( 2 )
 80/tex_offset = Vector2( 0, -16 )
 80/modulate = Color( 1, 1, 1, 1 )
 80/region = Rect2( 304, 48, 16, 16 )
@@ -1678,7 +1679,7 @@ resource_name = "tileset"
 80/shapes = [  ]
 80/z_index = 0
 81/name = ""
-81/texture = SubResource( 3 )
+81/texture = SubResource( 2 )
 81/tex_offset = Vector2( 0, -16 )
 81/modulate = Color( 1, 1, 1, 1 )
 81/region = Rect2( 0, 64, 16, 16 )
@@ -1692,7 +1693,7 @@ resource_name = "tileset"
 81/shapes = [  ]
 81/z_index = 0
 82/name = ""
-82/texture = SubResource( 3 )
+82/texture = SubResource( 2 )
 82/tex_offset = Vector2( 0, -16 )
 82/modulate = Color( 1, 1, 1, 1 )
 82/region = Rect2( 16, 64, 16, 16 )
@@ -1706,7 +1707,7 @@ resource_name = "tileset"
 82/shapes = [  ]
 82/z_index = 0
 83/name = ""
-83/texture = SubResource( 3 )
+83/texture = SubResource( 2 )
 83/tex_offset = Vector2( 0, -16 )
 83/modulate = Color( 1, 1, 1, 1 )
 83/region = Rect2( 32, 64, 16, 16 )
@@ -1720,7 +1721,7 @@ resource_name = "tileset"
 83/shapes = [  ]
 83/z_index = 0
 84/name = ""
-84/texture = SubResource( 3 )
+84/texture = SubResource( 2 )
 84/tex_offset = Vector2( 0, -16 )
 84/modulate = Color( 1, 1, 1, 1 )
 84/region = Rect2( 48, 64, 16, 16 )
@@ -1734,7 +1735,7 @@ resource_name = "tileset"
 84/shapes = [  ]
 84/z_index = 0
 85/name = ""
-85/texture = SubResource( 3 )
+85/texture = SubResource( 2 )
 85/tex_offset = Vector2( 0, -16 )
 85/modulate = Color( 1, 1, 1, 1 )
 85/region = Rect2( 64, 64, 16, 16 )
@@ -1748,7 +1749,7 @@ resource_name = "tileset"
 85/shapes = [  ]
 85/z_index = 0
 86/name = ""
-86/texture = SubResource( 3 )
+86/texture = SubResource( 2 )
 86/tex_offset = Vector2( 0, -16 )
 86/modulate = Color( 1, 1, 1, 1 )
 86/region = Rect2( 80, 64, 16, 16 )
@@ -1762,7 +1763,7 @@ resource_name = "tileset"
 86/shapes = [  ]
 86/z_index = 0
 87/name = ""
-87/texture = SubResource( 3 )
+87/texture = SubResource( 2 )
 87/tex_offset = Vector2( 0, -16 )
 87/modulate = Color( 1, 1, 1, 1 )
 87/region = Rect2( 96, 64, 16, 16 )
@@ -1776,7 +1777,7 @@ resource_name = "tileset"
 87/shapes = [  ]
 87/z_index = 0
 88/name = ""
-88/texture = SubResource( 3 )
+88/texture = SubResource( 2 )
 88/tex_offset = Vector2( 0, -16 )
 88/modulate = Color( 1, 1, 1, 1 )
 88/region = Rect2( 112, 64, 16, 16 )
@@ -1790,7 +1791,7 @@ resource_name = "tileset"
 88/shapes = [  ]
 88/z_index = 0
 89/name = ""
-89/texture = SubResource( 3 )
+89/texture = SubResource( 2 )
 89/tex_offset = Vector2( 0, -16 )
 89/modulate = Color( 1, 1, 1, 1 )
 89/region = Rect2( 128, 64, 16, 16 )
@@ -1804,7 +1805,7 @@ resource_name = "tileset"
 89/shapes = [  ]
 89/z_index = 0
 90/name = ""
-90/texture = SubResource( 3 )
+90/texture = SubResource( 2 )
 90/tex_offset = Vector2( 0, -16 )
 90/modulate = Color( 1, 1, 1, 1 )
 90/region = Rect2( 144, 64, 16, 16 )
@@ -1818,7 +1819,7 @@ resource_name = "tileset"
 90/shapes = [  ]
 90/z_index = 0
 91/name = ""
-91/texture = SubResource( 3 )
+91/texture = SubResource( 2 )
 91/tex_offset = Vector2( 0, -16 )
 91/modulate = Color( 1, 1, 1, 1 )
 91/region = Rect2( 160, 64, 16, 16 )
@@ -1832,7 +1833,7 @@ resource_name = "tileset"
 91/shapes = [  ]
 91/z_index = 0
 92/name = ""
-92/texture = SubResource( 3 )
+92/texture = SubResource( 2 )
 92/tex_offset = Vector2( 0, -16 )
 92/modulate = Color( 1, 1, 1, 1 )
 92/region = Rect2( 176, 64, 16, 16 )
@@ -1846,7 +1847,7 @@ resource_name = "tileset"
 92/shapes = [  ]
 92/z_index = 0
 93/name = ""
-93/texture = SubResource( 3 )
+93/texture = SubResource( 2 )
 93/tex_offset = Vector2( 0, -16 )
 93/modulate = Color( 1, 1, 1, 1 )
 93/region = Rect2( 192, 64, 16, 16 )
@@ -1860,7 +1861,7 @@ resource_name = "tileset"
 93/shapes = [  ]
 93/z_index = 0
 94/name = ""
-94/texture = SubResource( 3 )
+94/texture = SubResource( 2 )
 94/tex_offset = Vector2( 0, -16 )
 94/modulate = Color( 1, 1, 1, 1 )
 94/region = Rect2( 208, 64, 16, 16 )
@@ -1874,7 +1875,7 @@ resource_name = "tileset"
 94/shapes = [  ]
 94/z_index = 0
 95/name = ""
-95/texture = SubResource( 3 )
+95/texture = SubResource( 2 )
 95/tex_offset = Vector2( 0, -16 )
 95/modulate = Color( 1, 1, 1, 1 )
 95/region = Rect2( 224, 64, 16, 16 )
@@ -1888,7 +1889,7 @@ resource_name = "tileset"
 95/shapes = [  ]
 95/z_index = 0
 96/name = ""
-96/texture = SubResource( 3 )
+96/texture = SubResource( 2 )
 96/tex_offset = Vector2( 0, -16 )
 96/modulate = Color( 1, 1, 1, 1 )
 96/region = Rect2( 240, 64, 16, 16 )
@@ -1902,7 +1903,7 @@ resource_name = "tileset"
 96/shapes = [  ]
 96/z_index = 0
 97/name = ""
-97/texture = SubResource( 3 )
+97/texture = SubResource( 2 )
 97/tex_offset = Vector2( 0, -16 )
 97/modulate = Color( 1, 1, 1, 1 )
 97/region = Rect2( 256, 64, 16, 16 )
@@ -1916,7 +1917,7 @@ resource_name = "tileset"
 97/shapes = [  ]
 97/z_index = 0
 98/name = ""
-98/texture = SubResource( 3 )
+98/texture = SubResource( 2 )
 98/tex_offset = Vector2( 0, -16 )
 98/modulate = Color( 1, 1, 1, 1 )
 98/region = Rect2( 272, 64, 16, 16 )
@@ -1930,7 +1931,7 @@ resource_name = "tileset"
 98/shapes = [  ]
 98/z_index = 0
 99/name = ""
-99/texture = SubResource( 3 )
+99/texture = SubResource( 2 )
 99/tex_offset = Vector2( 0, -16 )
 99/modulate = Color( 1, 1, 1, 1 )
 99/region = Rect2( 288, 64, 16, 16 )
@@ -1944,7 +1945,7 @@ resource_name = "tileset"
 99/shapes = [  ]
 99/z_index = 0
 100/name = ""
-100/texture = SubResource( 3 )
+100/texture = SubResource( 2 )
 100/tex_offset = Vector2( 0, -16 )
 100/modulate = Color( 1, 1, 1, 1 )
 100/region = Rect2( 304, 64, 16, 16 )
@@ -1958,7 +1959,7 @@ resource_name = "tileset"
 100/shapes = [  ]
 100/z_index = 0
 101/name = ""
-101/texture = SubResource( 3 )
+101/texture = SubResource( 2 )
 101/tex_offset = Vector2( 0, -16 )
 101/modulate = Color( 1, 1, 1, 1 )
 101/region = Rect2( 0, 80, 16, 16 )
@@ -1972,7 +1973,7 @@ resource_name = "tileset"
 101/shapes = [  ]
 101/z_index = 0
 102/name = ""
-102/texture = SubResource( 3 )
+102/texture = SubResource( 2 )
 102/tex_offset = Vector2( 0, -16 )
 102/modulate = Color( 1, 1, 1, 1 )
 102/region = Rect2( 16, 80, 16, 16 )
@@ -1986,7 +1987,7 @@ resource_name = "tileset"
 102/shapes = [  ]
 102/z_index = 0
 103/name = ""
-103/texture = SubResource( 3 )
+103/texture = SubResource( 2 )
 103/tex_offset = Vector2( 0, -16 )
 103/modulate = Color( 1, 1, 1, 1 )
 103/region = Rect2( 32, 80, 16, 16 )
@@ -2000,7 +2001,7 @@ resource_name = "tileset"
 103/shapes = [  ]
 103/z_index = 0
 104/name = ""
-104/texture = SubResource( 3 )
+104/texture = SubResource( 2 )
 104/tex_offset = Vector2( 0, -16 )
 104/modulate = Color( 1, 1, 1, 1 )
 104/region = Rect2( 48, 80, 16, 16 )
@@ -2014,7 +2015,7 @@ resource_name = "tileset"
 104/shapes = [  ]
 104/z_index = 0
 105/name = ""
-105/texture = SubResource( 3 )
+105/texture = SubResource( 2 )
 105/tex_offset = Vector2( 0, -16 )
 105/modulate = Color( 1, 1, 1, 1 )
 105/region = Rect2( 64, 80, 16, 16 )
@@ -2028,7 +2029,7 @@ resource_name = "tileset"
 105/shapes = [  ]
 105/z_index = 0
 106/name = ""
-106/texture = SubResource( 3 )
+106/texture = SubResource( 2 )
 106/tex_offset = Vector2( 0, -16 )
 106/modulate = Color( 1, 1, 1, 1 )
 106/region = Rect2( 80, 80, 16, 16 )
@@ -2042,7 +2043,7 @@ resource_name = "tileset"
 106/shapes = [  ]
 106/z_index = 0
 107/name = ""
-107/texture = SubResource( 3 )
+107/texture = SubResource( 2 )
 107/tex_offset = Vector2( 0, -16 )
 107/modulate = Color( 1, 1, 1, 1 )
 107/region = Rect2( 96, 80, 16, 16 )
@@ -2056,7 +2057,7 @@ resource_name = "tileset"
 107/shapes = [  ]
 107/z_index = 0
 108/name = ""
-108/texture = SubResource( 3 )
+108/texture = SubResource( 2 )
 108/tex_offset = Vector2( 0, -16 )
 108/modulate = Color( 1, 1, 1, 1 )
 108/region = Rect2( 112, 80, 16, 16 )
@@ -2070,7 +2071,7 @@ resource_name = "tileset"
 108/shapes = [  ]
 108/z_index = 0
 109/name = ""
-109/texture = SubResource( 3 )
+109/texture = SubResource( 2 )
 109/tex_offset = Vector2( 0, -16 )
 109/modulate = Color( 1, 1, 1, 1 )
 109/region = Rect2( 128, 80, 16, 16 )
@@ -2084,7 +2085,7 @@ resource_name = "tileset"
 109/shapes = [  ]
 109/z_index = 0
 110/name = ""
-110/texture = SubResource( 3 )
+110/texture = SubResource( 2 )
 110/tex_offset = Vector2( 0, -16 )
 110/modulate = Color( 1, 1, 1, 1 )
 110/region = Rect2( 144, 80, 16, 16 )
@@ -2098,7 +2099,7 @@ resource_name = "tileset"
 110/shapes = [  ]
 110/z_index = 0
 111/name = ""
-111/texture = SubResource( 3 )
+111/texture = SubResource( 2 )
 111/tex_offset = Vector2( 0, -16 )
 111/modulate = Color( 1, 1, 1, 1 )
 111/region = Rect2( 160, 80, 16, 16 )
@@ -2112,7 +2113,7 @@ resource_name = "tileset"
 111/shapes = [  ]
 111/z_index = 0
 112/name = ""
-112/texture = SubResource( 3 )
+112/texture = SubResource( 2 )
 112/tex_offset = Vector2( 0, -16 )
 112/modulate = Color( 1, 1, 1, 1 )
 112/region = Rect2( 176, 80, 16, 16 )
@@ -2126,7 +2127,7 @@ resource_name = "tileset"
 112/shapes = [  ]
 112/z_index = 0
 113/name = ""
-113/texture = SubResource( 3 )
+113/texture = SubResource( 2 )
 113/tex_offset = Vector2( 0, -16 )
 113/modulate = Color( 1, 1, 1, 1 )
 113/region = Rect2( 192, 80, 16, 16 )
@@ -2140,7 +2141,7 @@ resource_name = "tileset"
 113/shapes = [  ]
 113/z_index = 0
 114/name = ""
-114/texture = SubResource( 3 )
+114/texture = SubResource( 2 )
 114/tex_offset = Vector2( 0, -16 )
 114/modulate = Color( 1, 1, 1, 1 )
 114/region = Rect2( 208, 80, 16, 16 )
@@ -2154,7 +2155,7 @@ resource_name = "tileset"
 114/shapes = [  ]
 114/z_index = 0
 115/name = ""
-115/texture = SubResource( 3 )
+115/texture = SubResource( 2 )
 115/tex_offset = Vector2( 0, -16 )
 115/modulate = Color( 1, 1, 1, 1 )
 115/region = Rect2( 224, 80, 16, 16 )
@@ -2168,7 +2169,7 @@ resource_name = "tileset"
 115/shapes = [  ]
 115/z_index = 0
 116/name = ""
-116/texture = SubResource( 3 )
+116/texture = SubResource( 2 )
 116/tex_offset = Vector2( 0, -16 )
 116/modulate = Color( 1, 1, 1, 1 )
 116/region = Rect2( 240, 80, 16, 16 )
@@ -2182,7 +2183,7 @@ resource_name = "tileset"
 116/shapes = [  ]
 116/z_index = 0
 117/name = ""
-117/texture = SubResource( 3 )
+117/texture = SubResource( 2 )
 117/tex_offset = Vector2( 0, -16 )
 117/modulate = Color( 1, 1, 1, 1 )
 117/region = Rect2( 256, 80, 16, 16 )
@@ -2196,7 +2197,7 @@ resource_name = "tileset"
 117/shapes = [  ]
 117/z_index = 0
 118/name = ""
-118/texture = SubResource( 3 )
+118/texture = SubResource( 2 )
 118/tex_offset = Vector2( 0, -16 )
 118/modulate = Color( 1, 1, 1, 1 )
 118/region = Rect2( 272, 80, 16, 16 )
@@ -2210,7 +2211,7 @@ resource_name = "tileset"
 118/shapes = [  ]
 118/z_index = 0
 119/name = ""
-119/texture = SubResource( 3 )
+119/texture = SubResource( 2 )
 119/tex_offset = Vector2( 0, -16 )
 119/modulate = Color( 1, 1, 1, 1 )
 119/region = Rect2( 288, 80, 16, 16 )
@@ -2224,7 +2225,7 @@ resource_name = "tileset"
 119/shapes = [  ]
 119/z_index = 0
 120/name = ""
-120/texture = SubResource( 3 )
+120/texture = SubResource( 2 )
 120/tex_offset = Vector2( 0, -16 )
 120/modulate = Color( 1, 1, 1, 1 )
 120/region = Rect2( 304, 80, 16, 16 )
@@ -2238,7 +2239,7 @@ resource_name = "tileset"
 120/shapes = [  ]
 120/z_index = 0
 121/name = ""
-121/texture = SubResource( 3 )
+121/texture = SubResource( 2 )
 121/tex_offset = Vector2( 0, -16 )
 121/modulate = Color( 1, 1, 1, 1 )
 121/region = Rect2( 0, 96, 16, 16 )
@@ -2252,7 +2253,7 @@ resource_name = "tileset"
 121/shapes = [  ]
 121/z_index = 0
 122/name = ""
-122/texture = SubResource( 3 )
+122/texture = SubResource( 2 )
 122/tex_offset = Vector2( 0, -16 )
 122/modulate = Color( 1, 1, 1, 1 )
 122/region = Rect2( 16, 96, 16, 16 )
@@ -2266,7 +2267,7 @@ resource_name = "tileset"
 122/shapes = [  ]
 122/z_index = 0
 123/name = ""
-123/texture = SubResource( 3 )
+123/texture = SubResource( 2 )
 123/tex_offset = Vector2( 0, -16 )
 123/modulate = Color( 1, 1, 1, 1 )
 123/region = Rect2( 32, 96, 16, 16 )
@@ -2280,7 +2281,7 @@ resource_name = "tileset"
 123/shapes = [  ]
 123/z_index = 0
 124/name = ""
-124/texture = SubResource( 3 )
+124/texture = SubResource( 2 )
 124/tex_offset = Vector2( 0, -16 )
 124/modulate = Color( 1, 1, 1, 1 )
 124/region = Rect2( 48, 96, 16, 16 )
@@ -2294,7 +2295,7 @@ resource_name = "tileset"
 124/shapes = [  ]
 124/z_index = 0
 125/name = ""
-125/texture = SubResource( 3 )
+125/texture = SubResource( 2 )
 125/tex_offset = Vector2( 0, -16 )
 125/modulate = Color( 1, 1, 1, 1 )
 125/region = Rect2( 64, 96, 16, 16 )
@@ -2308,7 +2309,7 @@ resource_name = "tileset"
 125/shapes = [  ]
 125/z_index = 0
 126/name = ""
-126/texture = SubResource( 3 )
+126/texture = SubResource( 2 )
 126/tex_offset = Vector2( 0, -16 )
 126/modulate = Color( 1, 1, 1, 1 )
 126/region = Rect2( 80, 96, 16, 16 )
@@ -2322,7 +2323,7 @@ resource_name = "tileset"
 126/shapes = [  ]
 126/z_index = 0
 127/name = ""
-127/texture = SubResource( 3 )
+127/texture = SubResource( 2 )
 127/tex_offset = Vector2( 0, -16 )
 127/modulate = Color( 1, 1, 1, 1 )
 127/region = Rect2( 96, 96, 16, 16 )
@@ -2336,7 +2337,7 @@ resource_name = "tileset"
 127/shapes = [  ]
 127/z_index = 0
 128/name = ""
-128/texture = SubResource( 3 )
+128/texture = SubResource( 2 )
 128/tex_offset = Vector2( 0, -16 )
 128/modulate = Color( 1, 1, 1, 1 )
 128/region = Rect2( 112, 96, 16, 16 )
@@ -2350,7 +2351,7 @@ resource_name = "tileset"
 128/shapes = [  ]
 128/z_index = 0
 129/name = ""
-129/texture = SubResource( 3 )
+129/texture = SubResource( 2 )
 129/tex_offset = Vector2( 0, -16 )
 129/modulate = Color( 1, 1, 1, 1 )
 129/region = Rect2( 128, 96, 16, 16 )
@@ -2364,7 +2365,7 @@ resource_name = "tileset"
 129/shapes = [  ]
 129/z_index = 0
 130/name = ""
-130/texture = SubResource( 3 )
+130/texture = SubResource( 2 )
 130/tex_offset = Vector2( 0, -16 )
 130/modulate = Color( 1, 1, 1, 1 )
 130/region = Rect2( 144, 96, 16, 16 )
@@ -2378,7 +2379,7 @@ resource_name = "tileset"
 130/shapes = [  ]
 130/z_index = 0
 131/name = ""
-131/texture = SubResource( 3 )
+131/texture = SubResource( 2 )
 131/tex_offset = Vector2( 0, -16 )
 131/modulate = Color( 1, 1, 1, 1 )
 131/region = Rect2( 160, 96, 16, 16 )
@@ -2392,7 +2393,7 @@ resource_name = "tileset"
 131/shapes = [  ]
 131/z_index = 0
 132/name = ""
-132/texture = SubResource( 3 )
+132/texture = SubResource( 2 )
 132/tex_offset = Vector2( 0, -16 )
 132/modulate = Color( 1, 1, 1, 1 )
 132/region = Rect2( 176, 96, 16, 16 )
@@ -2406,7 +2407,7 @@ resource_name = "tileset"
 132/shapes = [  ]
 132/z_index = 0
 133/name = ""
-133/texture = SubResource( 3 )
+133/texture = SubResource( 2 )
 133/tex_offset = Vector2( 0, -16 )
 133/modulate = Color( 1, 1, 1, 1 )
 133/region = Rect2( 192, 96, 16, 16 )
@@ -2420,7 +2421,7 @@ resource_name = "tileset"
 133/shapes = [  ]
 133/z_index = 0
 134/name = ""
-134/texture = SubResource( 3 )
+134/texture = SubResource( 2 )
 134/tex_offset = Vector2( 0, -16 )
 134/modulate = Color( 1, 1, 1, 1 )
 134/region = Rect2( 208, 96, 16, 16 )
@@ -2434,7 +2435,7 @@ resource_name = "tileset"
 134/shapes = [  ]
 134/z_index = 0
 135/name = ""
-135/texture = SubResource( 3 )
+135/texture = SubResource( 2 )
 135/tex_offset = Vector2( 0, -16 )
 135/modulate = Color( 1, 1, 1, 1 )
 135/region = Rect2( 224, 96, 16, 16 )
@@ -2448,7 +2449,7 @@ resource_name = "tileset"
 135/shapes = [  ]
 135/z_index = 0
 136/name = ""
-136/texture = SubResource( 3 )
+136/texture = SubResource( 2 )
 136/tex_offset = Vector2( 0, -16 )
 136/modulate = Color( 1, 1, 1, 1 )
 136/region = Rect2( 240, 96, 16, 16 )
@@ -2462,7 +2463,7 @@ resource_name = "tileset"
 136/shapes = [  ]
 136/z_index = 0
 137/name = ""
-137/texture = SubResource( 3 )
+137/texture = SubResource( 2 )
 137/tex_offset = Vector2( 0, -16 )
 137/modulate = Color( 1, 1, 1, 1 )
 137/region = Rect2( 256, 96, 16, 16 )
@@ -2476,7 +2477,7 @@ resource_name = "tileset"
 137/shapes = [  ]
 137/z_index = 0
 138/name = ""
-138/texture = SubResource( 3 )
+138/texture = SubResource( 2 )
 138/tex_offset = Vector2( 0, -16 )
 138/modulate = Color( 1, 1, 1, 1 )
 138/region = Rect2( 272, 96, 16, 16 )
@@ -2490,7 +2491,7 @@ resource_name = "tileset"
 138/shapes = [  ]
 138/z_index = 0
 139/name = ""
-139/texture = SubResource( 3 )
+139/texture = SubResource( 2 )
 139/tex_offset = Vector2( 0, -16 )
 139/modulate = Color( 1, 1, 1, 1 )
 139/region = Rect2( 288, 96, 16, 16 )
@@ -2504,7 +2505,7 @@ resource_name = "tileset"
 139/shapes = [  ]
 139/z_index = 0
 140/name = ""
-140/texture = SubResource( 3 )
+140/texture = SubResource( 2 )
 140/tex_offset = Vector2( 0, -16 )
 140/modulate = Color( 1, 1, 1, 1 )
 140/region = Rect2( 304, 96, 16, 16 )
@@ -2518,7 +2519,7 @@ resource_name = "tileset"
 140/shapes = [  ]
 140/z_index = 0
 141/name = ""
-141/texture = SubResource( 3 )
+141/texture = SubResource( 2 )
 141/tex_offset = Vector2( 0, -16 )
 141/modulate = Color( 1, 1, 1, 1 )
 141/region = Rect2( 0, 112, 16, 16 )
@@ -2532,7 +2533,7 @@ resource_name = "tileset"
 141/shapes = [  ]
 141/z_index = 0
 142/name = ""
-142/texture = SubResource( 3 )
+142/texture = SubResource( 2 )
 142/tex_offset = Vector2( 0, -16 )
 142/modulate = Color( 1, 1, 1, 1 )
 142/region = Rect2( 16, 112, 16, 16 )
@@ -2546,7 +2547,7 @@ resource_name = "tileset"
 142/shapes = [  ]
 142/z_index = 0
 143/name = ""
-143/texture = SubResource( 3 )
+143/texture = SubResource( 2 )
 143/tex_offset = Vector2( 0, -16 )
 143/modulate = Color( 1, 1, 1, 1 )
 143/region = Rect2( 32, 112, 16, 16 )
@@ -2560,7 +2561,7 @@ resource_name = "tileset"
 143/shapes = [  ]
 143/z_index = 0
 144/name = ""
-144/texture = SubResource( 3 )
+144/texture = SubResource( 2 )
 144/tex_offset = Vector2( 0, -16 )
 144/modulate = Color( 1, 1, 1, 1 )
 144/region = Rect2( 48, 112, 16, 16 )
@@ -2574,7 +2575,7 @@ resource_name = "tileset"
 144/shapes = [  ]
 144/z_index = 0
 145/name = ""
-145/texture = SubResource( 3 )
+145/texture = SubResource( 2 )
 145/tex_offset = Vector2( 0, -16 )
 145/modulate = Color( 1, 1, 1, 1 )
 145/region = Rect2( 64, 112, 16, 16 )
@@ -2588,7 +2589,7 @@ resource_name = "tileset"
 145/shapes = [  ]
 145/z_index = 0
 146/name = ""
-146/texture = SubResource( 3 )
+146/texture = SubResource( 2 )
 146/tex_offset = Vector2( 0, -16 )
 146/modulate = Color( 1, 1, 1, 1 )
 146/region = Rect2( 80, 112, 16, 16 )
@@ -2602,7 +2603,7 @@ resource_name = "tileset"
 146/shapes = [  ]
 146/z_index = 0
 147/name = ""
-147/texture = SubResource( 3 )
+147/texture = SubResource( 2 )
 147/tex_offset = Vector2( 0, -16 )
 147/modulate = Color( 1, 1, 1, 1 )
 147/region = Rect2( 96, 112, 16, 16 )
@@ -2616,7 +2617,7 @@ resource_name = "tileset"
 147/shapes = [  ]
 147/z_index = 0
 148/name = ""
-148/texture = SubResource( 3 )
+148/texture = SubResource( 2 )
 148/tex_offset = Vector2( 0, -16 )
 148/modulate = Color( 1, 1, 1, 1 )
 148/region = Rect2( 112, 112, 16, 16 )
@@ -2630,7 +2631,7 @@ resource_name = "tileset"
 148/shapes = [  ]
 148/z_index = 0
 149/name = ""
-149/texture = SubResource( 3 )
+149/texture = SubResource( 2 )
 149/tex_offset = Vector2( 0, -16 )
 149/modulate = Color( 1, 1, 1, 1 )
 149/region = Rect2( 128, 112, 16, 16 )
@@ -2644,7 +2645,7 @@ resource_name = "tileset"
 149/shapes = [  ]
 149/z_index = 0
 150/name = ""
-150/texture = SubResource( 3 )
+150/texture = SubResource( 2 )
 150/tex_offset = Vector2( 0, -16 )
 150/modulate = Color( 1, 1, 1, 1 )
 150/region = Rect2( 144, 112, 16, 16 )
@@ -2658,7 +2659,7 @@ resource_name = "tileset"
 150/shapes = [  ]
 150/z_index = 0
 151/name = ""
-151/texture = SubResource( 3 )
+151/texture = SubResource( 2 )
 151/tex_offset = Vector2( 0, -16 )
 151/modulate = Color( 1, 1, 1, 1 )
 151/region = Rect2( 160, 112, 16, 16 )
@@ -2672,7 +2673,7 @@ resource_name = "tileset"
 151/shapes = [  ]
 151/z_index = 0
 152/name = ""
-152/texture = SubResource( 3 )
+152/texture = SubResource( 2 )
 152/tex_offset = Vector2( 0, -16 )
 152/modulate = Color( 1, 1, 1, 1 )
 152/region = Rect2( 176, 112, 16, 16 )
@@ -2686,7 +2687,7 @@ resource_name = "tileset"
 152/shapes = [  ]
 152/z_index = 0
 153/name = ""
-153/texture = SubResource( 3 )
+153/texture = SubResource( 2 )
 153/tex_offset = Vector2( 0, -16 )
 153/modulate = Color( 1, 1, 1, 1 )
 153/region = Rect2( 192, 112, 16, 16 )
@@ -2700,7 +2701,7 @@ resource_name = "tileset"
 153/shapes = [  ]
 153/z_index = 0
 154/name = ""
-154/texture = SubResource( 3 )
+154/texture = SubResource( 2 )
 154/tex_offset = Vector2( 0, -16 )
 154/modulate = Color( 1, 1, 1, 1 )
 154/region = Rect2( 208, 112, 16, 16 )
@@ -2714,7 +2715,7 @@ resource_name = "tileset"
 154/shapes = [  ]
 154/z_index = 0
 155/name = ""
-155/texture = SubResource( 3 )
+155/texture = SubResource( 2 )
 155/tex_offset = Vector2( 0, -16 )
 155/modulate = Color( 1, 1, 1, 1 )
 155/region = Rect2( 224, 112, 16, 16 )
@@ -2728,7 +2729,7 @@ resource_name = "tileset"
 155/shapes = [  ]
 155/z_index = 0
 156/name = ""
-156/texture = SubResource( 3 )
+156/texture = SubResource( 2 )
 156/tex_offset = Vector2( 0, -16 )
 156/modulate = Color( 1, 1, 1, 1 )
 156/region = Rect2( 240, 112, 16, 16 )
@@ -2742,7 +2743,7 @@ resource_name = "tileset"
 156/shapes = [  ]
 156/z_index = 0
 157/name = ""
-157/texture = SubResource( 3 )
+157/texture = SubResource( 2 )
 157/tex_offset = Vector2( 0, -16 )
 157/modulate = Color( 1, 1, 1, 1 )
 157/region = Rect2( 256, 112, 16, 16 )
@@ -2756,7 +2757,7 @@ resource_name = "tileset"
 157/shapes = [  ]
 157/z_index = 0
 158/name = ""
-158/texture = SubResource( 3 )
+158/texture = SubResource( 2 )
 158/tex_offset = Vector2( 0, -16 )
 158/modulate = Color( 1, 1, 1, 1 )
 158/region = Rect2( 272, 112, 16, 16 )
@@ -2770,7 +2771,7 @@ resource_name = "tileset"
 158/shapes = [  ]
 158/z_index = 0
 159/name = ""
-159/texture = SubResource( 3 )
+159/texture = SubResource( 2 )
 159/tex_offset = Vector2( 0, -16 )
 159/modulate = Color( 1, 1, 1, 1 )
 159/region = Rect2( 288, 112, 16, 16 )
@@ -2784,7 +2785,7 @@ resource_name = "tileset"
 159/shapes = [  ]
 159/z_index = 0
 160/name = ""
-160/texture = SubResource( 3 )
+160/texture = SubResource( 2 )
 160/tex_offset = Vector2( 0, -16 )
 160/modulate = Color( 1, 1, 1, 1 )
 160/region = Rect2( 304, 112, 16, 16 )
@@ -2798,7 +2799,7 @@ resource_name = "tileset"
 160/shapes = [  ]
 160/z_index = 0
 161/name = ""
-161/texture = SubResource( 3 )
+161/texture = SubResource( 2 )
 161/tex_offset = Vector2( 0, -16 )
 161/modulate = Color( 1, 1, 1, 1 )
 161/region = Rect2( 0, 128, 16, 16 )
@@ -2812,7 +2813,7 @@ resource_name = "tileset"
 161/shapes = [  ]
 161/z_index = 0
 162/name = ""
-162/texture = SubResource( 3 )
+162/texture = SubResource( 2 )
 162/tex_offset = Vector2( 0, -16 )
 162/modulate = Color( 1, 1, 1, 1 )
 162/region = Rect2( 16, 128, 16, 16 )
@@ -2826,7 +2827,7 @@ resource_name = "tileset"
 162/shapes = [  ]
 162/z_index = 0
 163/name = ""
-163/texture = SubResource( 3 )
+163/texture = SubResource( 2 )
 163/tex_offset = Vector2( 0, -16 )
 163/modulate = Color( 1, 1, 1, 1 )
 163/region = Rect2( 32, 128, 16, 16 )
@@ -2840,7 +2841,7 @@ resource_name = "tileset"
 163/shapes = [  ]
 163/z_index = 0
 164/name = ""
-164/texture = SubResource( 3 )
+164/texture = SubResource( 2 )
 164/tex_offset = Vector2( 0, -16 )
 164/modulate = Color( 1, 1, 1, 1 )
 164/region = Rect2( 48, 128, 16, 16 )
@@ -2854,7 +2855,7 @@ resource_name = "tileset"
 164/shapes = [  ]
 164/z_index = 0
 165/name = ""
-165/texture = SubResource( 3 )
+165/texture = SubResource( 2 )
 165/tex_offset = Vector2( 0, -16 )
 165/modulate = Color( 1, 1, 1, 1 )
 165/region = Rect2( 64, 128, 16, 16 )
@@ -2868,7 +2869,7 @@ resource_name = "tileset"
 165/shapes = [  ]
 165/z_index = 0
 166/name = ""
-166/texture = SubResource( 3 )
+166/texture = SubResource( 2 )
 166/tex_offset = Vector2( 0, -16 )
 166/modulate = Color( 1, 1, 1, 1 )
 166/region = Rect2( 80, 128, 16, 16 )
@@ -2882,7 +2883,7 @@ resource_name = "tileset"
 166/shapes = [  ]
 166/z_index = 0
 167/name = ""
-167/texture = SubResource( 3 )
+167/texture = SubResource( 2 )
 167/tex_offset = Vector2( 0, -16 )
 167/modulate = Color( 1, 1, 1, 1 )
 167/region = Rect2( 96, 128, 16, 16 )
@@ -2896,7 +2897,7 @@ resource_name = "tileset"
 167/shapes = [  ]
 167/z_index = 0
 168/name = ""
-168/texture = SubResource( 3 )
+168/texture = SubResource( 2 )
 168/tex_offset = Vector2( 0, -16 )
 168/modulate = Color( 1, 1, 1, 1 )
 168/region = Rect2( 112, 128, 16, 16 )
@@ -2910,7 +2911,7 @@ resource_name = "tileset"
 168/shapes = [  ]
 168/z_index = 0
 169/name = ""
-169/texture = SubResource( 3 )
+169/texture = SubResource( 2 )
 169/tex_offset = Vector2( 0, -16 )
 169/modulate = Color( 1, 1, 1, 1 )
 169/region = Rect2( 128, 128, 16, 16 )
@@ -2924,7 +2925,7 @@ resource_name = "tileset"
 169/shapes = [  ]
 169/z_index = 0
 170/name = ""
-170/texture = SubResource( 3 )
+170/texture = SubResource( 2 )
 170/tex_offset = Vector2( 0, -16 )
 170/modulate = Color( 1, 1, 1, 1 )
 170/region = Rect2( 144, 128, 16, 16 )
@@ -2938,7 +2939,7 @@ resource_name = "tileset"
 170/shapes = [  ]
 170/z_index = 0
 171/name = ""
-171/texture = SubResource( 3 )
+171/texture = SubResource( 2 )
 171/tex_offset = Vector2( 0, -16 )
 171/modulate = Color( 1, 1, 1, 1 )
 171/region = Rect2( 160, 128, 16, 16 )
@@ -2952,7 +2953,7 @@ resource_name = "tileset"
 171/shapes = [  ]
 171/z_index = 0
 172/name = ""
-172/texture = SubResource( 3 )
+172/texture = SubResource( 2 )
 172/tex_offset = Vector2( 0, -16 )
 172/modulate = Color( 1, 1, 1, 1 )
 172/region = Rect2( 176, 128, 16, 16 )
@@ -2966,7 +2967,7 @@ resource_name = "tileset"
 172/shapes = [  ]
 172/z_index = 0
 173/name = ""
-173/texture = SubResource( 3 )
+173/texture = SubResource( 2 )
 173/tex_offset = Vector2( 0, -16 )
 173/modulate = Color( 1, 1, 1, 1 )
 173/region = Rect2( 192, 128, 16, 16 )
@@ -2980,7 +2981,7 @@ resource_name = "tileset"
 173/shapes = [  ]
 173/z_index = 0
 174/name = ""
-174/texture = SubResource( 3 )
+174/texture = SubResource( 2 )
 174/tex_offset = Vector2( 0, -16 )
 174/modulate = Color( 1, 1, 1, 1 )
 174/region = Rect2( 208, 128, 16, 16 )
@@ -2994,7 +2995,7 @@ resource_name = "tileset"
 174/shapes = [  ]
 174/z_index = 0
 175/name = ""
-175/texture = SubResource( 3 )
+175/texture = SubResource( 2 )
 175/tex_offset = Vector2( 0, -16 )
 175/modulate = Color( 1, 1, 1, 1 )
 175/region = Rect2( 224, 128, 16, 16 )
@@ -3008,7 +3009,7 @@ resource_name = "tileset"
 175/shapes = [  ]
 175/z_index = 0
 176/name = ""
-176/texture = SubResource( 3 )
+176/texture = SubResource( 2 )
 176/tex_offset = Vector2( 0, -16 )
 176/modulate = Color( 1, 1, 1, 1 )
 176/region = Rect2( 240, 128, 16, 16 )
@@ -3022,7 +3023,7 @@ resource_name = "tileset"
 176/shapes = [  ]
 176/z_index = 0
 177/name = ""
-177/texture = SubResource( 3 )
+177/texture = SubResource( 2 )
 177/tex_offset = Vector2( 0, -16 )
 177/modulate = Color( 1, 1, 1, 1 )
 177/region = Rect2( 256, 128, 16, 16 )
@@ -3036,7 +3037,7 @@ resource_name = "tileset"
 177/shapes = [  ]
 177/z_index = 0
 178/name = ""
-178/texture = SubResource( 3 )
+178/texture = SubResource( 2 )
 178/tex_offset = Vector2( 0, -16 )
 178/modulate = Color( 1, 1, 1, 1 )
 178/region = Rect2( 272, 128, 16, 16 )
@@ -3050,7 +3051,7 @@ resource_name = "tileset"
 178/shapes = [  ]
 178/z_index = 0
 179/name = ""
-179/texture = SubResource( 3 )
+179/texture = SubResource( 2 )
 179/tex_offset = Vector2( 0, -16 )
 179/modulate = Color( 1, 1, 1, 1 )
 179/region = Rect2( 288, 128, 16, 16 )
@@ -3064,7 +3065,7 @@ resource_name = "tileset"
 179/shapes = [  ]
 179/z_index = 0
 180/name = ""
-180/texture = SubResource( 3 )
+180/texture = SubResource( 2 )
 180/tex_offset = Vector2( 0, -16 )
 180/modulate = Color( 1, 1, 1, 1 )
 180/region = Rect2( 304, 128, 16, 16 )
@@ -3078,7 +3079,7 @@ resource_name = "tileset"
 180/shapes = [  ]
 180/z_index = 0
 181/name = ""
-181/texture = SubResource( 3 )
+181/texture = SubResource( 2 )
 181/tex_offset = Vector2( 0, -16 )
 181/modulate = Color( 1, 1, 1, 1 )
 181/region = Rect2( 0, 144, 16, 16 )
@@ -3092,7 +3093,7 @@ resource_name = "tileset"
 181/shapes = [  ]
 181/z_index = 0
 182/name = ""
-182/texture = SubResource( 3 )
+182/texture = SubResource( 2 )
 182/tex_offset = Vector2( 0, -16 )
 182/modulate = Color( 1, 1, 1, 1 )
 182/region = Rect2( 16, 144, 16, 16 )
@@ -3106,7 +3107,7 @@ resource_name = "tileset"
 182/shapes = [  ]
 182/z_index = 0
 183/name = ""
-183/texture = SubResource( 3 )
+183/texture = SubResource( 2 )
 183/tex_offset = Vector2( 0, -16 )
 183/modulate = Color( 1, 1, 1, 1 )
 183/region = Rect2( 32, 144, 16, 16 )
@@ -3120,7 +3121,7 @@ resource_name = "tileset"
 183/shapes = [  ]
 183/z_index = 0
 184/name = ""
-184/texture = SubResource( 3 )
+184/texture = SubResource( 2 )
 184/tex_offset = Vector2( 0, -16 )
 184/modulate = Color( 1, 1, 1, 1 )
 184/region = Rect2( 48, 144, 16, 16 )
@@ -3134,7 +3135,7 @@ resource_name = "tileset"
 184/shapes = [  ]
 184/z_index = 0
 185/name = ""
-185/texture = SubResource( 3 )
+185/texture = SubResource( 2 )
 185/tex_offset = Vector2( 0, -16 )
 185/modulate = Color( 1, 1, 1, 1 )
 185/region = Rect2( 64, 144, 16, 16 )
@@ -3148,7 +3149,7 @@ resource_name = "tileset"
 185/shapes = [  ]
 185/z_index = 0
 186/name = ""
-186/texture = SubResource( 3 )
+186/texture = SubResource( 2 )
 186/tex_offset = Vector2( 0, -16 )
 186/modulate = Color( 1, 1, 1, 1 )
 186/region = Rect2( 80, 144, 16, 16 )
@@ -3162,7 +3163,7 @@ resource_name = "tileset"
 186/shapes = [  ]
 186/z_index = 0
 187/name = ""
-187/texture = SubResource( 3 )
+187/texture = SubResource( 2 )
 187/tex_offset = Vector2( 0, -16 )
 187/modulate = Color( 1, 1, 1, 1 )
 187/region = Rect2( 96, 144, 16, 16 )
@@ -3176,7 +3177,7 @@ resource_name = "tileset"
 187/shapes = [  ]
 187/z_index = 0
 188/name = ""
-188/texture = SubResource( 3 )
+188/texture = SubResource( 2 )
 188/tex_offset = Vector2( 0, -16 )
 188/modulate = Color( 1, 1, 1, 1 )
 188/region = Rect2( 112, 144, 16, 16 )
@@ -3190,7 +3191,7 @@ resource_name = "tileset"
 188/shapes = [  ]
 188/z_index = 0
 189/name = ""
-189/texture = SubResource( 3 )
+189/texture = SubResource( 2 )
 189/tex_offset = Vector2( 0, -16 )
 189/modulate = Color( 1, 1, 1, 1 )
 189/region = Rect2( 128, 144, 16, 16 )
@@ -3204,7 +3205,7 @@ resource_name = "tileset"
 189/shapes = [  ]
 189/z_index = 0
 190/name = ""
-190/texture = SubResource( 3 )
+190/texture = SubResource( 2 )
 190/tex_offset = Vector2( 0, -16 )
 190/modulate = Color( 1, 1, 1, 1 )
 190/region = Rect2( 144, 144, 16, 16 )
@@ -3218,7 +3219,7 @@ resource_name = "tileset"
 190/shapes = [  ]
 190/z_index = 0
 191/name = ""
-191/texture = SubResource( 3 )
+191/texture = SubResource( 2 )
 191/tex_offset = Vector2( 0, -16 )
 191/modulate = Color( 1, 1, 1, 1 )
 191/region = Rect2( 160, 144, 16, 16 )
@@ -3232,7 +3233,7 @@ resource_name = "tileset"
 191/shapes = [  ]
 191/z_index = 0
 192/name = ""
-192/texture = SubResource( 3 )
+192/texture = SubResource( 2 )
 192/tex_offset = Vector2( 0, -16 )
 192/modulate = Color( 1, 1, 1, 1 )
 192/region = Rect2( 176, 144, 16, 16 )
@@ -3246,7 +3247,7 @@ resource_name = "tileset"
 192/shapes = [  ]
 192/z_index = 0
 193/name = ""
-193/texture = SubResource( 3 )
+193/texture = SubResource( 2 )
 193/tex_offset = Vector2( 0, -16 )
 193/modulate = Color( 1, 1, 1, 1 )
 193/region = Rect2( 192, 144, 16, 16 )
@@ -3260,7 +3261,7 @@ resource_name = "tileset"
 193/shapes = [  ]
 193/z_index = 0
 194/name = ""
-194/texture = SubResource( 3 )
+194/texture = SubResource( 2 )
 194/tex_offset = Vector2( 0, -16 )
 194/modulate = Color( 1, 1, 1, 1 )
 194/region = Rect2( 208, 144, 16, 16 )
@@ -3274,7 +3275,7 @@ resource_name = "tileset"
 194/shapes = [  ]
 194/z_index = 0
 195/name = ""
-195/texture = SubResource( 3 )
+195/texture = SubResource( 2 )
 195/tex_offset = Vector2( 0, -16 )
 195/modulate = Color( 1, 1, 1, 1 )
 195/region = Rect2( 224, 144, 16, 16 )
@@ -3288,7 +3289,7 @@ resource_name = "tileset"
 195/shapes = [  ]
 195/z_index = 0
 196/name = ""
-196/texture = SubResource( 3 )
+196/texture = SubResource( 2 )
 196/tex_offset = Vector2( 0, -16 )
 196/modulate = Color( 1, 1, 1, 1 )
 196/region = Rect2( 240, 144, 16, 16 )
@@ -3302,7 +3303,7 @@ resource_name = "tileset"
 196/shapes = [  ]
 196/z_index = 0
 197/name = ""
-197/texture = SubResource( 3 )
+197/texture = SubResource( 2 )
 197/tex_offset = Vector2( 0, -16 )
 197/modulate = Color( 1, 1, 1, 1 )
 197/region = Rect2( 256, 144, 16, 16 )
@@ -3316,7 +3317,7 @@ resource_name = "tileset"
 197/shapes = [  ]
 197/z_index = 0
 198/name = ""
-198/texture = SubResource( 3 )
+198/texture = SubResource( 2 )
 198/tex_offset = Vector2( 0, -16 )
 198/modulate = Color( 1, 1, 1, 1 )
 198/region = Rect2( 272, 144, 16, 16 )
@@ -3330,7 +3331,7 @@ resource_name = "tileset"
 198/shapes = [  ]
 198/z_index = 0
 199/name = ""
-199/texture = SubResource( 3 )
+199/texture = SubResource( 2 )
 199/tex_offset = Vector2( 0, -16 )
 199/modulate = Color( 1, 1, 1, 1 )
 199/region = Rect2( 288, 144, 16, 16 )
@@ -3344,7 +3345,7 @@ resource_name = "tileset"
 199/shapes = [  ]
 199/z_index = 0
 200/name = ""
-200/texture = SubResource( 3 )
+200/texture = SubResource( 2 )
 200/tex_offset = Vector2( 0, -16 )
 200/modulate = Color( 1, 1, 1, 1 )
 200/region = Rect2( 304, 144, 16, 16 )
@@ -3358,7 +3359,7 @@ resource_name = "tileset"
 200/shapes = [  ]
 200/z_index = 0
 201/name = ""
-201/texture = SubResource( 3 )
+201/texture = SubResource( 2 )
 201/tex_offset = Vector2( 0, -16 )
 201/modulate = Color( 1, 1, 1, 1 )
 201/region = Rect2( 0, 160, 16, 16 )
@@ -3372,7 +3373,7 @@ resource_name = "tileset"
 201/shapes = [  ]
 201/z_index = 0
 202/name = ""
-202/texture = SubResource( 3 )
+202/texture = SubResource( 2 )
 202/tex_offset = Vector2( 0, -16 )
 202/modulate = Color( 1, 1, 1, 1 )
 202/region = Rect2( 16, 160, 16, 16 )
@@ -3386,7 +3387,7 @@ resource_name = "tileset"
 202/shapes = [  ]
 202/z_index = 0
 203/name = ""
-203/texture = SubResource( 3 )
+203/texture = SubResource( 2 )
 203/tex_offset = Vector2( 0, -16 )
 203/modulate = Color( 1, 1, 1, 1 )
 203/region = Rect2( 32, 160, 16, 16 )
@@ -3400,7 +3401,7 @@ resource_name = "tileset"
 203/shapes = [  ]
 203/z_index = 0
 204/name = ""
-204/texture = SubResource( 3 )
+204/texture = SubResource( 2 )
 204/tex_offset = Vector2( 0, -16 )
 204/modulate = Color( 1, 1, 1, 1 )
 204/region = Rect2( 48, 160, 16, 16 )
@@ -3414,7 +3415,7 @@ resource_name = "tileset"
 204/shapes = [  ]
 204/z_index = 0
 205/name = ""
-205/texture = SubResource( 3 )
+205/texture = SubResource( 2 )
 205/tex_offset = Vector2( 0, -16 )
 205/modulate = Color( 1, 1, 1, 1 )
 205/region = Rect2( 64, 160, 16, 16 )
@@ -3428,7 +3429,7 @@ resource_name = "tileset"
 205/shapes = [  ]
 205/z_index = 0
 206/name = ""
-206/texture = SubResource( 3 )
+206/texture = SubResource( 2 )
 206/tex_offset = Vector2( 0, -16 )
 206/modulate = Color( 1, 1, 1, 1 )
 206/region = Rect2( 80, 160, 16, 16 )
@@ -3442,7 +3443,7 @@ resource_name = "tileset"
 206/shapes = [  ]
 206/z_index = 0
 207/name = ""
-207/texture = SubResource( 3 )
+207/texture = SubResource( 2 )
 207/tex_offset = Vector2( 0, -16 )
 207/modulate = Color( 1, 1, 1, 1 )
 207/region = Rect2( 96, 160, 16, 16 )
@@ -3456,7 +3457,7 @@ resource_name = "tileset"
 207/shapes = [  ]
 207/z_index = 0
 208/name = ""
-208/texture = SubResource( 3 )
+208/texture = SubResource( 2 )
 208/tex_offset = Vector2( 0, -16 )
 208/modulate = Color( 1, 1, 1, 1 )
 208/region = Rect2( 112, 160, 16, 16 )
@@ -3470,7 +3471,7 @@ resource_name = "tileset"
 208/shapes = [  ]
 208/z_index = 0
 209/name = ""
-209/texture = SubResource( 3 )
+209/texture = SubResource( 2 )
 209/tex_offset = Vector2( 0, -16 )
 209/modulate = Color( 1, 1, 1, 1 )
 209/region = Rect2( 128, 160, 16, 16 )
@@ -3484,7 +3485,7 @@ resource_name = "tileset"
 209/shapes = [  ]
 209/z_index = 0
 210/name = ""
-210/texture = SubResource( 3 )
+210/texture = SubResource( 2 )
 210/tex_offset = Vector2( 0, -16 )
 210/modulate = Color( 1, 1, 1, 1 )
 210/region = Rect2( 144, 160, 16, 16 )
@@ -3493,19 +3494,19 @@ resource_name = "tileset"
 210/navigation_offset = Vector2( 0, 0 )
 210/shape_offset = Vector2( 8, -8 )
 210/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-210/shape = SubResource( 15 )
+210/shape = SubResource( 54 )
 210/shape_one_way = false
 210/shape_one_way_margin = 1.0
 210/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 54 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 210/z_index = 0
 211/name = ""
-211/texture = SubResource( 3 )
+211/texture = SubResource( 2 )
 211/tex_offset = Vector2( 0, -16 )
 211/modulate = Color( 1, 1, 1, 1 )
 211/region = Rect2( 160, 160, 16, 16 )
@@ -3514,19 +3515,19 @@ resource_name = "tileset"
 211/navigation_offset = Vector2( 0, 0 )
 211/shape_offset = Vector2( 8, -8 )
 211/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-211/shape = SubResource( 16 )
+211/shape = SubResource( 55 )
 211/shape_one_way = false
 211/shape_one_way_margin = 1.0
 211/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 55 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 211/z_index = 0
 212/name = ""
-212/texture = SubResource( 3 )
+212/texture = SubResource( 2 )
 212/tex_offset = Vector2( 0, -16 )
 212/modulate = Color( 1, 1, 1, 1 )
 212/region = Rect2( 176, 160, 16, 16 )
@@ -3535,19 +3536,19 @@ resource_name = "tileset"
 212/navigation_offset = Vector2( 0, 0 )
 212/shape_offset = Vector2( 8, -8 )
 212/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-212/shape = SubResource( 17 )
+212/shape = SubResource( 56 )
 212/shape_one_way = false
 212/shape_one_way_margin = 1.0
 212/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 56 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 212/z_index = 0
 213/name = ""
-213/texture = SubResource( 3 )
+213/texture = SubResource( 2 )
 213/tex_offset = Vector2( 0, -16 )
 213/modulate = Color( 1, 1, 1, 1 )
 213/region = Rect2( 192, 160, 16, 16 )
@@ -3556,19 +3557,19 @@ resource_name = "tileset"
 213/navigation_offset = Vector2( 0, 0 )
 213/shape_offset = Vector2( 8, -8 )
 213/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-213/shape = SubResource( 18 )
+213/shape = SubResource( 57 )
 213/shape_one_way = false
 213/shape_one_way_margin = 1.0
 213/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 57 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 213/z_index = 0
 214/name = ""
-214/texture = SubResource( 3 )
+214/texture = SubResource( 2 )
 214/tex_offset = Vector2( 0, -16 )
 214/modulate = Color( 1, 1, 1, 1 )
 214/region = Rect2( 208, 160, 16, 16 )
@@ -3577,19 +3578,19 @@ resource_name = "tileset"
 214/navigation_offset = Vector2( 0, 0 )
 214/shape_offset = Vector2( 8, -8 )
 214/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-214/shape = SubResource( 19 )
+214/shape = SubResource( 58 )
 214/shape_one_way = false
 214/shape_one_way_margin = 1.0
 214/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 58 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 214/z_index = 0
 215/name = ""
-215/texture = SubResource( 3 )
+215/texture = SubResource( 2 )
 215/tex_offset = Vector2( 0, -16 )
 215/modulate = Color( 1, 1, 1, 1 )
 215/region = Rect2( 224, 160, 16, 16 )
@@ -3598,19 +3599,19 @@ resource_name = "tileset"
 215/navigation_offset = Vector2( 0, 0 )
 215/shape_offset = Vector2( 8, -8 )
 215/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-215/shape = SubResource( 20 )
+215/shape = SubResource( 59 )
 215/shape_one_way = false
 215/shape_one_way_margin = 1.0
 215/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 59 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 215/z_index = 0
 216/name = ""
-216/texture = SubResource( 3 )
+216/texture = SubResource( 2 )
 216/tex_offset = Vector2( 0, -16 )
 216/modulate = Color( 1, 1, 1, 1 )
 216/region = Rect2( 240, 160, 16, 16 )
@@ -3619,19 +3620,19 @@ resource_name = "tileset"
 216/navigation_offset = Vector2( 0, 0 )
 216/shape_offset = Vector2( 8, -8 )
 216/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-216/shape = SubResource( 21 )
+216/shape = SubResource( 60 )
 216/shape_one_way = false
 216/shape_one_way_margin = 1.0
 216/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 60 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 216/z_index = 0
 217/name = ""
-217/texture = SubResource( 3 )
+217/texture = SubResource( 2 )
 217/tex_offset = Vector2( 0, -16 )
 217/modulate = Color( 1, 1, 1, 1 )
 217/region = Rect2( 256, 160, 16, 16 )
@@ -3640,19 +3641,19 @@ resource_name = "tileset"
 217/navigation_offset = Vector2( 0, 0 )
 217/shape_offset = Vector2( 8, -8 )
 217/shape_transform = Transform2D( 1, 0, 0, 1, 8, -8 )
-217/shape = SubResource( 22 )
+217/shape = SubResource( 61 )
 217/shape_one_way = false
 217/shape_one_way_margin = 1.0
 217/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 61 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, -8 )
 } ]
 217/z_index = 0
 218/name = ""
-218/texture = SubResource( 3 )
+218/texture = SubResource( 2 )
 218/tex_offset = Vector2( 0, -16 )
 218/modulate = Color( 1, 1, 1, 1 )
 218/region = Rect2( 272, 160, 16, 16 )
@@ -3666,7 +3667,7 @@ resource_name = "tileset"
 218/shapes = [  ]
 218/z_index = 0
 219/name = ""
-219/texture = SubResource( 3 )
+219/texture = SubResource( 2 )
 219/tex_offset = Vector2( 0, -16 )
 219/modulate = Color( 1, 1, 1, 1 )
 219/region = Rect2( 288, 160, 16, 16 )
@@ -3680,7 +3681,7 @@ resource_name = "tileset"
 219/shapes = [  ]
 219/z_index = 0
 220/name = ""
-220/texture = SubResource( 3 )
+220/texture = SubResource( 2 )
 220/tex_offset = Vector2( 0, -16 )
 220/modulate = Color( 1, 1, 1, 1 )
 220/region = Rect2( 304, 160, 16, 16 )
@@ -3704,7 +3705,7 @@ __meta__ = {
 "version": 1.2
 }
 
-[node name="level01" type="Node2D"]
+[node name="level00" type="Node2D"]
 __meta__ = {
 "height": 22,
 "infinite": 0,
@@ -3714,7 +3715,7 @@ __meta__ = {
 "tilewidth": 16,
 "type": "map",
 "version": 1.2,
-"width": 32
+"width": 64
 }
 
 [node name="fondo" type="TileMap" parent="."]
@@ -3725,12 +3726,12 @@ cell_y_sort = true
 compatibility_mode = true
 cell_clip_uv = true
 format = 1
-tile_data = PoolIntArray( 0, 75, 0, 1, 63, 0, 2, 64, 0, 3, 76, 0, 4, 75, 0, 5, 76, 0, 6, 75, 0, 7, 76, 0, 8, 75, 0, 9, 76, 0, 10, 75, 0, 11, 76, 0, 12, 75, 0, 13, 76, 0, 14, 75, 0, 15, 76, 0, 16, 75, 0, 17, 76, 0, 18, 75, 0, 19, 76, 0, 20, 75, 0, 21, 76, 0, 22, 75, 0, 23, 76, 0, 24, 75, 0, 25, 76, 0, 26, 75, 0, 27, 76, 0, 28, 75, 0, 29, 67, 0, 30, 68, 0, 31, 76, 0, 65536, 95, 0, 65537, 83, 0, 65538, 84, 0, 65539, 96, 0, 65540, 95, 0, 65541, 96, 0, 65542, 95, 0, 65543, 96, 0, 65544, 95, 0, 65545, 96, 0, 65546, 95, 0, 65547, 96, 0, 65548, 95, 0, 65549, 96, 0, 65550, 95, 0, 65551, 96, 0, 65552, 95, 0, 65553, 96, 0, 65554, 95, 0, 65555, 96, 0, 65556, 95, 0, 65557, 96, 0, 65558, 95, 0, 65559, 96, 0, 65560, 95, 0, 65561, 96, 0, 65562, 95, 0, 65563, 96, 0, 65564, 95, 0, 65565, 87, 0, 65566, 88, 0, 65567, 96, 0, 131072, 75, 0, 131073, 76, 0, 131074, 75, 0, 131075, 76, 0, 131076, 75, 0, 131077, 76, 0, 131078, 75, 0, 131079, 76, 0, 131080, 75, 0, 131081, 76, 0, 131082, 75, 0, 131083, 76, 0, 131084, 75, 0, 131085, 76, 0, 131086, 75, 0, 131087, 76, 0, 131088, 75, 0, 131089, 76, 0, 131090, 75, 0, 131091, 76, 0, 131092, 75, 0, 131093, 76, 0, 131094, 75, 0, 131095, 76, 0, 131096, 75, 0, 131097, 76, 0, 131098, 75, 0, 131099, 76, 0, 131100, 75, 0, 131101, 76, 0, 131102, 75, 0, 131103, 76, 0, 196608, 95, 0, 196609, 96, 0, 196610, 95, 0, 196611, 96, 0, 196612, 95, 0, 196613, 96, 0, 196614, 95, 0, 196615, 96, 0, 196616, 112, 0, 196617, 113, 0, 196618, 95, 0, 196619, 96, 0, 196620, 95, 0, 196621, 96, 0, 196622, 95, 0, 196623, 69, 0, 196624, 70, 0, 196625, 96, 0, 196626, 95, 0, 196627, 96, 0, 196628, 95, 0, 196629, 96, 0, 196630, 112, 0, 196631, 113, 0, 196632, 95, 0, 196633, 96, 0, 196634, 95, 0, 196635, 96, 0, 196636, 95, 0, 196637, 96, 0, 196638, 95, 0, 196639, 96, 0, 262144, 75, 0, 262145, 76, 0, 262146, 75, 0, 262147, 76, 0, 262148, 75, 0, 262149, 76, 0, 262150, 75, 0, 262151, 76, 0, 262152, 132, 0, 262153, 133, 0, 262154, 69, 0, 262155, 70, 0, 262156, 113, 0, 262157, 76, 0, 262158, 75, 0, 262159, 89, 0, 262160, 90, 0, 262161, 76, 0, 262162, 75, 0, 262163, 112, 0, 262164, 69, 0, 262165, 70, 0, 262166, 132, 0, 262167, 133, 0, 262168, 75, 0, 262169, 76, 0, 262170, 75, 0, 262171, 76, 0, 262172, 75, 0, 262173, 76, 0, 262174, 75, 0, 262175, 76, 0, 327680, 95, 0, 327681, 96, 0, 327682, 95, 0, 327683, 96, 0, 327684, 95, 0, 327685, 96, 0, 327686, 95, 0, 327687, 96, 0, 327688, 95, 0, 327689, 96, 0, 327690, 89, 0, 327691, 90, 0, 327692, 133, 0, 327693, 96, 0, 327694, 95, 0, 327695, 96, 0, 327696, 95, 0, 327697, 96, 0, 327698, 95, 0, 327699, 132, 0, 327700, 89, 0, 327701, 90, 0, 327702, 95, 0, 327703, 96, 0, 327704, 95, 0, 327705, 96, 0, 327706, 95, 0, 327707, 96, 0, 327708, 95, 0, 327709, 96, 0, 327710, 95, 0, 327711, 96, 0, 393216, 75, 0, 393217, 76, 0, 393218, 75, 0, 393219, 76, 0, 393220, 75, 0, 393221, 76, 0, 393222, 75, 0, 393223, 76, 0, 393224, 75, 0, 393225, 76, 0, 393226, 75, 0, 393227, 76, 0, 393228, 75, 0, 393229, 76, 0, 393230, 75, 0, 393231, 76, 0, 393232, 75, 0, 393233, 76, 0, 393234, 75, 0, 393235, 76, 0, 393236, 75, 0, 393237, 76, 0, 393238, 75, 0, 393239, 76, 0, 393240, 75, 0, 393241, 76, 0, 393242, 75, 0, 393243, 76, 0, 393244, 75, 0, 393245, 76, 0, 393246, 75, 0, 393247, 76, 0, 458752, 95, 0, 458753, 96, 0, 458754, 95, 0, 458755, 96, 0, 458756, 95, 0, 458757, 96, 0, 458758, 95, 0, 458759, 96, 0, 458760, 95, 0, 458761, 96, 0, 458762, 95, 0, 458763, 96, 0, 458764, 95, 0, 458765, 96, 0, 458766, 95, 0, 458767, 96, 0, 458768, 95, 0, 458769, 96, 0, 458770, 95, 0, 458771, 96, 0, 458772, 95, 0, 458773, 96, 0, 458774, 95, 0, 458775, 96, 0, 458776, 95, 0, 458777, 96, 0, 458778, 95, 0, 458779, 96, 0, 458780, 95, 0, 458781, 96, 0, 458782, 95, 0, 458783, 96, 0, 524288, 75, 0, 524289, 76, 0, 524290, 75, 0, 524291, 76, 0, 524292, 75, 0, 524293, 76, 0, 524294, 75, 0, 524295, 76, 0, 524296, 75, 0, 524297, 76, 0, 524298, 75, 0, 524299, 76, 0, 524300, 75, 0, 524301, 76, 0, 524302, 75, 0, 524303, 76, 0, 524304, 75, 0, 524305, 76, 0, 524306, 75, 0, 524307, 76, 0, 524308, 75, 0, 524309, 76, 0, 524310, 75, 0, 524311, 76, 0, 524312, 75, 0, 524313, 76, 0, 524314, 75, 0, 524315, 76, 0, 524316, 75, 0, 524317, 76, 0, 524318, 75, 0, 524319, 76, 0, 589824, 95, 0, 589825, 96, 0, 589826, 95, 0, 589827, 96, 0, 589828, 95, 0, 589829, 96, 0, 589830, 95, 0, 589831, 96, 0, 589832, 95, 0, 589833, 96, 0, 589834, 95, 0, 589835, 96, 0, 589836, 95, 0, 589837, 96, 0, 589838, 95, 0, 589839, 96, 0, 589840, 95, 0, 589841, 96, 0, 589842, 95, 0, 589843, 96, 0, 589844, 95, 0, 589845, 96, 0, 589846, 95, 0, 589847, 96, 0, 589848, 95, 0, 589849, 96, 0, 589850, 95, 0, 589851, 96, 0, 589852, 95, 0, 589853, 96, 0, 589854, 95, 0, 589855, 96, 0, 655360, 75, 0, 655361, 76, 0, 655362, 75, 0, 655363, 76, 0, 655364, 75, 0, 655365, 76, 0, 655366, 75, 0, 655367, 76, 0, 655368, 75, 0, 655369, 76, 0, 655370, 75, 0, 655371, 76, 0, 655372, 75, 0, 655373, 76, 0, 655374, 75, 0, 655375, 76, 0, 655376, 75, 0, 655377, 76, 0, 655378, 75, 0, 655379, 76, 0, 655380, 75, 0, 655381, 76, 0, 655382, 75, 0, 655383, 76, 0, 655384, 75, 0, 655385, 76, 0, 655386, 75, 0, 655387, 76, 0, 655388, 75, 0, 655389, 76, 0, 655390, 75, 0, 655391, 76, 0, 720896, 95, 0, 720897, 96, 0, 720898, 95, 0, 720899, 96, 0, 720900, 95, 0, 720901, 96, 0, 720902, 95, 0, 720903, 96, 0, 720904, 95, 0, 720905, 96, 0, 720906, 95, 0, 720907, 96, 0, 720908, 95, 0, 720909, 96, 0, 720910, 95, 0, 720911, 96, 0, 720912, 95, 0, 720913, 96, 0, 720914, 95, 0, 720915, 96, 0, 720916, 95, 0, 720917, 96, 0, 720918, 95, 0, 720919, 96, 0, 720920, 95, 0, 720921, 96, 0, 720922, 95, 0, 720923, 96, 0, 720924, 95, 0, 720925, 96, 0, 720926, 95, 0, 720927, 96, 0, 786432, 75, 0, 786433, 76, 0, 786434, 77, 0, 786435, 78, 0, 786436, 75, 0, 786437, 76, 0, 786438, 75, 0, 786439, 76, 0, 786440, 75, 0, 786441, 76, 0, 786442, 75, 0, 786443, 76, 0, 786444, 75, 0, 786445, 76, 0, 786446, 75, 0, 786447, 101, 0, 786448, 102, 0, 786449, 76, 0, 786450, 75, 0, 786451, 76, 0, 786452, 75, 0, 786453, 76, 0, 786454, 75, 0, 786455, 76, 0, 786456, 75, 0, 786457, 76, 0, 786458, 75, 0, 786459, 76, 0, 786460, 107, 0, 786461, 108, 0, 786462, 75, 0, 786463, 76, 0, 851968, 95, 0, 851969, 96, 0, 851970, 97, 0, 851971, 98, 0, 851972, 95, 0, 851973, 96, 0, 851974, 95, 0, 851975, 96, 0, 851976, 95, 0, 851977, 96, 0, 851978, 95, 0, 851979, 96, 0, 851980, 95, 0, 851981, 96, 0, 851982, 95, 0, 851983, 121, 0, 851984, 122, 0, 851985, 96, 0, 851986, 95, 0, 851987, 96, 0, 851988, 95, 0, 851989, 96, 0, 851990, 95, 0, 851991, 96, 0, 851992, 95, 0, 851993, 96, 0, 851994, 95, 0, 851995, 96, 0, 851996, 127, 0, 851997, 128, 0, 851998, 95, 0, 851999, 96, 0, 917504, 75, 0, 917505, 76, 0, 917506, 75, 0, 917507, 76, 0, 917508, 75, 0, 917509, 76, 0, 917510, 75, 0, 917511, 76, 0, 917512, 75, 0, 917513, 76, 0, 917514, 75, 0, 917515, 76, 0, 917516, 75, 0, 917517, 76, 0, 917518, 75, 0, 917519, 76, 0, 917520, 75, 0, 917521, 76, 0, 917522, 75, 0, 917523, 76, 0, 917524, 75, 0, 917525, 76, 0, 917526, 75, 0, 917527, 76, 0, 917528, 75, 0, 917529, 76, 0, 917530, 75, 0, 917531, 76, 0, 917532, 75, 0, 917533, 76, 0, 917534, 75, 0, 917535, 76, 0, 983040, 95, 0, 983041, 96, 0, 983042, 95, 0, 983043, 96, 0, 983044, 95, 0, 983045, 96, 0, 983046, 95, 0, 983047, 96, 0, 983048, 95, 0, 983049, 96, 0, 983050, 95, 0, 983051, 96, 0, 983052, 95, 0, 983053, 96, 0, 983054, 95, 0, 983055, 96, 0, 983056, 95, 0, 983057, 96, 0, 983058, 95, 0, 983059, 96, 0, 983060, 95, 0, 983061, 96, 0, 983062, 95, 0, 983063, 96, 0, 983064, 95, 0, 983065, 96, 0, 983066, 95, 0, 983067, 96, 0, 983068, 95, 0, 983069, 96, 0, 983070, 95, 0, 983071, 96, 0, 1048576, 75, 0, 1048577, 76, 0, 1048578, 75, 0, 1048579, 76, 0, 1048580, 75, 0, 1048581, 76, 0, 1048582, 75, 0, 1048583, 76, 0, 1048584, 75, 0, 1048585, 76, 0, 1048586, 75, 0, 1048587, 76, 0, 1048588, 75, 0, 1048589, 76, 0, 1048590, 75, 0, 1048591, 76, 0, 1048592, 75, 0, 1048593, 76, 0, 1048594, 75, 0, 1048595, 76, 0, 1048596, 75, 0, 1048597, 76, 0, 1048598, 75, 0, 1048599, 76, 0, 1048600, 75, 0, 1048601, 76, 0, 1048602, 75, 0, 1048603, 76, 0, 1048604, 75, 0, 1048605, 112, 0, 1048606, 113, 0, 1048607, 76, 0, 1114112, 95, 0, 1114113, 96, 0, 1114114, 95, 0, 1114115, 96, 0, 1114116, 95, 0, 1114117, 96, 0, 1114118, 95, 0, 1114119, 96, 0, 1114120, 95, 0, 1114121, 96, 0, 1114122, 95, 0, 1114123, 96, 0, 1114124, 95, 0, 1114125, 96, 0, 1114126, 95, 0, 1114127, 96, 0, 1114128, 95, 0, 1114129, 96, 0, 1114130, 95, 0, 1114131, 96, 0, 1114132, 95, 0, 1114133, 96, 0, 1114134, 95, 0, 1114135, 96, 0, 1114136, 95, 0, 1114137, 96, 0, 1114138, 95, 0, 1114139, 96, 0, 1114140, 95, 0, 1114141, 132, 0, 1114142, 133, 0, 1114143, 96, 0, 1179648, 75, 0, 1179649, 76, 0, 1179650, 75, 0, 1179651, 76, 0, 1179652, 75, 0, 1179653, 76, 0, 1179654, 75, 0, 1179655, 76, 0, 1179656, 75, 0, 1179657, 76, 0, 1179658, 75, 0, 1179659, 76, 0, 1179660, 75, 0, 1179661, 112, 0, 1179662, 113, 0, 1179663, 76, 0, 1179664, 75, 0, 1179665, 112, 0, 1179666, 113, 0, 1179667, 76, 0, 1179668, 75, 0, 1179669, 76, 0, 1179670, 75, 0, 1179671, 76, 0, 1179672, 75, 0, 1179673, 76, 0, 1179674, 75, 0, 1179675, 76, 0, 1179676, 75, 0, 1179677, 76, 0, 1179678, 75, 0, 1179679, 76, 0, 1245184, 95, 0, 1245185, 96, 0, 1245186, 95, 0, 1245187, 96, 0, 1245188, 95, 0, 1245189, 96, 0, 1245190, 95, 0, 1245191, 96, 0, 1245192, 95, 0, 1245193, 96, 0, 1245194, 95, 0, 1245195, 96, 0, 1245196, 95, 0, 1245197, 132, 0, 1245198, 133, 0, 1245199, 96, 0, 1245200, 95, 0, 1245201, 132, 0, 1245202, 133, 0, 1245203, 96, 0, 1245204, 95, 0, 1245205, 96, 0, 1245206, 95, 0, 1245207, 96, 0, 1245208, 95, 0, 1245209, 96, 0, 1245210, 95, 0, 1245211, 96, 0, 1245212, 95, 0, 1245213, 96, 0, 1245214, 95, 0, 1245215, 96, 0, 1310720, 75, 0, 1310721, 76, 0, 1310722, 75, 0, 1310723, 76, 0, 1310724, 75, 0, 1310725, 76, 0, 1310726, 75, 0, 1310727, 76, 0, 1310728, 75, 0, 1310729, 76, 0, 1310730, 75, 0, 1310731, 76, 0, 1310732, 75, 0, 1310733, 76, 0, 1310734, 75, 0, 1310735, 76, 0, 1310736, 75, 0, 1310737, 76, 0, 1310738, 75, 0, 1310739, 76, 0, 1310740, 75, 0, 1310741, 76, 0, 1310742, 75, 0, 1310743, 76, 0, 1310744, 75, 0, 1310745, 76, 0, 1310746, 75, 0, 1310747, 76, 0, 1310748, 75, 0, 1310749, 76, 0, 1310750, 75, 0, 1310751, 76, 0 )
+tile_data = PoolIntArray( 0, 75, 0, 1, 112, 0, 2, 113, 0, 3, 112, 0, 4, 113, 0, 5, 112, 0, 6, 113, 0, 7, 112, 0, 8, 113, 0, 9, 112, 0, 10, 113, 0, 11, 112, 0, 12, 113, 0, 13, 112, 0, 14, 113, 0, 15, 112, 0, 16, 113, 0, 17, 112, 0, 18, 113, 0, 19, 112, 0, 20, 113, 0, 21, 112, 0, 22, 113, 0, 23, 112, 0, 24, 113, 0, 25, 112, 0, 26, 113, 0, 27, 112, 0, 28, 113, 0, 29, 101, 0, 30, 102, 0, 31, 112, 0, 32, 113, 0, 33, 75, 0, 34, 76, 0, 35, 76, 0, 36, 113, 0, 37, 112, 0, 38, 113, 0, 39, 112, 0, 40, 113, 0, 41, 112, 0, 42, 113, 0, 43, 112, 0, 44, 113, 0, 45, 112, 0, 46, 113, 0, 47, 112, 0, 48, 113, 0, 49, 112, 0, 50, 113, 0, 51, 112, 0, 52, 113, 0, 53, 112, 0, 54, 113, 0, 55, 112, 0, 56, 113, 0, 57, 112, 0, 58, 113, 0, 59, 112, 0, 60, 113, 0, 61, 112, 0, 62, 113, 0, 63, 76, 0, 65536, 95, 0, 65537, 132, 0, 65538, 133, 0, 65539, 105, 0, 65540, 106, 0, 65541, 132, 0, 65542, 133, 0, 65543, 132, 0, 65544, 133, 0, 65545, 132, 0, 65546, 133, 0, 65547, 132, 0, 65548, 133, 0, 65549, 132, 0, 65550, 133, 0, 65551, 132, 0, 65552, 133, 0, 65553, 132, 0, 65554, 133, 0, 65555, 132, 0, 65556, 133, 0, 65557, 132, 0, 65558, 133, 0, 65559, 132, 0, 65560, 133, 0, 65561, 132, 0, 65562, 133, 0, 65563, 132, 0, 65564, 133, 0, 65565, 121, 0, 65566, 122, 0, 65567, 132, 0, 65568, 133, 0, 65569, 75, 0, 65570, 76, 0, 65571, 96, 0, 65572, 133, 0, 65573, 75, 0, 65574, 76, 0, 65575, 132, 0, 65576, 133, 0, 65577, 132, 0, 65578, 133, 0, 65579, 132, 0, 65580, 133, 0, 65581, 132, 0, 65582, 133, 0, 65583, 132, 0, 65584, 133, 0, 65585, 132, 0, 65586, 77, 0, 65587, 78, 0, 65588, 133, 0, 65589, 132, 0, 65590, 133, 0, 65591, 132, 0, 65592, 133, 0, 65593, 132, 0, 65594, 133, 0, 65595, 132, 0, 65596, 133, 0, 65597, 132, 0, 65598, 133, 0, 65599, 96, 0, 131072, 75, 0, 131073, 112, 0, 131074, 113, 0, 131075, 125, 0, 131076, 126, 0, 131077, 112, 0, 131078, 113, 0, 131079, 112, 0, 131080, 113, 0, 131081, 112, 0, 131082, 113, 0, 131083, 112, 0, 131084, 113, 0, 131085, 112, 0, 131086, 113, 0, 131087, 112, 0, 131088, 113, 0, 131089, 112, 0, 131090, 113, 0, 131091, 112, 0, 131092, 113, 0, 131093, 112, 0, 131094, 113, 0, 131095, 112, 0, 131096, 113, 0, 131097, 112, 0, 131098, 113, 0, 131099, 112, 0, 131100, 113, 0, 131101, 112, 0, 131102, 113, 0, 131103, 112, 0, 131104, 75, 0, 131105, 76, 0, 131106, 76, 0, 131107, 112, 0, 131108, 113, 0, 131109, 95, 0, 131110, 96, 0, 131111, 76, 0, 131112, 76, 0, 131113, 76, 0, 131114, 76, 0, 131115, 112, 0, 131116, 113, 0, 131117, 112, 0, 131118, 113, 0, 131119, 112, 0, 131120, 113, 0, 131121, 112, 0, 131122, 97, 0, 131123, 98, 0, 131124, 113, 0, 131125, 112, 0, 131126, 113, 0, 131127, 112, 0, 131128, 113, 0, 131129, 112, 0, 131130, 75, 0, 131131, 76, 0, 131132, 76, 0, 131133, 112, 0, 131134, 113, 0, 131135, 76, 0, 196608, 95, 0, 196609, 132, 0, 196610, 75, 0, 196611, 76, 0, 196612, 133, 0, 196613, 132, 0, 196614, 133, 0, 196615, 132, 0, 196616, 133, 0, 196617, 132, 0, 196618, 133, 0, 196619, 132, 0, 196620, 133, 0, 196621, 132, 0, 196622, 133, 0, 196623, 132, 0, 196624, 133, 0, 196625, 132, 0, 196626, 133, 0, 196627, 132, 0, 196628, 133, 0, 196629, 132, 0, 196630, 133, 0, 196631, 132, 0, 196632, 133, 0, 196633, 132, 0, 196634, 133, 0, 196635, 75, 0, 196636, 76, 0, 196637, 132, 0, 196638, 133, 0, 196639, 75, 0, 196640, 76, 0, 196641, 76, 0, 196642, 96, 0, 196643, 132, 0, 196644, 133, 0, 196645, 95, 0, 196646, 96, 0, 196647, 96, 0, 196648, 96, 0, 196649, 96, 0, 196650, 96, 0, 196651, 132, 0, 196652, 75, 0, 196653, 76, 0, 196654, 76, 0, 196655, 76, 0, 196656, 76, 0, 196657, 76, 0, 196658, 95, 0, 196659, 96, 0, 196660, 133, 0, 196661, 132, 0, 196662, 133, 0, 196663, 132, 0, 196664, 75, 0, 196665, 76, 0, 196666, 95, 0, 196667, 96, 0, 196668, 96, 0, 196669, 76, 0, 196670, 133, 0, 196671, 96, 0, 262144, 75, 0, 262145, 112, 0, 262146, 95, 0, 262147, 96, 0, 262148, 113, 0, 262149, 112, 0, 262150, 113, 0, 262151, 112, 0, 262152, 113, 0, 262153, 112, 0, 262154, 113, 0, 262155, 112, 0, 262156, 113, 0, 262157, 71, 0, 262158, 72, 0, 262159, 112, 0, 262160, 109, 0, 262161, 110, 0, 262162, 113, 0, 262163, 63, 0, 262164, 64, 0, 262165, 112, 0, 262166, 113, 0, 262167, 112, 0, 262168, 113, 0, 262169, 112, 0, 262170, 75, 0, 262171, 76, 0, 262172, 76, 0, 262173, 76, 0, 262174, 76, 0, 262175, 76, 0, 262176, 76, 0, 262177, 96, 0, 262178, 113, 0, 262179, 112, 0, 262180, 113, 0, 262181, 112, 0, 262182, 113, 0, 262183, 112, 0, 262184, 113, 0, 262185, 112, 0, 262186, 113, 0, 262187, 112, 0, 262188, 95, 0, 262189, 96, 0, 262190, 96, 0, 262191, 96, 0, 262192, 96, 0, 262193, 96, 0, 262194, 71, 0, 262195, 72, 0, 262196, 113, 0, 262197, 75, 0, 262198, 76, 0, 262199, 75, 0, 262200, 76, 0, 262201, 76, 0, 262202, 113, 0, 262203, 95, 0, 262204, 96, 0, 262205, 96, 0, 262206, 113, 0, 262207, 76, 0, 327680, 95, 0, 327681, 132, 0, 327682, 133, 0, 327683, 132, 0, 327684, 133, 0, 327685, 132, 0, 327686, 133, 0, 327687, 132, 0, 327688, 133, 0, 327689, 132, 0, 327690, 133, 0, 327691, 132, 0, 327692, 133, 0, 327693, 91, 0, 327694, 92, 0, 327695, 75, 0, 327696, 129, 0, 327697, 130, 0, 327698, 75, 0, 327699, 83, 0, 327700, 84, 0, 327701, 75, 0, 327702, 76, 0, 327703, 76, 0, 327704, 75, 0, 327705, 76, 0, 327706, 76, 0, 327707, 76, 0, 327708, 96, 0, 327709, 96, 0, 327710, 96, 0, 327711, 96, 0, 327712, 96, 0, 327713, 132, 0, 327714, 133, 0, 327715, 132, 0, 327716, 133, 0, 327717, 132, 0, 327718, 133, 0, 327719, 132, 0, 327720, 133, 0, 327721, 132, 0, 327722, 75, 0, 327723, 75, 0, 327724, 75, 0, 327725, 76, 0, 327726, 133, 0, 327727, 132, 0, 327728, 133, 0, 327729, 132, 0, 327730, 91, 0, 327731, 92, 0, 327732, 133, 0, 327733, 95, 0, 327734, 96, 0, 327735, 76, 0, 327736, 96, 0, 327737, 96, 0, 327738, 75, 0, 327739, 76, 0, 327740, 69, 0, 327741, 70, 0, 327742, 133, 0, 327743, 96, 0, 393216, 75, 0, 393217, 112, 0, 393218, 113, 0, 393219, 112, 0, 393220, 113, 0, 393221, 112, 0, 393222, 113, 0, 393223, 112, 0, 393224, 113, 0, 393225, 112, 0, 393226, 113, 0, 393227, 112, 0, 393228, 113, 0, 393229, 112, 0, 393230, 75, 0, 393231, 76, 0, 393232, 96, 0, 393233, 112, 0, 393234, 75, 0, 393235, 76, 0, 393236, 113, 0, 393237, 95, 0, 393238, 96, 0, 393239, 96, 0, 393240, 76, 0, 393241, 76, 0, 393242, 96, 0, 393243, 96, 0, 393244, 113, 0, 393245, 112, 0, 393246, 113, 0, 393247, 112, 0, 393248, 113, 0, 393249, 112, 0, 393250, 113, 0, 393251, 112, 0, 393252, 113, 0, 393253, 112, 0, 393254, 113, 0, 393255, 112, 0, 393256, 75, 0, 393257, 75, 0, 393258, 95, 0, 393259, 95, 0, 393260, 95, 0, 393261, 96, 0, 393262, 113, 0, 393263, 112, 0, 393264, 113, 0, 393265, 112, 0, 393266, 113, 0, 393267, 112, 0, 393268, 113, 0, 393269, 95, 0, 393270, 96, 0, 393271, 96, 0, 393272, 113, 0, 393273, 75, 0, 393274, 95, 0, 393275, 96, 0, 393276, 89, 0, 393277, 90, 0, 393278, 113, 0, 393279, 76, 0, 458752, 95, 0, 458753, 132, 0, 458754, 133, 0, 458755, 132, 0, 458756, 133, 0, 458757, 132, 0, 458758, 133, 0, 458759, 132, 0, 458760, 133, 0, 458761, 132, 0, 458762, 133, 0, 458763, 132, 0, 458764, 133, 0, 458765, 75, 0, 458766, 76, 0, 458767, 96, 0, 458768, 133, 0, 458769, 132, 0, 458770, 95, 0, 458771, 96, 0, 458772, 133, 0, 458773, 112, 0, 458774, 113, 0, 458775, 96, 0, 458776, 96, 0, 458777, 96, 0, 458778, 133, 0, 458779, 132, 0, 458780, 133, 0, 458781, 132, 0, 458782, 133, 0, 458783, 132, 0, 458784, 133, 0, 458785, 132, 0, 458786, 133, 0, 458787, 75, 0, 458788, 75, 0, 458789, 76, 0, 458790, 133, 0, 458791, 132, 0, 458792, 95, 0, 458793, 95, 0, 458794, 95, 0, 458795, 96, 0, 458796, 133, 0, 458797, 132, 0, 458798, 133, 0, 458799, 132, 0, 458800, 133, 0, 458801, 132, 0, 458802, 133, 0, 458803, 132, 0, 458804, 133, 0, 458805, 95, 0, 458806, 96, 0, 458807, 96, 0, 458808, 133, 0, 458809, 95, 0, 458810, 96, 0, 458811, 132, 0, 458812, 133, 0, 458813, 132, 0, 458814, 133, 0, 458815, 96, 0, 524288, 75, 0, 524289, 112, 0, 524290, 113, 0, 524291, 112, 0, 524292, 113, 0, 524293, 112, 0, 524294, 113, 0, 524295, 112, 0, 524296, 113, 0, 524297, 75, 0, 524298, 76, 0, 524299, 112, 0, 524300, 113, 0, 524301, 75, 0, 524302, 76, 0, 524303, 76, 0, 524304, 113, 0, 524305, 75, 0, 524306, 76, 0, 524307, 76, 0, 524308, 113, 0, 524309, 132, 0, 524310, 133, 0, 524311, 112, 0, 524312, 113, 0, 524313, 112, 0, 524314, 113, 0, 524315, 112, 0, 524316, 113, 0, 524317, 112, 0, 524318, 113, 0, 524319, 112, 0, 524320, 113, 0, 524321, 112, 0, 524322, 113, 0, 524323, 95, 0, 524324, 95, 0, 524325, 96, 0, 524326, 113, 0, 524327, 112, 0, 524328, 113, 0, 524329, 112, 0, 524330, 113, 0, 524331, 112, 0, 524332, 75, 0, 524333, 76, 0, 524334, 76, 0, 524335, 76, 0, 524336, 113, 0, 524337, 112, 0, 524338, 113, 0, 524339, 112, 0, 524340, 113, 0, 524341, 112, 0, 524342, 113, 0, 524343, 112, 0, 524344, 113, 0, 524345, 95, 0, 524346, 96, 0, 524347, 112, 0, 524348, 75, 0, 524349, 75, 0, 524350, 76, 0, 524351, 76, 0, 589824, 95, 0, 589825, 132, 0, 589826, 133, 0, 589827, 132, 0, 589828, 133, 0, 589829, 132, 0, 589830, 133, 0, 589831, 132, 0, 589832, 133, 0, 589833, 95, 0, 589834, 96, 0, 589835, 132, 0, 589836, 75, 0, 589837, 76, 0, 589838, 96, 0, 589839, 96, 0, 589840, 133, 0, 589841, 75, 0, 589842, 76, 0, 589843, 96, 0, 589844, 133, 0, 589845, 95, 0, 589846, 96, 0, 589847, 132, 0, 589848, 133, 0, 589849, 132, 0, 589850, 133, 0, 589851, 132, 0, 589852, 133, 0, 589853, 75, 0, 589854, 75, 0, 589855, 75, 0, 589856, 76, 0, 589857, 132, 0, 589858, 133, 0, 589859, 75, 0, 589860, 76, 0, 589861, 132, 0, 589862, 133, 0, 589863, 132, 0, 589864, 75, 0, 589865, 76, 0, 589866, 76, 0, 589867, 76, 0, 589868, 76, 0, 589869, 96, 0, 589870, 96, 0, 589871, 96, 0, 589872, 76, 0, 589873, 76, 0, 589874, 76, 0, 589875, 76, 0, 589876, 76, 0, 589877, 76, 0, 589878, 133, 0, 589879, 132, 0, 589880, 133, 0, 589881, 95, 0, 589882, 96, 0, 589883, 75, 0, 589884, 95, 0, 589885, 95, 0, 589886, 96, 0, 589887, 96, 0, 655360, 75, 0, 655361, 112, 0, 655362, 113, 0, 655363, 112, 0, 655364, 113, 0, 655365, 112, 0, 655366, 113, 0, 655367, 75, 0, 655368, 76, 0, 655369, 112, 0, 655370, 113, 0, 655371, 75, 0, 655372, 76, 0, 655373, 96, 0, 655374, 75, 0, 655375, 75, 0, 655376, 76, 0, 655377, 95, 0, 655378, 96, 0, 655379, 112, 0, 655380, 113, 0, 655381, 95, 0, 655382, 96, 0, 655383, 112, 0, 655384, 113, 0, 655385, 112, 0, 655386, 113, 0, 655387, 112, 0, 655388, 113, 0, 655389, 95, 0, 655390, 95, 0, 655391, 95, 0, 655392, 69, 0, 655393, 70, 0, 655394, 113, 0, 655395, 95, 0, 655396, 96, 0, 655397, 112, 0, 655398, 113, 0, 655399, 112, 0, 655400, 95, 0, 655401, 96, 0, 655402, 96, 0, 655403, 96, 0, 655404, 96, 0, 655405, 112, 0, 655406, 95, 0, 655407, 96, 0, 655408, 96, 0, 655409, 131, 0, 655410, 96, 0, 655411, 96, 0, 655412, 96, 0, 655413, 96, 0, 655414, 113, 0, 655415, 112, 0, 655416, 113, 0, 655417, 112, 0, 655418, 75, 0, 655419, 75, 0, 655420, 109, 0, 655421, 110, 0, 655422, 113, 0, 655423, 76, 0, 720896, 95, 0, 720897, 132, 0, 720898, 75, 0, 720899, 76, 0, 720900, 76, 0, 720901, 132, 0, 720902, 133, 0, 720903, 95, 0, 720904, 96, 0, 720905, 132, 0, 720906, 133, 0, 720907, 75, 0, 720908, 76, 0, 720909, 75, 0, 720910, 76, 0, 720911, 95, 0, 720912, 96, 0, 720913, 132, 0, 720914, 133, 0, 720915, 132, 0, 720916, 133, 0, 720917, 132, 0, 720918, 133, 0, 720919, 132, 0, 720920, 133, 0, 720921, 132, 0, 720922, 133, 0, 720923, 75, 0, 720924, 76, 0, 720925, 132, 0, 720926, 133, 0, 720927, 132, 0, 720928, 89, 0, 720929, 90, 0, 720930, 133, 0, 720931, 132, 0, 720932, 133, 0, 720933, 132, 0, 720934, 133, 0, 720935, 132, 0, 720936, 133, 0, 720937, 132, 0, 720938, 133, 0, 720939, 132, 0, 720940, 133, 0, 720941, 132, 0, 720942, 133, 0, 720943, 132, 0, 720944, 133, 0, 720945, 75, 0, 720946, 63, 0, 720947, 64, 0, 720948, 133, 0, 720949, 132, 0, 720950, 133, 0, 720951, 132, 0, 720952, 133, 0, 720953, 132, 0, 720954, 95, 0, 720955, 95, 0, 720956, 129, 0, 720957, 130, 0, 720958, 133, 0, 720959, 96, 0, 786432, 75, 0, 786433, 112, 0, 786434, 77, 0, 786435, 78, 0, 786436, 96, 0, 786437, 112, 0, 786438, 113, 0, 786439, 75, 0, 786440, 76, 0, 786441, 112, 0, 786442, 75, 0, 786443, 76, 0, 786444, 96, 0, 786445, 95, 0, 786446, 96, 0, 786447, 112, 0, 786448, 113, 0, 786449, 112, 0, 786450, 113, 0, 786451, 112, 0, 786452, 113, 0, 786453, 112, 0, 786454, 113, 0, 786455, 112, 0, 786456, 75, 0, 786457, 76, 0, 786458, 76, 0, 786459, 95, 0, 786460, 96, 0, 786461, 75, 0, 786462, 76, 0, 786463, 112, 0, 786464, 113, 0, 786465, 112, 0, 786466, 113, 0, 786467, 112, 0, 786468, 113, 0, 786469, 112, 0, 786470, 113, 0, 786471, 112, 0, 786472, 113, 0, 786473, 112, 0, 786474, 113, 0, 786475, 112, 0, 786476, 113, 0, 786477, 75, 0, 786478, 75, 0, 786479, 76, 0, 786480, 113, 0, 786481, 95, 0, 786482, 83, 0, 786483, 84, 0, 786484, 113, 0, 786485, 112, 0, 786486, 113, 0, 786487, 112, 0, 786488, 113, 0, 786489, 112, 0, 786490, 113, 0, 786491, 112, 0, 786492, 113, 0, 786493, 112, 0, 786494, 113, 0, 786495, 76, 0, 851968, 95, 0, 851969, 132, 0, 851970, 97, 0, 851971, 98, 0, 851972, 133, 0, 851973, 132, 0, 851974, 133, 0, 851975, 95, 0, 851976, 96, 0, 851977, 75, 0, 851978, 76, 0, 851979, 96, 0, 851980, 95, 0, 851981, 96, 0, 851982, 76, 0, 851983, 132, 0, 851984, 133, 0, 851985, 132, 0, 851986, 133, 0, 851987, 75, 0, 851988, 76, 0, 851989, 132, 0, 851990, 133, 0, 851991, 75, 0, 851992, 76, 0, 851993, 76, 0, 851994, 96, 0, 851995, 76, 0, 851996, 96, 0, 851997, 95, 0, 851998, 96, 0, 851999, 132, 0, 852000, 75, 0, 852001, 76, 0, 852002, 133, 0, 852003, 132, 0, 852004, 133, 0, 852005, 132, 0, 852006, 133, 0, 852007, 132, 0, 852008, 133, 0, 852009, 132, 0, 852010, 133, 0, 852011, 132, 0, 852012, 133, 0, 852013, 95, 0, 852014, 95, 0, 852015, 96, 0, 852016, 133, 0, 852017, 132, 0, 852018, 133, 0, 852019, 132, 0, 852020, 133, 0, 852021, 132, 0, 852022, 133, 0, 852023, 75, 0, 852024, 75, 0, 852025, 76, 0, 852026, 133, 0, 852027, 132, 0, 852028, 133, 0, 852029, 75, 0, 852030, 76, 0, 852031, 96, 0, 917504, 75, 0, 917505, 112, 0, 917506, 75, 0, 917507, 76, 0, 917508, 113, 0, 917509, 75, 0, 917510, 75, 0, 917511, 95, 0, 917512, 96, 0, 917513, 76, 0, 917514, 96, 0, 917515, 112, 0, 917516, 95, 0, 917517, 96, 0, 917518, 96, 0, 917519, 112, 0, 917520, 113, 0, 917521, 75, 0, 917522, 76, 0, 917523, 75, 0, 917524, 75, 0, 917525, 69, 0, 917526, 70, 0, 917527, 95, 0, 917528, 96, 0, 917529, 96, 0, 917530, 95, 0, 917531, 96, 0, 917532, 113, 0, 917533, 112, 0, 917534, 113, 0, 917535, 112, 0, 917536, 95, 0, 917537, 96, 0, 917538, 76, 0, 917539, 112, 0, 917540, 113, 0, 917541, 112, 0, 917542, 113, 0, 917543, 112, 0, 917544, 113, 0, 917545, 112, 0, 917546, 113, 0, 917547, 112, 0, 917548, 113, 0, 917549, 112, 0, 917550, 113, 0, 917551, 112, 0, 917552, 113, 0, 917553, 75, 0, 917554, 75, 0, 917555, 75, 0, 917556, 76, 0, 917557, 112, 0, 917558, 113, 0, 917559, 95, 0, 917560, 95, 0, 917561, 96, 0, 917562, 113, 0, 917563, 112, 0, 917564, 75, 0, 917565, 95, 0, 917566, 96, 0, 917567, 76, 0, 983040, 95, 0, 983041, 75, 0, 983042, 76, 0, 983043, 96, 0, 983044, 133, 0, 983045, 95, 0, 983046, 95, 0, 983047, 96, 0, 983048, 76, 0, 983049, 96, 0, 983050, 133, 0, 983051, 132, 0, 983052, 133, 0, 983053, 132, 0, 983054, 133, 0, 983055, 132, 0, 983056, 133, 0, 983057, 95, 0, 983058, 96, 0, 983059, 95, 0, 983060, 95, 0, 983061, 89, 0, 983062, 90, 0, 983063, 132, 0, 983064, 133, 0, 983065, 132, 0, 983066, 95, 0, 983067, 96, 0, 983068, 133, 0, 983069, 132, 0, 983070, 133, 0, 983071, 132, 0, 983072, 75, 0, 983073, 95, 0, 983074, 96, 0, 983075, 75, 0, 983076, 76, 0, 983077, 76, 0, 983078, 133, 0, 983079, 132, 0, 983080, 133, 0, 983081, 132, 0, 983082, 133, 0, 983083, 132, 0, 983084, 133, 0, 983085, 132, 0, 983086, 133, 0, 983087, 132, 0, 983088, 133, 0, 983089, 95, 0, 983090, 95, 0, 983091, 95, 0, 983092, 96, 0, 983093, 132, 0, 983094, 75, 0, 983095, 95, 0, 983096, 96, 0, 983097, 132, 0, 983098, 133, 0, 983099, 132, 0, 983100, 95, 0, 983101, 96, 0, 983102, 133, 0, 983103, 96, 0, 1048576, 75, 0, 1048577, 75, 0, 1048578, 76, 0, 1048579, 112, 0, 1048580, 113, 0, 1048581, 112, 0, 1048582, 95, 0, 1048583, 96, 0, 1048584, 96, 0, 1048585, 112, 0, 1048586, 113, 0, 1048587, 75, 0, 1048588, 76, 0, 1048589, 76, 0, 1048590, 76, 0, 1048591, 112, 0, 1048592, 75, 0, 1048593, 95, 0, 1048594, 96, 0, 1048595, 112, 0, 1048596, 113, 0, 1048597, 95, 0, 1048598, 96, 0, 1048599, 76, 0, 1048600, 113, 0, 1048601, 75, 0, 1048602, 95, 0, 1048603, 75, 0, 1048604, 76, 0, 1048605, 112, 0, 1048606, 75, 0, 1048607, 75, 0, 1048608, 95, 0, 1048609, 96, 0, 1048610, 113, 0, 1048611, 75, 0, 1048612, 76, 0, 1048613, 96, 0, 1048614, 113, 0, 1048615, 112, 0, 1048616, 113, 0, 1048617, 112, 0, 1048618, 113, 0, 1048619, 112, 0, 1048620, 113, 0, 1048621, 112, 0, 1048622, 113, 0, 1048623, 112, 0, 1048624, 113, 0, 1048625, 112, 0, 1048626, 113, 0, 1048627, 112, 0, 1048628, 113, 0, 1048629, 75, 0, 1048630, 95, 0, 1048631, 75, 0, 1048632, 75, 0, 1048633, 76, 0, 1048634, 113, 0, 1048635, 75, 0, 1048636, 95, 0, 1048637, 96, 0, 1048638, 113, 0, 1048639, 76, 0, 1114112, 95, 0, 1114113, 75, 0, 1114114, 76, 0, 1114115, 132, 0, 1114116, 65, 0, 1114117, 66, 0, 1114118, 95, 0, 1114119, 96, 0, 1114120, 133, 0, 1114121, 132, 0, 1114122, 75, 0, 1114123, 75, 0, 1114124, 76, 0, 1114125, 96, 0, 1114126, 96, 0, 1114127, 75, 0, 1114128, 95, 0, 1114129, 96, 0, 1114130, 133, 0, 1114131, 132, 0, 1114132, 133, 0, 1114133, 75, 0, 1114134, 76, 0, 1114135, 96, 0, 1114136, 133, 0, 1114137, 95, 0, 1114138, 95, 0, 1114139, 95, 0, 1114140, 96, 0, 1114141, 132, 0, 1114142, 95, 0, 1114143, 95, 0, 1114144, 96, 0, 1114145, 132, 0, 1114146, 75, 0, 1114147, 76, 0, 1114148, 96, 0, 1114149, 132, 0, 1114150, 133, 0, 1114151, 132, 0, 1114152, 133, 0, 1114153, 132, 0, 1114154, 133, 0, 1114155, 132, 0, 1114156, 133, 0, 1114157, 132, 0, 1114158, 133, 0, 1114159, 132, 0, 1114160, 75, 0, 1114161, 76, 0, 1114162, 133, 0, 1114163, 132, 0, 1114164, 133, 0, 1114165, 95, 0, 1114166, 95, 0, 1114167, 95, 0, 1114168, 75, 0, 1114169, 75, 0, 1114170, 75, 0, 1114171, 95, 0, 1114172, 95, 0, 1114173, 96, 0, 1114174, 133, 0, 1114175, 96, 0, 1179648, 75, 0, 1179649, 75, 0, 1179650, 76, 0, 1179651, 112, 0, 1179652, 85, 0, 1179653, 86, 0, 1179654, 113, 0, 1179655, 75, 0, 1179656, 75, 0, 1179657, 75, 0, 1179658, 95, 0, 1179659, 95, 0, 1179660, 96, 0, 1179661, 112, 0, 1179662, 95, 0, 1179663, 95, 0, 1179664, 96, 0, 1179665, 112, 0, 1179666, 113, 0, 1179667, 112, 0, 1179668, 113, 0, 1179669, 75, 0, 1179670, 75, 0, 1179671, 75, 0, 1179672, 75, 0, 1179673, 76, 0, 1179674, 113, 0, 1179675, 112, 0, 1179676, 113, 0, 1179677, 73, 0, 1179678, 74, 0, 1179679, 113, 0, 1179680, 76, 0, 1179681, 76, 0, 1179682, 76, 0, 1179683, 96, 0, 1179684, 113, 0, 1179685, 112, 0, 1179686, 113, 0, 1179687, 112, 0, 1179688, 113, 0, 1179689, 112, 0, 1179690, 113, 0, 1179691, 112, 0, 1179692, 113, 0, 1179693, 112, 0, 1179694, 113, 0, 1179695, 112, 0, 1179696, 95, 0, 1179697, 96, 0, 1179698, 71, 0, 1179699, 72, 0, 1179700, 113, 0, 1179701, 95, 0, 1179702, 96, 0, 1179703, 112, 0, 1179704, 95, 0, 1179705, 95, 0, 1179706, 95, 0, 1179707, 95, 0, 1179708, 65, 0, 1179709, 66, 0, 1179710, 113, 0, 1179711, 76, 0, 1245184, 95, 0, 1245185, 75, 0, 1245186, 75, 0, 1245187, 75, 0, 1245188, 75, 0, 1245189, 75, 0, 1245190, 75, 0, 1245191, 95, 0, 1245192, 95, 0, 1245193, 95, 0, 1245194, 96, 0, 1245195, 132, 0, 1245196, 133, 0, 1245197, 132, 0, 1245198, 95, 0, 1245199, 96, 0, 1245200, 133, 0, 1245201, 132, 0, 1245202, 133, 0, 1245203, 132, 0, 1245204, 133, 0, 1245205, 95, 0, 1245206, 95, 0, 1245207, 95, 0, 1245208, 95, 0, 1245209, 96, 0, 1245210, 76, 0, 1245211, 132, 0, 1245212, 133, 0, 1245213, 93, 0, 1245214, 94, 0, 1245215, 133, 0, 1245216, 96, 0, 1245217, 96, 0, 1245218, 96, 0, 1245219, 96, 0, 1245220, 133, 0, 1245221, 132, 0, 1245222, 133, 0, 1245223, 132, 0, 1245224, 133, 0, 1245225, 132, 0, 1245226, 133, 0, 1245227, 132, 0, 1245228, 133, 0, 1245229, 132, 0, 1245230, 133, 0, 1245231, 132, 0, 1245232, 95, 0, 1245233, 96, 0, 1245234, 91, 0, 1245235, 92, 0, 1245236, 133, 0, 1245237, 132, 0, 1245238, 133, 0, 1245239, 132, 0, 1245240, 133, 0, 1245241, 132, 0, 1245242, 133, 0, 1245243, 132, 0, 1245244, 85, 0, 1245245, 86, 0, 1245246, 133, 0, 1245247, 96, 0, 1310720, 75, 0, 1310721, 95, 0, 1310722, 95, 0, 1310723, 95, 0, 1310724, 95, 0, 1310725, 95, 0, 1310726, 95, 0, 1310727, 96, 0, 1310728, 113, 0, 1310729, 112, 0, 1310730, 113, 0, 1310731, 112, 0, 1310732, 113, 0, 1310733, 112, 0, 1310734, 113, 0, 1310735, 112, 0, 1310736, 113, 0, 1310737, 112, 0, 1310738, 113, 0, 1310739, 112, 0, 1310740, 113, 0, 1310741, 112, 0, 1310742, 113, 0, 1310743, 112, 0, 1310744, 113, 0, 1310745, 95, 0, 1310746, 96, 0, 1310747, 96, 0, 1310748, 96, 0, 1310749, 96, 0, 1310750, 96, 0, 1310751, 96, 0, 1310752, 113, 0, 1310753, 112, 0, 1310754, 113, 0, 1310755, 112, 0, 1310756, 113, 0, 1310757, 112, 0, 1310758, 113, 0, 1310759, 112, 0, 1310760, 113, 0, 1310761, 112, 0, 1310762, 113, 0, 1310763, 112, 0, 1310764, 113, 0, 1310765, 112, 0, 1310766, 113, 0, 1310767, 112, 0, 1310768, 113, 0, 1310769, 112, 0, 1310770, 113, 0, 1310771, 112, 0, 1310772, 113, 0, 1310773, 112, 0, 1310774, 113, 0, 1310775, 112, 0, 1310776, 113, 0, 1310777, 112, 0, 1310778, 113, 0, 1310779, 112, 0, 1310780, 113, 0, 1310781, 112, 0, 1310782, 113, 0, 1310783, 76, 0 )
 __meta__ = {
 "height": 22,
 "name": "fondo",
 "type": "tilelayer",
-"width": 32
+"width": 64
 }
 
 [node name="primer_plano" type="TileMap" parent="."]
@@ -3741,12 +3742,12 @@ cell_y_sort = true
 compatibility_mode = true
 cell_clip_uv = true
 format = 1
-tile_data = PoolIntArray( 0, 18, 0, 31, 18, 0, 65536, 18, 0, 65567, 17, 0, 131072, 17, 0, 131079, 17, 0, 131080, 18, 0, 131081, 18, 0, 131082, 17, 0, 131083, 17, 0, 131084, 16, 0, 131085, 18, 0, 131086, 18, 0, 131087, 17, 0, 131088, 17, 0, 131089, 16, 0, 131090, 18, 0, 131091, 18, 0, 131092, 16, 0, 131093, 17, 0, 131094, 18, 0, 131095, 18, 0, 131096, 18, 0, 131103, 17, 0, 196608, 16, 0, 196609, 18, 0, 196610, 17, 0, 196611, 53, 0, 196612, 54, 0, 196613, 18, 0, 196614, 18, 0, 196615, 18, 0, 196632, 18, 0, 196633, 18, 0, 196634, 17, 0, 196635, 49, 0, 196636, 50, 0, 196637, 17, 0, 196638, 16, 0, 196639, 18, 0, 262144, 17, 0, 262148, 55, 0, 262149, 56, 0, 262170, 51, 0, 262171, 52, 0, 262175, 18, 0, 327680, 17, 0, 327685, 55, 0, 327686, 56, 0, 327705, 51, 0, 327706, 52, 0, 327711, 17, 0, 393216, 17, 0, 393217, 17, 0, 393218, 53, 0, 393219, 54, 0, 393220, 18, 0, 393221, 18, 0, 393222, 16, 0, 393223, 18, 0, 393224, 17, 0, 393225, 16, 0, 393238, 18, 0, 393239, 17, 0, 393240, 18, 0, 393241, 17, 0, 393242, 17, 0, 393243, 18, 0, 393244, 49, 0, 393245, 50, 0, 393246, 18, 0, 393247, 16, 0, 458752, 16, 0, 458755, 55, 0, 458756, 56, 0, 458779, 51, 0, 458780, 52, 0, 458783, 16, 0, 524288, 16, 0, 524292, 55, 0, 524293, 56, 0, 524314, 51, 0, 524315, 52, 0, 524319, 18, 0, 589824, 16, 0, 589829, 55, 0, 589830, 56, 0, 589849, 51, 0, 589850, 52, 0, 589855, 16, 0, 655360, 16, 0, 655363, 18, 0, 655364, 18, 0, 655365, 18, 0, 655366, 17, 0, 655367, 16, 0, 655368, 16, 0, 655369, 18, 0, 655370, 17, 0, 655371, 17, 0, 655372, 49, 0, 655373, 50, 0, 655374, 17, 0, 655375, 18, 0, 655376, 17, 0, 655377, 18, 0, 655378, 53, 0, 655379, 54, 0, 655380, 16, 0, 655381, 16, 0, 655382, 17, 0, 655383, 17, 0, 655384, 17, 0, 655385, 17, 0, 655386, 17, 0, 655387, 16, 0, 655388, 18, 0, 655391, 17, 0, 720896, 17, 0, 720907, 51, 0, 720908, 52, 0, 720915, 55, 0, 720916, 56, 0, 720927, 18, 0, 786432, 17, 0, 786442, 51, 0, 786443, 52, 0, 786452, 55, 0, 786453, 56, 0, 786463, 17, 0, 851968, 16, 0, 851977, 51, 0, 851978, 52, 0, 851989, 55, 0, 851990, 56, 0, 851999, 16, 0, 917504, 16, 0, 917512, 51, 0, 917513, 52, 0, 917526, 55, 0, 917527, 56, 0, 917535, 17, 0, 983040, 18, 0, 983044, 17, 0, 983045, 16, 0, 983046, 53, 0, 983047, 54, 0, 983048, 17, 0, 983049, 17, 0, 983050, 17, 0, 983051, 17, 0, 983060, 18, 0, 983061, 17, 0, 983062, 17, 0, 983063, 17, 0, 983064, 49, 0, 983065, 50, 0, 983066, 17, 0, 983067, 18, 0, 983071, 17, 0, 1048576, 16, 0, 1048583, 55, 0, 1048584, 56, 0, 1048590, 17, 0, 1048591, 18, 0, 1048592, 17, 0, 1048593, 16, 0, 1048599, 51, 0, 1048600, 52, 0, 1048607, 17, 0, 1114112, 16, 0, 1114120, 55, 0, 1114121, 56, 0, 1114134, 51, 0, 1114135, 52, 0, 1114143, 17, 0, 1179648, 17, 0, 1179649, 18, 0, 1179651, 18, 0, 1179657, 55, 0, 1179658, 56, 0, 1179669, 51, 0, 1179670, 52, 0, 1179676, 17, 0, 1179677, 17, 0, 1179678, 17, 0, 1179679, 16, 0, 1245184, 18, 0, 1245188, 16, 0, 1245189, 17, 0, 1245194, 55, 0, 1245195, 56, 0, 1245204, 51, 0, 1245205, 52, 0, 1245210, 18, 0, 1245211, 18, 0, 1245212, 18, 0, 1245213, 16, 0, 1245214, 16, 0, 1245215, 18, 0, 1310720, 18, 0, 1310721, 17, 0, 1310722, 17, 0, 1310723, 18, 0, 1310724, 17, 0, 1310725, 18, 0, 1310726, 17, 0, 1310727, 18, 0, 1310728, 16, 0, 1310729, 17, 0, 1310730, 17, 0, 1310731, 17, 0, 1310732, 18, 0, 1310733, 17, 0, 1310734, 16, 0, 1310735, 16, 0, 1310736, 16, 0, 1310737, 16, 0, 1310738, 16, 0, 1310739, 18, 0, 1310740, 18, 0, 1310741, 17, 0, 1310742, 16, 0, 1310743, 17, 0, 1310744, 16, 0, 1310745, 17, 0, 1310746, 17, 0, 1310747, 17, 0, 1310748, 17, 0, 1310749, 17, 0, 1310750, 18, 0, 1310751, 18, 0, 1376256, 207, 0, 1376257, 207, 0, 1376258, 207, 0, 1376259, 207, 0, 1376260, 207, 0, 1376261, 207, 0, 1376262, 207, 0, 1376263, 207, 0, 1376264, 207, 0, 1376265, 207, 0, 1376266, 207, 0, 1376267, 207, 0, 1376268, 207, 0, 1376269, 207, 0, 1376270, 207, 0, 1376271, 207, 0, 1376272, 207, 0, 1376273, 207, 0, 1376274, 207, 0, 1376275, 207, 0, 1376276, 207, 0, 1376277, 207, 0, 1376278, 207, 0, 1376279, 207, 0, 1376280, 207, 0, 1376281, 207, 0, 1376282, 207, 0, 1376283, 207, 0, 1376284, 207, 0, 1376285, 207, 0, 1376286, 207, 0, 1376287, 207, 0 )
+tile_data = PoolIntArray( 0, 5, 0, 63, 6, 0, 65536, 5, 0, 65599, 6, 0, 131072, 13, 0, 131135, 6, 0, 196608, 5, 0, 196671, 6, 0, 262144, 5, 0, 262181, 49, 0, 262182, 50, 0, 262183, 14, 0, 262199, 55, 0, 262200, 56, 0, 262207, 6, 0, 327680, 5, 0, 327704, 5, 0, 327736, 55, 0, 327737, 56, 0, 327743, 6, 0, 393216, 5, 0, 393240, 6, 0, 393251, 51, 0, 393252, 52, 0, 393259, 6, 0, 393260, 4, 0, 393261, 5, 0, 393262, 6, 0, 393263, 6, 0, 393273, 55, 0, 393274, 56, 0, 393279, 6, 0, 458752, 5, 0, 458786, 51, 0, 458787, 52, 0, 458791, 6, 0, 458792, 5, 0, 458793, 6, 0, 458794, 5, 0, 458795, 6, 0, 458796, 4, 0, 458810, 55, 0, 458811, 56, 0, 458815, 6, 0, 524288, 5, 0, 524312, 6, 0, 524313, 14, 0, 524314, 15, 0, 524315, 14, 0, 524316, 15, 0, 524317, 49, 0, 524318, 50, 0, 524319, 6, 0, 524320, 5, 0, 524321, 4, 0, 524322, 6, 0, 524323, 5, 0, 524324, 4, 0, 524325, 5, 0, 524326, 4, 0, 524327, 4, 0, 524328, 5, 0, 524329, 5, 0, 524330, 4, 0, 524331, 6, 0, 524332, 4, 0, 524336, 14, 0, 524337, 15, 0, 524338, 13, 0, 524339, 14, 0, 524340, 15, 0, 524341, 15, 0, 524342, 14, 0, 524343, 15, 0, 524344, 14, 0, 524345, 21, 0, 524346, 22, 0, 524347, 14, 0, 524348, 14, 0, 524349, 15, 0, 524350, 15, 0, 524351, 6, 0, 589824, 5, 0, 589852, 51, 0, 589853, 52, 0, 589860, 6, 0, 589861, 6, 0, 589862, 6, 0, 589863, 6, 0, 589864, 6, 0, 589865, 6, 0, 589866, 6, 0, 589867, 6, 0, 589868, 6, 0, 589869, 6, 0, 589870, 6, 0, 589871, 6, 0, 589880, 23, 0, 589881, 24, 0, 589887, 6, 0, 655360, 5, 0, 655387, 51, 0, 655388, 52, 0, 655396, 5, 0, 655397, 6, 0, 655415, 23, 0, 655416, 24, 0, 655423, 6, 0, 720896, 5, 0, 720922, 51, 0, 720923, 52, 0, 720932, 5, 0, 720933, 6, 0, 720950, 23, 0, 720951, 24, 0, 720959, 6, 0, 786432, 5, 0, 786457, 25, 0, 786458, 26, 0, 786459, 14, 0, 786468, 5, 0, 786469, 6, 0, 786485, 23, 0, 786486, 24, 0, 786495, 6, 0, 851968, 5, 0, 851994, 27, 0, 851995, 28, 0, 852004, 5, 0, 852005, 6, 0, 852006, 6, 0, 852007, 4, 0, 852008, 6, 0, 852009, 4, 0, 852010, 6, 0, 852011, 4, 0, 852012, 6, 0, 852013, 5, 0, 852014, 6, 0, 852015, 4, 0, 852020, 23, 0, 852021, 24, 0, 852031, 6, 0, 917504, 5, 0, 917515, 52, 0, 917531, 27, 0, 917532, 28, 0, 917542, 5, 0, 917543, 6, 0, 917544, 5, 0, 917545, 6, 0, 917546, 5, 0, 917547, 6, 0, 917548, 5, 0, 917549, 6, 0, 917550, 5, 0, 917551, 6, 0, 917555, 23, 0, 917556, 24, 0, 917567, 6, 0, 983040, 5, 0, 983044, 5, 0, 983045, 5, 0, 983046, 5, 0, 983047, 5, 0, 983048, 5, 0, 983049, 5, 0, 983069, 28, 0, 983086, 6, 0, 983087, 6, 0, 983090, 23, 0, 983091, 24, 0, 983103, 6, 0, 1048576, 5, 0, 1048605, 14, 0, 1048606, 14, 0, 1048607, 14, 0, 1048608, 14, 0, 1048609, 25, 0, 1048610, 26, 0, 1048611, 14, 0, 1048622, 6, 0, 1048623, 5, 0, 1048624, 14, 0, 1048625, 14, 0, 1048626, 13, 0, 1048627, 14, 0, 1048628, 15, 0, 1048629, 14, 0, 1048630, 14, 0, 1048631, 15, 0, 1048632, 14, 0, 1048633, 21, 0, 1048634, 22, 0, 1048635, 14, 0, 1048636, 15, 0, 1048637, 14, 0, 1048638, 15, 0, 1048639, 6, 0, 1114112, 5, 0, 1114146, 27, 0, 1114147, 28, 0, 1114150, 14, 0, 1114151, 14, 0, 1114152, 53, 0, 1114153, 54, 0, 1114154, 14, 0, 1114155, 14, 0, 1114168, 23, 0, 1114169, 24, 0, 1114175, 6, 0, 1179648, 5, 0, 1179649, 11, 0, 1179650, 12, 0, 1179651, 11, 0, 1179683, 27, 0, 1179684, 28, 0, 1179689, 55, 0, 1179690, 56, 0, 1179703, 23, 0, 1179704, 24, 0, 1179711, 6, 0, 1245184, 5, 0, 1245185, 11, 0, 1245186, 12, 0, 1245187, 12, 0, 1245188, 12, 0, 1245189, 10, 0, 1245220, 27, 0, 1245221, 28, 0, 1245226, 55, 0, 1245227, 56, 0, 1245238, 23, 0, 1245239, 24, 0, 1245247, 6, 0, 1310720, 5, 0, 1310721, 5, 0, 1310722, 5, 0, 1310723, 5, 0, 1310724, 5, 0, 1310725, 5, 0, 1310726, 5, 0, 1310727, 5, 0, 1310728, 5, 0, 1310729, 5, 0, 1310730, 5, 0, 1310731, 5, 0, 1310732, 5, 0, 1310733, 5, 0, 1310734, 5, 0, 1310735, 5, 0, 1310736, 13, 0, 1310737, 13, 0, 1310738, 13, 0, 1310739, 13, 0, 1310740, 13, 0, 1310741, 13, 0, 1310742, 13, 0, 1310743, 5, 0, 1310744, 6, 0, 1310745, 5, 0, 1310746, 5, 0, 1310747, 5, 0, 1310748, 4, 0, 1310749, 4, 0, 1310750, 5, 0, 1310751, 6, 0, 1310752, 5, 0, 1310753, 5, 0, 1310754, 6, 0, 1310755, 4, 0, 1310756, 6, 0, 1310757, 6, 0, 1310758, 4, 0, 1310759, 4, 0, 1310760, 6, 0, 1310761, 5, 0, 1310762, 6, 0, 1310763, 6, 0, 1310764, 5, 0, 1310765, 6, 0, 1310766, 6, 0, 1310767, 5, 0, 1310768, 6, 0, 1310769, 4, 0, 1310770, 5, 0, 1310771, 6, 0, 1310772, 4, 0, 1310773, 5, 0, 1310774, 6, 0, 1310775, 6, 0, 1310776, 5, 0, 1310777, 6, 0, 1310778, 4, 0, 1310779, 5, 0, 1310780, 6, 0, 1310781, 4, 0, 1310782, 5, 0, 1310783, 6, 0, 1376256, 208, 0, 1376257, 208, 0, 1376258, 208, 0, 1376259, 208, 0, 1376260, 208, 0, 1376261, 208, 0, 1376262, 208, 0, 1376263, 208, 0, 1376264, 208, 0, 1376265, 208, 0, 1376266, 208, 0, 1376267, 208, 0, 1376268, 208, 0, 1376269, 208, 0, 1376270, 208, 0, 1376271, 208, 0, 1376272, 208, 0, 1376273, 208, 0, 1376274, 208, 0, 1376275, 208, 0, 1376276, 208, 0, 1376277, 208, 0, 1376278, 208, 0, 1376279, 208, 0, 1376280, 208, 0, 1376281, 208, 0, 1376282, 208, 0, 1376283, 208, 0, 1376284, 208, 0, 1376285, 208, 0, 1376286, 208, 0, 1376287, 208, 0, 1376288, 208, 0, 1376289, 208, 0, 1376290, 208, 0, 1376291, 208, 0, 1376292, 208, 0, 1376293, 208, 0, 1376294, 208, 0, 1376295, 208, 0, 1376296, 208, 0, 1376297, 208, 0, 1376298, 208, 0, 1376299, 208, 0, 1376300, 208, 0, 1376301, 208, 0, 1376302, 208, 0, 1376303, 208, 0, 1376304, 208, 0, 1376305, 208, 0, 1376306, 208, 0, 1376307, 208, 0, 1376308, 208, 0, 1376309, 208, 0, 1376310, 208, 0, 1376311, 208, 0, 1376312, 208, 0, 1376313, 208, 0, 1376314, 208, 0, 1376315, 208, 0, 1376316, 208, 0, 1376317, 208, 0, 1376318, 208, 0, 1376319, 208, 0 )
 __meta__ = {
 "height": 22,
 "name": "primer_plano",
 "type": "tilelayer",
-"width": 32
+"width": 64
 }
 
 [node name="dinamico" type="TileMap" parent="."]
@@ -3758,29 +3759,37 @@ cell_y_sort = true
 compatibility_mode = true
 cell_clip_uv = true
 format = 1
-tile_data = PoolIntArray( 131075, 141, 0, 131100, 169, 0, 458765, 201, 0, 458766, 19, 0, 458769, 20, 0, 524302, 39, 0, 524303, 37, 0, 524304, 38, 0, 524305, 40, 0, 589838, 59, 0, 589839, 57, 0, 589840, 58, 0, 589841, 60, 0, 917530, 148, 0, 983055, 176, 0, 1245186, 134, 0 )
+tile_data = PoolIntArray( 65543, 176, 0, 65559, 177, 0, 131113, 114, 0, 131130, 176, 0, 196654, 181, 0, 196655, 182, 0, 262184, 181, 0, 262185, 182, 0, 262190, 181, 0, 262191, 182, 0, 327720, 181, 0, 327721, 182, 0, 327724, 155, 0, 327726, 181, 0, 327727, 182, 0, 393256, 181, 0, 393257, 182, 0, 458755, 177, 0, 458777, 177, 0, 524333, 177, 0, 589842, 148, 0, 720919, 141, 0, 786436, 201, 0, 786437, 19, 0, 786438, 103, 0, 786439, 103, 0, 786440, 20, 0, 786474, 134, 0, 851973, 39, 0, 851974, 37, 0, 851975, 38, 0, 851976, 40, 0, 852024, 201, 0, 852025, 19, 0, 852026, 103, 0, 852027, 103, 0, 852028, 20, 0, 917509, 59, 0, 917510, 57, 0, 917511, 58, 0, 917512, 60, 0, 917561, 39, 0, 917562, 37, 0, 917563, 38, 0, 917564, 40, 0, 983054, 177, 0, 983097, 59, 0, 983098, 57, 0, 983099, 58, 0, 983100, 60, 0, 1114113, 177, 0, 1114170, 177, 0, 1245208, 176, 0 )
 __meta__ = {
 "height": 22,
 "name": "dinamico",
 "type": "tilelayer",
-"width": 32
+"width": 64
 }
 
-[node name="Jewel" parent="." instance=ExtResource( 1 )]
-position = Vector2( 448, 48 )
-sprite_texture = ExtResource( 5 )
+[node name="Jewel" parent="." instance=ExtResource( 2 )]
+position = Vector2( 656, 48 )
+sprite_texture = ExtResource( 6 )
 
-[node name="Jewel2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 48, 48 )
-sprite_texture = ExtResource( 4 )
+[node name="Jewel2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 704, 96 )
+sprite_texture = ExtResource( 7 )
 
-[node name="Door" parent="." instance=ExtResource( 6 )]
-position = Vector2( 240, 160 )
-
-[node name="Jewel3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 416, 240 )
+[node name="Jewel3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288, 160 )
 sprite_texture = ExtResource( 3 )
 
-[node name="Jewel4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 320 )
-sprite_texture = ExtResource( 2 )
+[node name="Jewel4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 368, 192 )
+sprite_texture = ExtResource( 4 )
+
+[node name="Jewel5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 672, 208 )
+sprite_texture = ExtResource( 1 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 96, 240 )
+
+[node name="Door2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 928, 256 )
+door_type = "salida"

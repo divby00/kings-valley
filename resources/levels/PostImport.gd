@@ -1,6 +1,7 @@
 extends Node
 
 const JewelTypes = ["", "rosa", "azul_clara", "azul_oscura", "naranja", "amarilla", "blanca", "verde"]
+const DoorTypes = ["", "entrada-salida", "entrada", "salida"]
 
 var scenes = {
 	"joya": {
@@ -40,18 +41,20 @@ func post_import(scene):
 				var objtype = object.get_meta("type")
 				var objname = object.get_meta("name")
 				print("Object found: name: " + objname + ", type: " + objtype)
+				
 				var node_to_clone = null
 				var node_offset = Vector2(0, 0)
 				if objname in scenes:
 					node_to_clone = scenes[objname].scene
 					node_offset = scenes[objname].offset
-
 				if node_to_clone:
 					var new_instance = node_to_clone.instance()
 					new_instance.position = object.position + node_offset
 					scene.add_child(new_instance)
 					new_instance.set_owner(scene)
 					set_jewel_details(new_instance, objname, objtype)
+					set_door_details(new_instance, objname, objtype)
+			
 			# After you processed all the objects, remove objetos and dinamico layers
 			node.queue_free()
 			var objetos = scene.get_node("objetos")
@@ -68,3 +71,10 @@ func set_jewel_details(new_instance, objname, objtype):
 			new_instance.sprite_texture = scenes[objname].sprites[objtype]
 		else:
 			print('Error: Unknown jewel type detected!: ' + objtype)
+
+func set_door_details(new_instance, objname, objtype):
+	if objname == "puerta":
+		if DoorTypes.has(objtype):
+			new_instance.door_type = objtype
+		else:
+			print('Error: Unknown door type detected!: ' + objtype)
