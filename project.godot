@@ -22,6 +22,7 @@ config/icon="res://kvicon.png"
 [autoload]
 
 Utils="*res://global/Utils.gd"
+Stats="*res://global/Stats.gd"
 
 [display]
 

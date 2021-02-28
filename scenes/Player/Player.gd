@@ -5,6 +5,7 @@ enum Facing {
 }
 
 enum Status {
+	DISABLED,
 	IDLE,
 	WALK,
 	JUMP
@@ -26,10 +27,15 @@ var animations = {
 	Status.WALK: "walk",
 	Status.JUMP: "jump",
 }
+var disabled setget set_disabled
 var status = Status.IDLE
 var motion = Vector2.ZERO
 var snap_vector = Vector2.ZERO
 var facing = Facing.LEFT
+
+func _ready():
+	self.disabled = true
+	Stats.item = Stats.Items.None
 
 func _process(_delta):
 	if Input.is_action_pressed("primary"):
@@ -80,10 +86,31 @@ func apply_gravity(delta):
 
 func update_animation(_input_vector):
 	if _input_vector == Vector2(0, 0):
-		animation_player.play("idle")
+		var anim = 'idle'
+		if Stats.item == Stats.Items.Pickaxe:
+			anim = "idle_pickaxe"
+		if Stats.item == Stats.Items.Dagger:
+			anim = "idle_dagger"
+		animation_player.play(anim)
 	else:
-		animation_player.play("walk")
+		var anim = 'walk'
+		if Stats.item == Stats.Items.Pickaxe:
+			anim = "walk_pickaxe"
+		if Stats.item == Stats.Items.Dagger:
+			anim = "walk_dagger"
+		animation_player.play(anim)
 	sprite.scale.x = -1 if facing == Facing.LEFT else 1
 
-func on_trigger_pressed(door):
-	print('Pressed')
+func set_disabled(value):
+	disabled = value
+	set_visible(!disabled)
+	set_physics_process(!disabled)
+
+func on_trigger_pressed(_door):
+	print('Trigger pressed')
+
+func on_pickaxe_picked(_pickaxe):
+	Stats.item = Stats.Items.Pickaxe
+
+func on_dagger_picked(_dagger):
+	Stats.item = Stats.Items.Dagger

@@ -21,7 +21,7 @@ func init():
 	self.status = Status.LEVEL_IN
 
 func create_player():
-	emit_signal("create_player", Vector2(self.global_position.x + 18, self.global_position.y - 16))
+	emit_signal("create_player", Vector2(self.global_position.x + 16, self.global_position.y - 16))
 
 func set_status(value):
 	status = value

@@ -20,6 +20,14 @@ var scenes = {
 	"puerta": {
 		"offset": Vector2(16, 48),
 		"scene": load("res://scenes/Door/Door.tscn")
+	},
+	"pico": {
+		"offset": Vector2(8, 8),
+		"scene": load("res://scenes/Pickaxe/Pickaxe.tscn")
+	},
+	"daga": {
+		"offset": Vector2(8, 8),
+		"scene": load("res://scenes/Dagger/Dagger.tscn")
 	}
 }
 
