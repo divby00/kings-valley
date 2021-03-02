@@ -15,6 +15,6 @@ func update_score():
 	pyramid_label.text = "PYRAMID-%02d" % Stats.level
 	
 func on_jewel_picked(_jewel):
-	Stats.points += 5000
+	Stats.points += 500
 	update_score()
 	

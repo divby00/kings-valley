@@ -42,7 +42,7 @@ func load_level(level_number):
 	set_camera_limits(level_number)
 	Stats.level = level_number
 	score.update_score()
-	open_door()
+	open_entrance_door()
 	
 func connect_signals():
 	connect_jewels()
@@ -69,11 +69,17 @@ func connect_daggers():
 func connect_doors():
 	var doors = get_tree().get_nodes_in_group('DoorGroup')
 	for door in doors:
-		Utils.connect_signal(door, 'create_player', self, 'on_create_player')
+		Utils.connect_signal(door, 'hide_doors', self, 'on_hide_doors')
+		Utils.connect_signal(door, 'prepare_player', self, 'on_prepare_player')
 
-func open_door():
+func open_entrance_door():
 	var door = find_entrance_door()
-	door.init()
+	door.start()
+
+func show_doors():
+	var doors = get_tree().get_nodes_in_group('DoorGroup')
+	for door in doors:
+		door.visible = true
 
 func find_entrance_door():
 	var final_door = null
@@ -97,9 +103,9 @@ func find_jewels_to_go():
 func set_jewels_to_go(value):
 	jewels_to_go = clamp(value, 0, MAX_JEWELS)
 	if jewels_to_go == 0:
-		print('Doors must be opened here')
+		show_doors()
 
-func on_create_player(position):
+func on_prepare_player(position):
 	# Assign player position
 	player.global_position = position
 	# Attach the camera
@@ -108,10 +114,12 @@ func on_create_player(position):
 	player.disabled = false
 	# Reset player items
 	Stats.item = Stats.Items.None
-	# Hide the doors
-	var doors = get_tree().get_nodes_in_group('DoorGroup')
-	for door in doors:
-		door.visible = false
 
 func on_jewel_picked(_jewel):
 	self.jewels_to_go -= 1
+	
+func on_hide_doors():
+	var doors = get_tree().get_nodes_in_group('DoorGroup')
+	for door in doors:
+		door.visible = false
+		door.close()
