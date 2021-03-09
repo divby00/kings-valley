@@ -49,6 +49,7 @@ func connect_signals():
 	connect_pickaxes()
 	connect_daggers()
 	connect_doors()
+	connect_stairs()
 
 func connect_jewels():
 	var jewels = get_tree().get_nodes_in_group('JewelGroup')
@@ -71,6 +72,11 @@ func connect_doors():
 	for door in doors:
 		Utils.connect_signal(door, 'hide_doors', self, 'on_hide_doors')
 		Utils.connect_signal(door, 'prepare_player', self, 'on_prepare_player')
+
+func connect_stairs():
+	var stairs = get_tree().get_nodes_in_group('StairsGroup')
+	for stair in stairs:
+		Utils.connect_signal(stair, 'player_on_stairs', player, 'on_player_on_stairs')
 
 func open_entrance_door():
 	var door = find_entrance_door()

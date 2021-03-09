@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://resources/sprites/jewel01.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Jewel/Jewel.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://resources/sprites/jewel04.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Pickaxe/Pickaxe.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Dagger/Dagger.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Stairs/Stairs.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 8 )
@@ -3769,6 +3770,10 @@ __meta__ = {
 "width": 64
 }
 
+[node name="Stairs" parent="." instance=ExtResource( 10 )]
+position = Vector2( 928, 160 )
+direction = "baja-izquierda"
+
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96, 240 )
 
@@ -3778,6 +3783,10 @@ position = Vector2( 24, 280 )
 [node name="Door2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 656, 320 )
 door_type = "salida"
+
+[node name="Stairs2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 800, 288 )
+direction = "sube-derecha"
 
 [node name="Pickaxe2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 56, 296 )

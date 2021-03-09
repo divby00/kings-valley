@@ -2,6 +2,7 @@ extends Node
 
 const JewelTypes = ["", "rosa", "azul_clara", "azul_oscura", "naranja", "amarilla", "blanca", "verde"]
 const DoorTypes = ["", "entrada-salida", "entrada", "salida"]
+const StairsTypes = ["", "sube-derecha", "baja-derecha", "sube-izquierda", "baja-izquierda"]
 
 var scenes = {
 	"joya": {
@@ -28,6 +29,10 @@ var scenes = {
 	"daga": {
 		"offset": Vector2(8, 8),
 		"scene": load("res://scenes/Dagger/Dagger.tscn")
+	},
+	"escalera": {
+		"offset": Vector2(0, 16),
+		"scene": load("res://scenes/Stairs/Stairs.tscn")
 	}
 }
 
@@ -62,6 +67,7 @@ func post_import(scene):
 					new_instance.set_owner(scene)
 					set_jewel_details(new_instance, objname, objtype)
 					set_door_details(new_instance, objname, objtype)
+					set_stairs_details(new_instance, objname, objtype)
 			
 			# After you processed all the objects, remove objetos and dinamico layers
 			node.queue_free()
@@ -71,7 +77,6 @@ func post_import(scene):
 			#scene.remove_child(dinamico)
 	# You must return the modified scene
 	return scene
-
 
 func set_jewel_details(new_instance, objname, objtype):
 	if objname == "joya":
@@ -86,3 +91,10 @@ func set_door_details(new_instance, objname, objtype):
 			new_instance.door_type = objtype
 		else:
 			print('Error: Unknown door type detected!: ' + objtype)
+
+func set_stairs_details(new_instance, objname, objtype):
+	if objname == "escalera":
+		if StairsTypes.has(objtype):
+			new_instance.direction = objtype
+		else:
+			print('Error: Unknown stair type detected!: ' + objtype)

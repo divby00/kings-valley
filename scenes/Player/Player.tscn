@@ -5,10 +5,10 @@
 [ext_resource path="res://resources/sprites/player_walks.png" type="Texture" id=3]
 [ext_resource path="res://resources/sprites/player_walks_dagger.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 15 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -35,7 +35,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "idle_dagger"
 length = 0.1
 tracks/0/type = "value"
@@ -63,7 +63,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 4 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "idle_pickaxe"
 length = 0.1
 tracks/0/type = "value"
@@ -91,7 +91,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -106,7 +106,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -134,7 +134,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "walk_dagger"
 length = 0.8
 loop = true
@@ -163,8 +163,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 4 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "walk_pickaxe"
+[sub_resource type="Animation" id=8]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -204,19 +203,20 @@ ACCELERATION = 200
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 hframes = 5
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "walk"
-anims/idle = SubResource( 3 )
-anims/idle_dagger = SubResource( 9 )
-anims/idle_pickaxe = SubResource( 7 )
-anims/jump = SubResource( 4 )
-anims/walk = SubResource( 5 )
-anims/walk_dagger = SubResource( 8 )
-anims/walk_pickaxe = SubResource( 6 )
+anims/idle = SubResource( 2 )
+anims/idle_dagger = SubResource( 3 )
+anims/idle_pickaxe = SubResource( 4 )
+anims/jump = SubResource( 5 )
+anims/walk = SubResource( 6 )
+anims/walk_dagger = SubResource( 7 )
+anims/walk_pickaxe = SubResource( 8 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

@@ -114,3 +114,6 @@ func on_pickaxe_picked(_pickaxe):
 
 func on_dagger_picked(_dagger):
 	Stats.item = Stats.Items.Dagger
+
+func on_player_on_stairs(_stairs):
+	print('On stairs')
