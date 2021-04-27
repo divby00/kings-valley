@@ -71,7 +71,7 @@ func doControl():
 						dagger.position.y -= 12
 						porting = PORTING.NONE
 						dagger.add_collision_exception_with(self)
-						var _ret = dagger.connect("on_floor",self.get_parent(),"dagger_on_floor")
+						Globals.connect_signal(dagger,"on_floor",self.get_parent(),"dagger_on_floor")
 						self.get_parent().add_child(dagger)
 						playSound(Globals.snd_dagger)
 					PORTING.PICKER:

@@ -147,7 +147,7 @@ func drawPyramid():
 				jewel.position.y = item.y*10
 				jewel.init_frame = item.p0-1
 				$Jewels.add_child(jewel)
-				_ret=jewel.connect("area_entered",Vick,"on_jewel_enter",[jewel])
+				Globals.connect_signal(jewel,"area_entered",Vick,"on_jewel_enter",[jewel])
 				jewels+=1
 				
 			Globals.It_dagger:
@@ -159,7 +159,7 @@ func drawPyramid():
 				picker.position.y = item.y*10
 				picker.init_frame = item.p0-1
 				$Pickers.add_child(picker)
-				_ret=picker.connect("body_entered",Vick,"on_picker_enter",[picker])
+				Globals.connect_signal(picker,"body_entered",Vick,"on_picker_enter",[picker])
 
 			Globals.It_door:
 				var door:TDoor = tdoor.instance()
@@ -167,8 +167,8 @@ func drawPyramid():
 				door.position.y = item.y*10
 				door.door_type = item.p0
 				door.Vick=Vick
-				_ret=door.connect("door_exiting",self,"on_door_exiting")
 				$Doors.add_child(door)
+				Globals.connect_signal(door,"door_exiting",self,"on_door_exiting")
 				
 			Globals.It_giratory:
 				var gdoor:TDoorGiratory = tgdoor.instance()
@@ -239,17 +239,17 @@ func drawPyramid():
 				elif item.p0==4:
 					mummy.color=mummy.COLOR.RED
 				mummy.vick=Vick
-				_ret=mummy.connect("sig_vick_collision",self,"on_vick_collision")
 				$Mummies.add_child(mummy)
+				Globals.connect_signal(mummy,"sig_vick_collision",self,"on_vick_collision")
 
 	#Asociamos los eventos de detección de escaleras sobre Vick y las momias
 	for staird in $Stairs.get_children():
 		if staird.get_class()=="TStairDetect":
-			_ret=staird.connect("area_entered",Vick,"on_stair_enter",[staird])
-			_ret=staird.connect("area_exited",Vick,"on_stair_exit",[staird])
+			Globals.connect_signal(staird,"area_entered",Vick,"on_stair_enter",[staird])
+			Globals.connect_signal(staird,"area_exited",Vick,"on_stair_exit",[staird])
 			for mummy in $Mummies.get_children():
-				_ret=staird.connect("area_entered",mummy,"on_stair_enter",[staird])
-				_ret=staird.connect("area_exited",mummy,"on_stair_exit",[staird])
+				Globals.connect_signal(staird,"area_entered",mummy,"on_stair_enter",[staird])
+				Globals.connect_signal(staird,"area_exited",mummy,"on_stair_exit",[staird])
 				
 	#Eliminamos a Vick de la Escena, para introducirlo en la puerta correspondiente
 	remove_child(Vick)
@@ -270,7 +270,7 @@ func putDaggerOnFloor(px,py,frame):
 	ldagger.position.y = py*10
 	ldagger.init_frame = frame
 	$Daggers.add_child(ldagger)
-	var _ret=ldagger.connect("body_entered",Vick,"on_dagger_enter",[ldagger])
+	Globals.connect_signal(ldagger,"body_entered",Vick,"on_dagger_enter",[ldagger])
 
 func dagger_on_floor(dagger):	
 	var pos:Vector2 = Vector2(int(dagger.position.x / 10),int(dagger.position.y / 10))
@@ -281,6 +281,8 @@ func dagger_on_floor(dagger):
 			dagger.position.x += 5
 		pos = Vector2(int(dagger.position.x / 10),int(dagger.position.y / 10))
 	
+# warning-ignore:narrowing_conversion
+# warning-ignore:narrowing_conversion
 	while pos.y < height-1 and not isBrick(pos.x,pos.y+1): pos.y+=1	
 	putDaggerOnFloor(pos.x,pos.y,175)
 	dagger.queue_free()

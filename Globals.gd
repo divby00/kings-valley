@@ -126,3 +126,7 @@ func resumeMusic():
 
 func getMusicPlayer():
 	return $ComMusic
+
+func connect_signal(source, signal_name, target, method_name, args=[]):
+	if not source.is_connected(signal_name, target, method_name):
+		source.connect(signal_name, target, method_name,args)

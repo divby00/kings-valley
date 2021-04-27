@@ -13,7 +13,7 @@ func _ready():
 	$CanvasLayer/FaderArea.setTransition(1)
 	Globals.LIVES=4
 	Globals.SCORE=0
-	var _ret=$CanvasLayer/TGameOptions.connect("sig_option_selected",self,"on_option_selected")
+	Globals.connect_signal($CanvasLayer/TGameOptions,"sig_option_selected",self,"on_option_selected")
 	showGameOptions(false)
 	$CanvasLayer/StickControls.visible = Globals.isTablet()
 	doEnterLevel(level,false)
@@ -28,10 +28,10 @@ func doEnterLevel(plevel,update_last=true):
 	level=plevel
 	var pyramid:TPyramidScreen = load("res://scenes/TPyramidScreen.tscn").instance()
 	var _ret=pyramid.setLevel(plevel,last_level)
-	_ret=pyramid.connect("sig_update_score",self,"on_update_score")
-	_ret=pyramid.connect("sig_next_level",self,"on_next_level")
-	_ret=pyramid.connect("sig_show_gameoptions",self,"on_show_gameoptions")
-	_ret=pyramid.connect("sig_restart_level",self,"on_restart_level")
+	Globals.connect_signal(pyramid,"sig_update_score",self,"on_update_score")
+	Globals.connect_signal(pyramid,"sig_next_level",self,"on_next_level")
+	Globals.connect_signal(pyramid,"sig_show_gameoptions",self,"on_show_gameoptions")
+	Globals.connect_signal(pyramid,"sig_restart_level",self,"on_restart_level")
 	pyramid.rect_position.y = 20
 	if $Scene.get_child_count()>0:
 		$Scene.get_child(0).queue_free()
@@ -80,7 +80,7 @@ func on_next_level(currentlevel,nextlevel):
 	var map:TPyramidMap = load("res://scenes/TPyramidMap.tscn").instance()
 	map.from_level=currentlevel
 	map.to_level=nextlevel
-	var _ret=map.connect("sig_continue_level",self,"on_continue_tolevel")
+	Globals.connect_signal(map,"sig_continue_level",self,"on_continue_tolevel")
 	$Scene.get_child(0).queue_free()
 	$Scene.add_child(map)
 	$CanvasLayer/Scores.visible=false

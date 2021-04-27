@@ -118,6 +118,10 @@ config/icon="res://icon.png"
 
 Globals="*res://Globals.tscn"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=320

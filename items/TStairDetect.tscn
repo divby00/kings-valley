@@ -3,7 +3,7 @@
 [ext_resource path="res://items/TStairDetect.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 1 )
+extents = Vector2( 2.0715, 1 )
 
 [node name="TStairDetect" type="Area2D"]
 collision_layer = 4

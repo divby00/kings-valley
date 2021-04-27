@@ -1,5 +1,8 @@
 class_name TGameOptions extends ColorRect
 
+
+onready var selector = $selector
+
 signal sig_option_selected(option)
 
 var option=0
