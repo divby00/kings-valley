@@ -8,6 +8,8 @@ enum MODE {MUMMY,APPEAR,DISAPPEAR}
 export (COLOR) var color=COLOR.WHITE setget setColor
 export (MODE) var mode=MODE.MUMMY setget setMode
 
+onready var timer=$Timer
+
 var vick
 var pyramid
 var texture_mummy:Texture
@@ -60,30 +62,33 @@ func setColor(c):
 			
 	texture_appear=load("res://pics/mummy_appear.png")
 	texture_disappear=load("res://pics/mummy_disappear.png")
-	$Sprite.texture=texture_mummy
+	if sprite!=null:
+		sprite.texture=texture_mummy
 	update()
 
 func setMode(m):
 	mode=m
+	if sprite==null:
+		return
 	match mode:
 		MODE.MUMMY:
-			$Sprite.texture=texture_mummy
-			$Sprite.hframes=11
+			sprite.texture=texture_mummy
+			sprite.hframes=11
 			self.set_collision_layer_bit(16,true) #Habilita la colisión
 		MODE.APPEAR:
-			$Sprite.texture=texture_appear
-			$Sprite.hframes=10
+			sprite.texture=texture_appear
+			sprite.hframes=10
 			self.set_collision_layer_bit(16,false) #Deshabilita la colisión
 		MODE.DISAPPEAR:
-			$Sprite.texture=texture_disappear
-			$Sprite.hframes=5
+			sprite.texture=texture_disappear
+			sprite.hframes=5
 			self.set_collision_layer_bit(16,false) #Deshabilita la colisión
-	$Sprite.frame=1
+	sprite.frame=1
 	update()
 
 func setState(st):
 	self.state=st
-	$Timer.stop()
+	timer.stop()
 	match self.state:
 		st_init:
 			setState(st_appearing)
@@ -106,7 +111,7 @@ func setState(st):
 			animator.play("disappear")
 			yield(animator,"animation_finished")
 			#Programamos la aparición después de 5 segundos
-			$Timer.start(5)
+			timer.start(5)
 
 		st_teleporting:
 			setMode(MODE.DISAPPEAR)
@@ -116,26 +121,26 @@ func setState(st):
 			yield(animator,"animation_finished")
 			pyramid.teleport(self)
 			#Programamos la aparición en medio segundo
-			$Timer.start(0.5)
+			timer.start(0.5)
 			
 		st_waiting:
 			setMode(MODE.MUMMY)
 			animator.play("waiting")
-			$Timer.start(rand_range(1.5,2.5))
+			timer.start(rand_range(1.5,2.5))
 			
 		st_walk:
 			#Establecemos un tiempo tras el cual, volvemos a decidir que hacer
 			match color:
 				COLOR.WHITE:
-					$Timer.start(rand_range(5,10))
+					timer.start(rand_range(5,10))
 				COLOR.BLUE:
-					$Timer.start(rand_range(5,8))
+					timer.start(rand_range(5,8))
 				COLOR.YELLOW:
-					$Timer.start(rand_range(5,6))
+					timer.start(rand_range(5,6))
 				COLOR.ORANGE:
-					$Timer.start(5)
+					timer.start(5)
 				COLOR.RED:
-					$Timer.start(rand_range(3,5))
+					timer.start(rand_range(3,5))
 
 func doControl():	
 	if state in [st_init]:
@@ -179,6 +184,7 @@ func doAfterMove():
 func doKill()->bool:
 	if state in [st_walk,st_waiting,st_falling,st_jump_left,st_jump_right,st_jump_top,st_onstairs]:
 		Globals.playSound(Globals.snd_mummydead)
+		vick.addScore(100)
 		setState(st_disappearing)
 		return true
 	return false
@@ -224,7 +230,7 @@ func _on_Timer_timeout():
 	if state in [st_walk,st_jump_left,st_jump_right,st_jump_top]:
 		#Si no estamos en el suelo, esperamos un poco más hasta estarlo
 		if not is_on_floor():
-			$Timer.start(1)
+			timer.start(1)
 		else:
 			#Si estamos cerca de Vick, decidimos perseguirlo.
 			if self.position.distance_to(vick.position)<80:

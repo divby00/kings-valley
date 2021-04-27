@@ -1,15 +1,24 @@
-extends ColorRect
+class_name TMainMenu extends ColorRect
 
 enum STATE {OPTIONS,CREDITS,OUT}
+
+onready var selector = $MenuOptions/selector
+onready var menu_options = $MenuOptions
+onready var scroll = $Scroll
+onready var scroll_animator = $Scroll/Credits/ScrollAnimator
+onready var start_game = $MenuOptions/start_game
+onready var sound_sets = $MenuOptions/sound_sets
+onready var credits = $MenuOptions/credits
+onready var exit_game = $MenuOptions/exit_game
+onready var scredits = $Scroll/Credits
+onready var scroll_y=scredits.rect_position.y
+onready var option_position = [start_game.position.y, sound_sets.position.y, credits.position.y, exit_game.position.y]
+
 var state = STATE.OPTIONS
 var option_menu=0
-var option_position
-var scroll_y
 
 func _ready():
 	Globals.playMusic(Globals.MUSICS.MENU)
-	option_position = [$MenuOptions/start_game.position.y, $MenuOptions/sound_sets.position.y, $MenuOptions/credits.position.y, $MenuOptions/exit_game.position.y]
-	scroll_y= $Scroll/Credits.rect_position.y
 	update_soundset()
 		
 func _process(_delta):	
@@ -21,10 +30,10 @@ func _process(_delta):
 		STATE.OPTIONS:	
 			if Input.is_action_just_pressed("ui_down") and option_menu<3:
 				option_menu+=1
-				$MenuOptions/selector.position.y = option_position[option_menu]
+				selector.position.y = option_position[option_menu]
 			elif Input.is_action_just_pressed("ui_up") and option_menu>0:
 				option_menu-=1
-				$MenuOptions/selector.position.y = option_position[option_menu]
+				selector.position.y = option_position[option_menu]
 			elif Input.is_action_just_pressed("ui_select"):
 				match option_menu:
 					0:
@@ -32,57 +41,56 @@ func _process(_delta):
 						Globals.playMusic(Globals.MUSICS.GETREADY)
 						self.set_process(false)
 						yield(Globals.getMusicPlayer(),"finished")
-						get_tree().change_scene("res://scenes/TGameScene.tscn")
+						Globals.set_scene(Globals.SCENES.GAME)
 					1:
 						Globals.loadSounds(!Globals.soundset_new)
 						update_soundset()
 						Globals.playSound(Globals.snd_fall)
 					2:
 						state=STATE.CREDITS
-						$MenuOptions.visible=false
-						$Scroll.visible=true
-						$Scroll/Credits/ScrollAnimator.play("scroll_up")
+						menu_options.visible=false
+						scroll.visible=true
+						scroll_animator.play("scroll_up")
 					3:
 						get_tree().quit()
 	
 func update_soundset():
 	if Globals.soundset_new:
-		$MenuOptions/sound_sets.setText("MODERN SOUNDSET")
+		sound_sets.setText("MODERN SOUNDSET")
 	else:
-		$MenuOptions/sound_sets.setText("CLASSIC SOUNDSET")
+		sound_sets.setText("CLASSIC SOUNDSET")
 
-
-func _on_ScrollAnimator_animation_finished(anim_name):
-	$MenuOptions.visible=true
-	$Scroll.visible=false
-	$Scroll/Credits/ScrollAnimator.stop(true)
-	$Scroll/Credits.rect_position.y=scroll_y
+func _on_ScrollAnimator_animation_finished(_anim_name):
+	menu_options.visible=true
+	scroll.visible=false
+	scroll_animator.stop(true)
+	scredits.rect_position.y=scroll_y
 	state=STATE.OPTIONS
 
-func setOption(opt) -> bool:
+func set_option(opt) -> bool:
 	if state!=STATE.OPTIONS:
 		return false
 
 	if (option_menu!=opt):
 		option_menu=opt
-		$MenuOptions/selector.position.y = option_position[option_menu]
+		selector.position.y = option_position[option_menu]
 		return false
 	return true
 
 func _on_BT_start_game_pressed():
-	if setOption(0):
+	if set_option(0):
 		Input.action_press("ui_select")
 
 func _on_BT_sound_set_pressed():
-	if setOption(1):
+	if set_option(1):
 		Input.action_press("ui_select")
 
 func _on_BT_credits_pressed():
-	if setOption(2):
+	if set_option(2):
 		Input.action_press("ui_select")
 
 func _on_BT_exitgame_pressed():
-	if setOption(3):
+	if set_option(3):
 		Input.action_press("ui_select")
 
 func _on_BT_endcredits_pressed():

@@ -2,15 +2,17 @@ class_name TDagger extends KinematicBody2D
 
 signal on_floor(dagger)
 
+enum STATE { FLYING, BOUNCE_START, BOUNCE, DOWNING , END }
+
+onready var timer = $Timer
+onready var animator = $AnimationPlayer
+onready var state = STATE.FLYING
+
 var velocity = 3
 var motion = Vector2.ZERO
 
-enum STATE { FLYING, BOUNCE_START, BOUNCE, DOWNING , END }
-
-onready var state = STATE.FLYING
-
 func _ready():
-	$AnimationPlayer.play("rotate")
+	animator.play("rotate")
 	
 func isFlip() -> bool:
 	return $Sprite.scale.x < 0
@@ -34,14 +36,12 @@ func _physics_process(_delta):
 				motion.x = 0
 				velocity = 2
 				if collider.collider.get_class()=="TMummy":
-					print(collider.collider.get_collision_layer_bit(16))
 					collider.collider.doKill()
-					
 		STATE.BOUNCE_START:
 			$Sprite.scale.x = -$Sprite.scale.x
 			state = STATE.BOUNCE
-			$Timer.wait_time=0.3
-			$Timer.start()
+			timer.wait_time=0.3
+			timer.start()
 		STATE.BOUNCE:
 			motion.x = -0.5 if $Sprite.scale.x<0 else 0.5
 			motion.y = -1

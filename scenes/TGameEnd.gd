@@ -1,22 +1,28 @@
 class_name TGameEnd extends Node2D
 
+onready var vick = $Path2D/PathFollow2D/vick
+onready var vick_animator = $VickAnimator
+onready var path_animator = $PathAnimator
+onready var fader = $Fader
+onready var texts = $Textos
+
 func _ready():
 	Globals.playMusic(Globals.MUSICS.ENDING)
-	$Path2D/PathFollow2D/vick.self_modulate=Color.black
-	$Fader.fadeOut(3)
-	yield($Fader,"fade_end")
-	$VickAnimator.play("stop")
-	yield($VickAnimator,"animation_finished")
-	$VickAnimator.play("appear")
-	yield($VickAnimator,"animation_finished")
-	$VickAnimator.play("walk")
-	$PathAnimator.play("move")
-	yield($PathAnimator,"animation_finished")
-	$VickAnimator.play("stop")
-	yield($VickAnimator,"animation_finished")
-	$Textos.visible=true
+	vick.self_modulate=Color.black
+	fader.fadeOut(3)
+	yield(fader,"fade_end")
+	vick_animator.play("stop")
+	yield(vick_animator,"animation_finished")
+	vick_animator.play("appear")
+	yield(vick_animator,"animation_finished")
+	vick_animator.play("walk")
+	path_animator.play("move")
+	yield(path_animator,"animation_finished")
+	vick_animator.play("stop")
+	yield(vick_animator,"animation_finished")
+	texts.visible=true
 	yield(Globals.getMusicPlayer(),"finished")
-	$Fader.fadeIn(3)
-	yield($Fader,"fade_end")
-	get_tree().change_scene("res://scenes/TMainMenu.tscn")
+	fader.fadeIn(3)
+	yield(fader,"fade_end")
+	Globals.set_scene(Globals.SCENES.MAINMENU)
 	

@@ -28,11 +28,12 @@ class TStairCell:
 	var onstair:bool = false
 	var stair_up:TStairDetect = null
 	var stair_down:TStairDetect = null
-	
+
+onready var sprite = $Sprite	
 onready var animator:AnimationPlayer = $Animator
-onready var sprite:Sprite = $Sprite
 onready var aplayer:AudioStreamPlayer = $AudioStreamPlayer
 onready var stair_cell:TStairCell = TStairCell.new()
+onready var feet_detect = $FeetDetect
 
 var state:int = st_init
 var input_vector:Vector2 = Vector2.ZERO
@@ -137,7 +138,7 @@ func do_on_stair_exit():
 	pass
 
 func on_stair_enter(body,stair:TStairDetect):
-	if body==$FeetDetect:
+	if body==feet_detect:
 		stair_cell.onstair = true
 		if stair.stair_type in [TStairDetect.STAIR_TYPE.UP_RIGHT,TStairDetect.STAIR_TYPE.UP_LEFT]:
 			stair_cell.stair_up = stair
@@ -146,7 +147,7 @@ func on_stair_enter(body,stair:TStairDetect):
 		do_on_stair_enter()
 		
 func on_stair_exit(body,stair:TStairDetect):
-	if body==$FeetDetect:
+	if body==feet_detect:
 		if stair.stair_type in [TStairDetect.STAIR_TYPE.UP_RIGHT,TStairDetect.STAIR_TYPE.UP_LEFT]:		
 			stair_cell.stair_up = null
 		else:

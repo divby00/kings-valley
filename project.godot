@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/TGameOptions.gd"
 }, {
+"base": "Node2D",
+"class": "TGameScene",
+"language": "GDScript",
+"path": "res://scenes/TGameScene.gd"
+}, {
 "base": "Area2D",
 "class": "TItem",
 "language": "GDScript",
@@ -53,6 +58,21 @@ _global_script_classes=[ {
 "class": "TJewelParticles",
 "language": "GDScript",
 "path": "res://items/TJewelParticles.gd"
+}, {
+"base": "Node2D",
+"class": "TJoystick",
+"language": "GDScript",
+"path": "res://items/TJoystick.gd"
+}, {
+"base": "ColorRect",
+"class": "TKonami",
+"language": "GDScript",
+"path": "res://scenes/TKonami.gd"
+}, {
+"base": "ColorRect",
+"class": "TMainMenu",
+"language": "GDScript",
+"path": "res://scenes/TMainMenu.gd"
 }, {
 "base": "TSprite",
 "class": "TMummy",
@@ -96,9 +116,13 @@ _global_script_class_icons={
 "TDoorGiratory": "",
 "TGameEnd": "",
 "TGameOptions": "",
+"TGameScene": "",
 "TItem": "",
 "TJewel": "",
 "TJewelParticles": "",
+"TJoystick": "",
+"TKonami": "",
+"TMainMenu": "",
 "TMummy": "",
 "TPyramidMap": "",
 "TPyramidScreen": "",
@@ -113,6 +137,10 @@ _global_script_class_icons={
 config/name="KValley"
 run/main_scene="res://scenes/TSplashScreen.tscn"
 config/icon="res://icon.png"
+
+[audio]
+
+default_bus_layout=""
 
 [autoload]
 

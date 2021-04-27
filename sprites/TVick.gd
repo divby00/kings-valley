@@ -111,7 +111,7 @@ func doAnimation():
 				animator.play("jump_picker")
 				
 func on_jewel_enter(area,jewel):
-	if (area==$FeetDetect):
+	if (area==feet_detect):
 		playSound(Globals.snd_takejewel)
 		var magic:TJewelParticles = tmagic.instance()
 		magic.position.x = jewel.position.x + 5
@@ -169,6 +169,7 @@ func doDead():
 	
 func goNextLevel():
 	state=st_leveldone
+	addScore(2000)
 	emit_signal("sig_level_done",pyramid.level+1)
 
 func goPrevLevel():

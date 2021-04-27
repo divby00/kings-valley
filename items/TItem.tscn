@@ -14,8 +14,8 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 centered = false
-vframes = 12
 hframes = 20
+vframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 5, 5 )

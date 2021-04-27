@@ -13,6 +13,19 @@ class TLevelItem:
 	var p1:int
 
 onready var Vick = $TVick
+onready var timer = $Timer
+onready var camera = $Camera
+onready var layer_back = $LayerBack
+onready var layer_front = $LayerFront
+onready var layer_pick = $LayerPick
+onready var jewels_node = $Jewels
+onready var daggers_node = $Daggers
+onready var pickers_node = $Pickers
+onready var doors_node = $Doors
+onready var giradoors_node = $DoorsGiratory
+onready var stairs_node = $Stairs
+onready var walls_node = $Walls
+onready var mummies_node = $Mummies
 onready var tjewel = preload("res://items/TJewel.tscn")
 onready var titem = preload("res://items/TItem.tscn")
 onready var tdoor = preload("res://items/TDoor.tscn")
@@ -32,12 +45,16 @@ var frontBuffer:Array
 var items:Array
 
 func _ready():
+	camera.limit_left=0
+	camera.limit_top=0
+	camera.limit_right=width*10
+	camera.limit_bottom=height*10
 	Vick.pyramid = self
 	drawPyramid()
 	setVickInitialPosition()
 
 func _process(_delta):	
-	$Camera.position = Vick.position
+	camera.position = Vick.position
 	if Input.is_action_just_pressed("ui_home") && Vick.visible:
 		if !get_tree().paused and not Vick.state in [Vick.st_dying,Vick.st_init,Vick.st_goingout,Vick.st_leveldone]:
 			emit_signal("sig_show_gameoptions")
@@ -51,7 +68,7 @@ func drawTile(layer,x,y,id):
 	layer.set_cell(x,y,0,false,false,false,Vector2(id % 20,int(id/20)))
 
 func drawFrontTile(x,y,id):	
-	$LayerFront.set_cell(x,y,0,false,false,false,Vector2(id % 20,int(id/20)))
+	layer_front.set_cell(x,y,0,false,false,false,Vector2(id % 20,int(id/20)))
 
 func clearTile(layer,x,y):
 	layer.set_cell(x,y,-1)
@@ -102,10 +119,6 @@ func readLevel(plevel):
 				item.p1 = file.get_8()
 		items.append(item)
 	file.close()
-	$Camera.limit_left=0
-	$Camera.limit_top=0
-	$Camera.limit_right=width*10
-	$Camera.limit_bottom=height*10
 	self.rect_size=Vector2(width*10,height*10)
 		
 func drawBufferOnLayer(buffer,layer):
@@ -124,21 +137,21 @@ func removeChildrens(node):
 
 func drawPyramid():
 	var _ret
-	$LayerBack.clear()
-	$LayerFront.clear()
-	$LayerPick.clear()
-	removeChildrens($Jewels)
-	removeChildrens($Daggers)
-	removeChildrens($Pickers)
-	removeChildrens($Doors)
-	removeChildrens($DoorsGiratory)
-	removeChildrens($Stairs)
-	removeChildrens($Walls)
-	removeChildrens($Mummies)
+	layer_back.clear()
+	layer_front.clear()
+	layer_pick.clear()
+	removeChildrens(jewels_node)
+	removeChildrens(daggers_node)
+	removeChildrens(pickers_node)
+	removeChildrens(doors_node)
+	removeChildrens(giradoors_node)
+	removeChildrens(stairs_node)
+	removeChildrens(walls_node)
+	removeChildrens(mummies_node)
 	jewels=0
-	$Mummies.visible=false
-	drawBufferOnLayer(backBuffer,$LayerBack)
-	drawBufferOnLayer(frontBuffer,$LayerFront)
+	mummies_node.visible=false
+	drawBufferOnLayer(backBuffer,layer_back)
+	drawBufferOnLayer(frontBuffer,layer_front)
 	for item in items:
 		match item.type:
 			Globals.It_jewel:
@@ -146,7 +159,7 @@ func drawPyramid():
 				jewel.position.x = item.x*10
 				jewel.position.y = item.y*10
 				jewel.init_frame = item.p0-1
-				$Jewels.add_child(jewel)
+				jewels_node.add_child(jewel)
 				Globals.connect_signal(jewel,"area_entered",Vick,"on_jewel_enter",[jewel])
 				jewels+=1
 				
@@ -158,7 +171,7 @@ func drawPyramid():
 				picker.position.x = item.x*10
 				picker.position.y = item.y*10
 				picker.init_frame = item.p0-1
-				$Pickers.add_child(picker)
+				pickers_node.add_child(picker)
 				Globals.connect_signal(picker,"body_entered",Vick,"on_picker_enter",[picker])
 
 			Globals.It_door:
@@ -167,7 +180,7 @@ func drawPyramid():
 				door.position.y = item.y*10
 				door.door_type = item.p0
 				door.Vick=Vick
-				$Doors.add_child(door)
+				doors_node.add_child(door)
 				Globals.connect_signal(door,"door_exiting",self,"on_door_exiting")
 				
 			Globals.It_giratory:
@@ -176,12 +189,12 @@ func drawPyramid():
 				gdoor.position.y = item.y*10
 				gdoor.height = item.p0
 				gdoor.direction = item.p1
-				$DoorsGiratory.add_child(gdoor)
+				giradoors_node.add_child(gdoor)
 				
 			Globals.It_wall:
 				var wall:TWall = twall.instance()
 				wall.doInit(self,item.x,item.y,item.p0,item.p1)
-				$Walls.add_child(wall)
+				walls_node.add_child(wall)
 				
 			Globals.It_stairs:
 				var staird:TStairDetect = tstairdetect.instance()
@@ -193,11 +206,11 @@ func drawPyramid():
 						var stair = tstair.instance()
 						stair.position.x = (item.x - 1)*10
 						stair.position.y = (item.y + 1)*10
-						$Stairs.add_child(stair)
+						stairs_node.add_child(stair)
 						stair = tstair.instance()
 						stair.position.x = item.x*10
 						stair.position.y = (item.y + 1)*10
-						$Stairs.add_child(stair)
+						stairs_node.add_child(stair)
 						
 					Globals.It_stair_dr:
 						staird.stair_type = TStairDetect.STAIR_TYPE.DOWN_RIGHT
@@ -206,11 +219,11 @@ func drawPyramid():
 						var stair = tstair.instance()
 						stair.position.x = (item.x + 1)*10
 						stair.position.y = (item.y + 1)*10
-						$Stairs.add_child(stair)
+						stairs_node.add_child(stair)
 						stair = tstair.instance()
 						stair.position.x = item.x*10
 						stair.position.y = (item.y + 1)*10
-						$Stairs.add_child(stair)
+						stairs_node.add_child(stair)
 						
 					Globals.It_stair_ur:
 						staird.stair_type = TStairDetect.STAIR_TYPE.UP_RIGHT
@@ -220,7 +233,7 @@ func drawPyramid():
 				
 				staird.position.x = item.x*10
 				staird.position.y = item.y*10
-				$Stairs.add_child(staird)
+				stairs_node.add_child(staird)
 				
 			Globals.It_mummy:
 				var mummy:TMummy = tmummy.instance()
@@ -239,15 +252,15 @@ func drawPyramid():
 				elif item.p0==4:
 					mummy.color=mummy.COLOR.RED
 				mummy.vick=Vick
-				$Mummies.add_child(mummy)
+				mummies_node.add_child(mummy)
 				Globals.connect_signal(mummy,"sig_vick_collision",self,"on_vick_collision")
 
 	#Asociamos los eventos de detección de escaleras sobre Vick y las momias
-	for staird in $Stairs.get_children():
+	for staird in stairs_node.get_children():
 		if staird.get_class()=="TStairDetect":
 			Globals.connect_signal(staird,"area_entered",Vick,"on_stair_enter",[staird])
 			Globals.connect_signal(staird,"area_exited",Vick,"on_stair_exit",[staird])
-			for mummy in $Mummies.get_children():
+			for mummy in mummies_node.get_children():
 				Globals.connect_signal(staird,"area_entered",mummy,"on_stair_enter",[staird])
 				Globals.connect_signal(staird,"area_exited",mummy,"on_stair_exit",[staird])
 				
@@ -269,7 +282,7 @@ func putDaggerOnFloor(px,py,frame):
 	ldagger.position.x = px*10
 	ldagger.position.y = py*10
 	ldagger.init_frame = frame
-	$Daggers.add_child(ldagger)
+	daggers_node.add_child(ldagger)
 	Globals.connect_signal(ldagger,"body_entered",Vick,"on_dagger_enter",[ldagger])
 
 func dagger_on_floor(dagger):	
@@ -290,15 +303,15 @@ func dagger_on_floor(dagger):
 #Determina si una celdilla esta libre para poder poner un item
 func isCellFreeForDagger(position:Vector2) -> bool:
 	var ipos:Vector2	
-	for i in $Jewels.get_children():
+	for i in jewels_node.get_children():
 		ipos = Vector2(int(i.position.x / 10),int(i.position.y / 10))
 		if ipos==position:
 			return false
-	for i in $Daggers.get_children():
+	for i in daggers_node.get_children():
 		ipos = Vector2(int(i.position.x / 10),int(i.position.y / 10))
 		if ipos==position:
 			return false
-	for i in $Pickers.get_children():
+	for i in pickers_node.get_children():
 		ipos = Vector2(int(i.position.x / 10),int(i.position.y / 10))
 		if ipos==position:
 			return false					
@@ -307,11 +320,11 @@ func isCellFreeForDagger(position:Vector2) -> bool:
 #Determina si la celdilla indicada está en un muro o una puerta giratoria
 func isGiratoryOrWall(position:Vector2) -> bool:
 	var ipos:Vector2
-	for i in $Walls.get_children():
+	for i in walls_node.get_children():
 		ipos = Vector2(int(i.position.x / 10),int(i.position.y / 10))
 		if ipos==position:
 			return true
-	for i in $DoorsGiratory.get_children():
+	for i in giradoors_node.get_children():
 		ipos = Vector2(int(i.position.x / 10),int(i.position.y / 10))
 		if ipos.x<=position.x and position.x<=ipos.x+1:
 			return true
@@ -449,21 +462,21 @@ func whereCanVickPick() -> Array:
 
 func pickCell(cell:Vector2,frame:int):
 	if frame<4:
-		drawTile($LayerPick,cell.x,cell.y,176+frame)
+		drawTile(layer_pick,cell.x,cell.y,176+frame)
 	else:
-		clearTile($LayerPick,cell.x,cell.y)
-		clearTile($LayerFront,cell.x,cell.y)
+		clearTile(layer_pick,cell.x,cell.y)
+		clearTile(layer_front,cell.x,cell.y)
 		setBufferValue(frontBuffer,cell.x,cell.y,0)
 
 func setVickInitialPosition():
-	for d in $Doors.get_children():
+	for d in doors_node.get_children():
 		if (from_level <= level and d.door_type in [TDoor.TYPE.IN,TDoor.TYPE.BOTH]) or \
 			(from_level > level and d.door_type in [TDoor.TYPE.OUT,TDoor.TYPE.BOTH]):
 			Vick.position = d.position + d.vickPosition()
 
 func showDoors(enterlevel:bool):
 	var wait_door = null
-	for d in $Doors.get_children():
+	for d in doors_node.get_children():
 		d.setClose(enterlevel)
 		d.visible = true
 		d.ready_to_exit = not enterlevel
@@ -477,20 +490,20 @@ func showDoors(enterlevel:bool):
 				
 	if (wait_door!=null):
 		yield(wait_door,"door_opened")
-		$Timer.start(1)
-		yield($Timer,"timeout")
-		for d in $Doors.get_children():
+		timer.start(1)
+		yield(timer,"timeout")
+		for d in doors_node.get_children():
 			d.closeDoor(false)
-		$Timer.start(1)
-		yield($Timer,"timeout")
-		for d in $Doors.get_children():
+		timer.start(1)
+		yield(timer,"timeout")
+		for d in doors_node.get_children():
 			d.visible=false
 		Vick.state = TSprite.st_walk
-		$Timer.start(0.5)
-		yield($Timer,"timeout")
+		timer.start(0.5)
+		yield(timer,"timeout")
 		playMusicLevel()
-		$Mummies.visible=true
-		for m in $Mummies.get_children():
+		mummies_node.visible=true
+		for m in mummies_node.get_children():
 			m.setState(m.st_appearing)
 
 func playMusicLevel():
@@ -510,7 +523,7 @@ func doDead():
 	Vick.doDead()
 
 func killMummies():
-	for m in $Mummies.get_children():
+	for m in mummies_node.get_children():
 		m.setState(m.st_disappearing)
 	
 func on_door_exiting():

@@ -1,4 +1,3 @@
-tool
 class_name TItem extends Area2D
 
 export (int,0,239) var init_frame=0 setget setInitFrame,getInitFrame

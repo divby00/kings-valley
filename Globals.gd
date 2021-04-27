@@ -1,8 +1,13 @@
 extends Node2D
 
 enum MUSICS {MENU=0,GETREADY=1,PYRAMIDMAP=2,GAMEOVER=3,ENDING=4,MUSIC1=5,MUSIC2=6,MUSIC3=7,MUSIC4=8,MUSIC5=9}
+enum SCENES {KONAMI,MAINMENU,GAME,GAMEOVER,PYRAMIDMAP,PYRAMID,ENDGAME}
 
-var tablet_mode = (OS.get_name()=="Android")
+onready var com_sound = $ComSound
+onready var com_music = $ComMusic
+onready var space_state = get_world_2d().direct_space_state
+
+var tablet_mode = true or (OS.get_name()=="Android")
 var soundset_new:bool=false
 
 # ---------------------------------------------
@@ -43,9 +48,6 @@ var snd_takejewel
 var snd_takepicker 
 var snd_dagger
 
-onready var comSound = $ComSound
-onready var space_state = get_world_2d().direct_space_state
-
 func _ready():
 	randomize()
 	VisualServer.set_default_clear_color(Color(0,0,0,1.0))
@@ -81,14 +83,14 @@ func ray_cast_areas(origin:Vector2,direction:Vector2) -> bool:
 	return space_state.intersect_ray(origin,direction,[],0x7FFFFFFF,false,true)
 	
 func playSound(sound):
-	if comSound.playing: comSound.stop()
-	comSound.stream = sound
-	comSound.play()
+	if com_sound.playing: com_sound.stop()
+	com_sound.stream = sound
+	com_sound.play()
 
 func playMusic(music:int,loop=false):
 	var stream
-	if $ComMusic.playing:
-		$ComMusic.stop()
+	if com_music.playing:
+		com_music.stop()
 	match music:
 		MUSICS.ENDING:
 			stream = load("res://music/EndingGame.ogg")
@@ -112,21 +114,45 @@ func playMusic(music:int,loop=false):
 			stream = load("res://music/PyramidMap.ogg")
 
 	stream.set_loop(loop)
-	$ComMusic.stream = stream
-	$ComMusic.play()
+	com_music.stream = stream
+	com_music.play()
 
 func stopMusic():
-	$ComMusic.stop()
+	com_music.stop()
 
 func pauseMusic():
-	$ComMusic.stream_paused=true
+	com_music.stream_paused=true
 	
 func resumeMusic():
-	$ComMusic.stream_paused=false
+	com_music.stream_paused=false
 
 func getMusicPlayer():
-	return $ComMusic
+	return com_music
 
 func connect_signal(source, signal_name, target, method_name, args=[]):
 	if not source.is_connected(signal_name, target, method_name):
 		source.connect(signal_name, target, method_name,args)
+
+func get_scene_name(scene:int) -> String:
+	match scene:
+		SCENES.KONAMI:
+			return "res://scenes/TKonami.tscn"
+		SCENES.MAINMENU:
+			return "res://scenes/TMainMenu.tscn"
+		SCENES.GAME:
+			return "res://scenes/TGameScene.tscn"
+		SCENES.GAMEOVER:
+			return "res://scenes/TGameOver.tscn"
+		SCENES.PYRAMIDMAP:
+			return "res://scenes/TPyramidMap.tscn"
+		SCENES.PYRAMID:
+			return "res://scenes/TPyramidScreen.tscn"
+		SCENES.ENDGAME:
+			return "res://scenes/TGameEnd.tscn"
+	return "unknow"
+
+func load_scene(scene:int):
+	return  load(get_scene_name(scene))
+
+func set_scene(scene:int):
+	get_tree().change_scene(get_scene_name(scene))
