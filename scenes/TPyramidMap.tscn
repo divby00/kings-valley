@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/TPyramidMap.gd" type="Script" id=1]
+[ext_resource path="res://pics/pergamino.png" type="Texture" id=2]
+[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pics/pergamino_items.png" type="Texture" id=4]
+
+[node name="TPyramidMap" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+from_level = 1
+to_level = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="pergamino" type="Sprite" parent="."]
+position = Vector2( 160, 119 )
+texture = ExtResource( 2 )
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 16 )
+text = "PYRAMID'S MAP"
+textalign = 4
+
+[node name="Pyramids" type="Node2D" parent="."]
+
+[node name="P1" type="Sprite" parent="Pyramids"]
+position = Vector2( 91, 70 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P2" type="Sprite" parent="Pyramids"]
+position = Vector2( 131, 70 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P3" type="Sprite" parent="Pyramids"]
+position = Vector2( 171, 70 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P4" type="Sprite" parent="Pyramids"]
+position = Vector2( 211, 70 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P5" type="Sprite" parent="Pyramids"]
+position = Vector2( 231, 100 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P6" type="Sprite" parent="Pyramids"]
+position = Vector2( 191, 100 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P7" type="Sprite" parent="Pyramids"]
+position = Vector2( 151, 100 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P8" type="Sprite" parent="Pyramids"]
+position = Vector2( 111, 100 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P9" type="Sprite" parent="Pyramids"]
+position = Vector2( 91, 130 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P10" type="Sprite" parent="Pyramids"]
+position = Vector2( 131, 130 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P11" type="Sprite" parent="Pyramids"]
+position = Vector2( 171, 130 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P12" type="Sprite" parent="Pyramids"]
+position = Vector2( 211, 130 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P13" type="Sprite" parent="Pyramids"]
+position = Vector2( 231, 160 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P14" type="Sprite" parent="Pyramids"]
+position = Vector2( 191, 160 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P15" type="Sprite" parent="Pyramids"]
+position = Vector2( 151, 160 )
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="P16" type="Sprite" parent="Pyramids"]
+position = Vector2( 107, 168 )
+texture = ExtResource( 4 )
+hframes = 3
+frame = 2

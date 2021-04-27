@@ -1,0 +1,229 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "FaderArea",
+"language": "GDScript",
+"path": "res://effects/FaderArea.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "TDagger",
+"language": "GDScript",
+"path": "res://sprites/TDagger.gd"
+}, {
+"base": "Node2D",
+"class": "TDoor",
+"language": "GDScript",
+"path": "res://items/TDoor.gd"
+}, {
+"base": "StaticBody2D",
+"class": "TDoorGiratory",
+"language": "GDScript",
+"path": "res://items/TDoorGiratory.gd"
+}, {
+"base": "Node2D",
+"class": "TGameEnd",
+"language": "GDScript",
+"path": "res://scenes/TGameEnd.gd"
+}, {
+"base": "ColorRect",
+"class": "TGameOptions",
+"language": "GDScript",
+"path": "res://scenes/TGameOptions.gd"
+}, {
+"base": "Area2D",
+"class": "TItem",
+"language": "GDScript",
+"path": "res://items/TItem.gd"
+}, {
+"base": "Area2D",
+"class": "TJewel",
+"language": "GDScript",
+"path": "res://items/TJewel.gd"
+}, {
+"base": "CPUParticles2D",
+"class": "TJewelParticles",
+"language": "GDScript",
+"path": "res://items/TJewelParticles.gd"
+}, {
+"base": "TSprite",
+"class": "TMummy",
+"language": "GDScript",
+"path": "res://sprites/TMummy.gd"
+}, {
+"base": "ColorRect",
+"class": "TPyramidMap",
+"language": "GDScript",
+"path": "res://scenes/TPyramidMap.gd"
+}, {
+"base": "Control",
+"class": "TPyramidScreen",
+"language": "GDScript",
+"path": "res://scenes/TPyramidScreen.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "TSprite",
+"language": "GDScript",
+"path": "res://sprites/TSprite.gd"
+}, {
+"base": "Area2D",
+"class": "TStairDetect",
+"language": "GDScript",
+"path": "res://items/TStairDetect.gd"
+}, {
+"base": "TSprite",
+"class": "TVick",
+"language": "GDScript",
+"path": "res://sprites/TVick.gd"
+}, {
+"base": "Area2D",
+"class": "TWall",
+"language": "GDScript",
+"path": "res://items/TWall.gd"
+} ]
+_global_script_class_icons={
+"FaderArea": "",
+"TDagger": "",
+"TDoor": "",
+"TDoorGiratory": "",
+"TGameEnd": "",
+"TGameOptions": "",
+"TItem": "",
+"TJewel": "",
+"TJewelParticles": "",
+"TMummy": "",
+"TPyramidMap": "",
+"TPyramidScreen": "",
+"TSprite": "",
+"TStairDetect": "",
+"TVick": "",
+"TWall": ""
+}
+
+[application]
+
+config/name="KValley"
+run/main_scene="res://scenes/TSplashScreen.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Globals.tscn"
+
+[display]
+
+window/size/width=320
+window/size/height=240
+window/size/test_width=960
+window/size/test_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777222,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":19,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":20,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":17,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":18,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_page_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_page_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_home={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":10,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_end={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="It_brick"
+2d_physics/layer_2="It_stairs"
+2d_physics/layer_3="It_stair_detect"
+2d_physics/layer_4="It_item"
+2d_physics/layer_5="It_giratory"
+2d_physics/layer_16="TVick"
+2d_physics/layer_17="TMummy"
+2d_physics/layer_18="TDagger"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/TGameOptions.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 6 )
+
+[node name="TGameOptions" type="ColorRect"]
+margin_right = 160.0
+margin_bottom = 80.0
+rect_clip_content = true
+color = Color( 0.0823529, 0.0823529, 0.160784, 0.647059 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 160, 0, 160, 80, 0, 80, 0, 0 )
+width = 4.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="select_option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 25, 15 )
+text = "SELECT OPTION"
+textalign = 3
+wavesize = 1.0
+
+[node name="continue" parent="." instance=ExtResource( 1 )]
+position = Vector2( 35, 35 )
+text = "CONTINUE"
+textalign = 3
+wavesize = 1.0
+
+[node name="BT_continue" type="TouchScreenButton" parent="."]
+position = Vector2( 80, 35 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="restart" parent="." instance=ExtResource( 1 )]
+position = Vector2( 35, 50 )
+text = "RESTART LEVEL"
+textalign = 3
+wavesize = 1.0
+
+[node name="BT_restart" type="TouchScreenButton" parent="."]
+position = Vector2( 80, 50 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="exit" parent="." instance=ExtResource( 1 )]
+position = Vector2( 35, 65 )
+text = "EXIT GAME"
+textalign = 3
+wavesize = 1.0
+
+[node name="BT_exit" type="TouchScreenButton" parent="."]
+position = Vector2( 80, 65 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="selector" parent="." instance=ExtResource( 1 )]
+position = Vector2( 20, 35 )
+text = ">"
+textalign = 3
+wavesize = 1.0
+
+[connection signal="pressed" from="BT_continue" to="." method="_on_BT_continue_pressed"]
+[connection signal="pressed" from="BT_restart" to="." method="_on_BT_restart_pressed"]
+[connection signal="pressed" from="BT_exit" to="." method="_on_BT_exit_pressed"]

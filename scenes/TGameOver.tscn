@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/TGameOver.gd" type="Script" id=2]
+
+[node name="TGameOver" type="ColorRect"]
+pause_mode = 2
+margin_right = 120.0
+margin_bottom = 40.0
+rect_clip_content = true
+color = Color( 0.0823529, 0.0823529, 0.160784, 0.647059 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 120, 0, 120, 40, 0, 40, 0, 0 )
+width = 4.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="game_over" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 20 )
+text = "GAME OVER"
+textalign = 4
+waves = 2.0
+wavesize = 1.0
+wavespeed = 80.63
+animatewaves = true

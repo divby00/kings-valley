@@ -1,0 +1,243 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/TMainMenu.gd" type="Script" id=1]
+[ext_resource path="res://pics/kvlogo.png" type="Texture" id=2]
+[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pics/scroll_fader.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 70, 6 )
+
+[sub_resource type="Animation" id=2]
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 140 ), Vector2( 0, -190 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 160, 80 )
+
+[node name="TMainMenu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 160, 40 )
+texture = ExtResource( 2 )
+
+[node name="konami" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 90 )
+text = "KONAMI & M.A SOFTWARE 2021"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 87.693
+
+[node name="MenuOptions" type="Node2D" parent="."]
+
+[node name="start_game" parent="MenuOptions" instance=ExtResource( 3 )]
+position = Vector2( 112, 129 )
+text = "START GAME"
+textalign = 3
+wavesize = 1.0
+wavespeed = 1.0
+
+[node name="BT_start_game" type="TouchScreenButton" parent="MenuOptions"]
+show_behind_parent = true
+position = Vector2( 164, 129 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="sound_sets" parent="MenuOptions" instance=ExtResource( 3 )]
+position = Vector2( 112, 144 )
+text = "CLASSIC SOUNDSET"
+textalign = 3
+wavesize = 1.0
+wavespeed = 1.0
+
+[node name="BT_sound_set" type="TouchScreenButton" parent="MenuOptions"]
+show_behind_parent = true
+position = Vector2( 164, 144 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="credits" parent="MenuOptions" instance=ExtResource( 3 )]
+position = Vector2( 112, 159 )
+text = "CREDITS"
+textalign = 3
+wavesize = 1.0
+wavespeed = 1.0
+
+[node name="BT_credits" type="TouchScreenButton" parent="MenuOptions"]
+show_behind_parent = true
+position = Vector2( 164, 159 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="exit_game" parent="MenuOptions" instance=ExtResource( 3 )]
+position = Vector2( 112, 174 )
+text = "EXIT GAME"
+textalign = 3
+wavesize = 1.0
+wavespeed = 1.0
+
+[node name="BT_exitgame" type="TouchScreenButton" parent="MenuOptions"]
+show_behind_parent = true
+position = Vector2( 164, 174 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="selector" parent="MenuOptions" instance=ExtResource( 3 )]
+position = Vector2( 96, 129 )
+text = ">"
+textalign = 3
+wavesize = 1.0
+wavespeed = 1.0
+
+[node name="Scroll" type="Control" parent="."]
+visible = false
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 240.0
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Control" parent="Scroll"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 140.0
+margin_bottom = 140.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scr1" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 8 )
+text = "KING'S VALLEY GODOT VERSION:"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr2" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 24 )
+text = "M.A SOFTWARE 2021"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr3" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 48 )
+text = "GRAPHICS & SOUNDS:"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr4" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 64 )
+text = "TONI GALVEZ"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr5" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 88 )
+text = "MUSIC:"
+textalign = 4
+waves = 2.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr6" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 104 )
+text = "NARCISOUND"
+textalign = 4
+waves = 3.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr7" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 128 )
+text = "UTILS & HELP:"
+textalign = 4
+waves = 3.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr8" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 144 )
+text = "JESUS CHICHARRO"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr9" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 168 )
+text = "CODING & SOME MUSICS:"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="scr10" parent="Scroll/Credits" instance=ExtResource( 3 )]
+position = Vector2( 160, 184 )
+text = "MIGUEL ANGEL JIMENEZ"
+textalign = 4
+waves = 4.0
+wavesize = 1.0
+wavespeed = 50.0
+animatewaves = true
+
+[node name="ScrollAnimator" type="AnimationPlayer" parent="Scroll/Credits"]
+anims/scroll_up = SubResource( 2 )
+
+[node name="fader_bottom" type="Sprite" parent="Scroll"]
+position = Vector2( 160, 130 )
+scale = Vector2( 32, 2 )
+texture = ExtResource( 4 )
+
+[node name="fader_top" type="Sprite" parent="Scroll"]
+position = Vector2( 160, 10 )
+scale = Vector2( 32, -2 )
+texture = ExtResource( 4 )
+
+[node name="BT_endcredits" type="TouchScreenButton" parent="Scroll"]
+position = Vector2( 160, 63 )
+shape = SubResource( 3 )
+shape_centered = false
+
+[connection signal="pressed" from="MenuOptions/BT_start_game" to="." method="_on_BT_start_game_pressed"]
+[connection signal="pressed" from="MenuOptions/BT_sound_set" to="." method="_on_BT_sound_set_pressed"]
+[connection signal="pressed" from="MenuOptions/BT_credits" to="." method="_on_BT_credits_pressed"]
+[connection signal="pressed" from="MenuOptions/BT_exitgame" to="." method="_on_BT_exitgame_pressed"]
+[connection signal="animation_finished" from="Scroll/Credits/ScrollAnimator" to="." method="_on_ScrollAnimator_animation_finished"]
+[connection signal="pressed" from="Scroll/BT_endcredits" to="." method="_on_BT_endcredits_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PyramidMap.ogg-de51c0dc80f73f0559dd241a5e340f62.oggstr"
+
+[deps]
+
+source_file="res://music/PyramidMap.ogg"
+dest_files=[ "res://.import/PyramidMap.ogg-de51c0dc80f73f0559dd241a5e340f62.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
