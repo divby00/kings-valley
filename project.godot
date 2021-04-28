@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "TDagger",
 "language": "GDScript",
-"path": "res://sprites/TDagger.gd"
+"path": "res://scenes/sprites/TDagger.gd"
 }, {
 "base": "Node2D",
 "class": "TDoor",
@@ -77,7 +77,7 @@ _global_script_classes=[ {
 "base": "TSprite",
 "class": "TMummy",
 "language": "GDScript",
-"path": "res://sprites/TMummy.gd"
+"path": "res://scenes/sprites/TMummy.gd"
 }, {
 "base": "ColorRect",
 "class": "TPyramidMap",
@@ -92,7 +92,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "TSprite",
 "language": "GDScript",
-"path": "res://sprites/TSprite.gd"
+"path": "res://scenes/sprites/TSprite.gd"
 }, {
 "base": "Area2D",
 "class": "TStairDetect",
@@ -102,7 +102,7 @@ _global_script_classes=[ {
 "base": "TSprite",
 "class": "TVick",
 "language": "GDScript",
-"path": "res://sprites/TVick.gd"
+"path": "res://scenes/sprites/TVick.gd"
 }, {
 "base": "Area2D",
 "class": "TWall",

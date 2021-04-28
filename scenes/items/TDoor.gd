@@ -68,6 +68,6 @@ func _on_exitzone_body_entered(body):
 		yield(animator, "animation_finished")
 		vick.visible = false
 		if door_type in [TYPE.OUT, TYPE.BOTH]:
-			vick.goNextLevel()
+			vick.go_next_level()
 		else:
-			vick.goPrevLevel()
+			vick.do_previous_level()

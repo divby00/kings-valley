@@ -33,7 +33,7 @@ onready var tgdoor = preload("res://scenes/items/TDoorGiratory.tscn")
 onready var tstairdetect = preload("res://scenes/items/TStairDetect.tscn")
 onready var tstair = preload("res://scenes/items/TStair.tscn")
 onready var twall = preload("res://scenes/items/TWall.tscn")
-onready var tmummy = preload("res://sprites/TMummy.tscn")
+onready var tmummy = preload("res://scenes/sprites/TMummy.tscn")
 
 var level:int=0
 var from_level:int=0
@@ -266,7 +266,7 @@ func drawPyramid():
 				
 	#Eliminamos a Vick de la Escena, para introducirlo en la puerta correspondiente
 	remove_child(Vick)
-	Vick.initGame()
+	Vick.init_game()
 	
 	#Actualizamos los contadores
 	_on_TVick_sig_update_score()
@@ -288,7 +288,7 @@ func putDaggerOnFloor(px,py,frame):
 func dagger_on_floor(dagger):	
 	var pos:Vector2 = Vector2(int(dagger.position.x / 10),int(dagger.position.y / 10))
 	while not isCellFreeForDagger(pos):
-		if dagger.isFlip():
+		if dagger.is_flip():
 			dagger.position.x -= 5
 		else:
 			dagger.position.x += 5
@@ -409,7 +409,7 @@ func whereCanVickPick() -> Array:
 	#Miramos si Vick está encerrado
 	if isPickableBrick(int(pos.x-1),int(pos.y-1)) and isPickableBrick(int(pos.x+1),int(pos.y-1)):
 		#Si está encerrado, debe picar primero para los lados, a menos que esté en los límites de la pirámide
-		if Vick.isFlip():
+		if Vick.is_flip():
 			if pos.x<=1:
 				return result
 			else:
@@ -425,14 +425,14 @@ func whereCanVickPick() -> Array:
 					result.append(Vector2(pos.x+1,pos.y))
 	else:
 		#Como no está encerrado, debe picar en el suelo, pero no en los limites de la piramide.
-		if Vick.isFlip() and pos.x<=1:
+		if Vick.is_flip() and pos.x<=1:
 			return result
 			
 		if pos.x>=width-2 or pos.y>=height-2:
 			return result
 			
 		#Corregimos la celdilla segun flip
-		if Vick.isFlip():
+		if Vick.is_flip():
 			pos.x -= 1
 		else:
 			pos.x += 1
@@ -504,7 +504,7 @@ func showDoors(enterlevel:bool):
 		play_musicLevel()
 		mummies_node.visible=true
 		for m in mummies_node.get_children():
-			m.setState(m.st_appearing)
+			m.set_state(m.st_appearing)
 
 func play_musicLevel():
 	match (level % 5):
@@ -519,24 +519,24 @@ func play_musicLevel():
 		0:
 			Globals.play_music(Globals.MUSICS.MUSIC5,true)
 		
-func doDead():
-	Vick.doDead()
+func do_dead():
+	Vick.do_dead()
 
 func killMummies():
 	for m in mummies_node.get_children():
-		m.setState(m.st_disappearing)
+		m.set_state(m.st_disappearing)
 	
 func detect_push_wall(px,py):
 	var pos:Vector2 = Vector2(int(Vick.position.x / 10),int(Vick.position.y/10))
 	if pos.x == px and pos.y-1==py:
-		doDead()
+		do_dead()
 	
 func on_door_exiting():
 	killMummies()
 	
 func on_vick_collision():
 	killMummies()
-	doDead()
+	do_dead()
 				
 func _on_TVick_sig_jewel_taken():
 	jewels-=1
