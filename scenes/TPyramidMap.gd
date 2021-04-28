@@ -16,7 +16,7 @@ func _ready():
 		item.visible=false
 
 func run():
-	Globals.playMusic(Globals.MUSICS.PYRAMIDMAP)
+	Globals.play_music(Globals.MUSICS.PYRAMIDMAP)
 	pfrom = pyramids.get_child(from_level-1)
 	pto = pyramids.get_child(to_level-1)
 

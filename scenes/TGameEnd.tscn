@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/TGameEnd.gd" type="Script" id=1]
-[ext_resource path="res://pics/ending.png" type="Texture" id=2]
-[ext_resource path="res://pics/vick.png" type="Texture" id=3]
-[ext_resource path="res://effects/FaderArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://pics/fader1.png" type="Texture" id=5]
-[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=6]
-[ext_resource path="res://effects/FireWorks.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/pics/ending.png" type="Texture" id=2]
+[ext_resource path="res://assets/pics/vick.png" type="Texture" id=3]
+[ext_resource path="res://scenes/effects/FaderArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/pics/fader1.png" type="Texture" id=5]
+[ext_resource path="res://scenes/fonts/BitmapText.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/effects/FireWorks.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "appear"

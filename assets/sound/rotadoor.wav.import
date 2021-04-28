@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rotadoor.wav-10e5afedb94ab9c264f850ab93d63378.sample"
+
+[deps]
+
+source_file="res://assets/sound/rotadoor.wav"
+dest_files=[ "res://.import/rotadoor.wav-10e5afedb94ab9c264f850ab93d63378.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

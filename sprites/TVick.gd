@@ -5,7 +5,7 @@ signal sig_level_done(level)
 signal sig_update_score()
 signal sig_vick_dead()
 
-onready var tmagic = preload("res://items/TJewelParticles.tscn")
+onready var tmagic = preload("res://scenes/items/TJewelParticles.tscn")
 onready var tdagger = preload("res://sprites/TDagger.tscn")
 
 enum PORTING { NONE=0, DAGGER=1, PICKER=2 }
@@ -53,7 +53,7 @@ func doControl():
 			if motion.y > 30:
 				if not falling:
 					falling = true
-					playSound(Globals.snd_fall)
+					play_sound(Globals.snd_fall)
 			else:
 				falling = false
 			
@@ -63,7 +63,7 @@ func doControl():
 					PORTING.NONE:
 						if is_on_floor():
 							doJump()
-							playSound(Globals.snd_jump)
+							play_sound(Globals.snd_jump)
 					PORTING.DAGGER:
 						var dagger:TDagger=tdagger.instance()						
 						dagger.doFlip(sprite.scale.x<0)
@@ -73,7 +73,7 @@ func doControl():
 						dagger.add_collision_exception_with(self)
 						Globals.connect_signal(dagger,"on_floor",self.get_parent(),"dagger_on_floor")
 						self.get_parent().add_child(dagger)
-						playSound(Globals.snd_dagger)
+						play_sound(Globals.snd_dagger)
 					PORTING.PICKER:
 						pickingcells = pyramid.whereCanVickPick()
 						if pickingcells.size()>0:
@@ -112,7 +112,7 @@ func doAnimation():
 				
 func on_jewel_enter(area,jewel):
 	if (area==feet_detect):
-		playSound(Globals.snd_takejewel)
+		play_sound(Globals.snd_takejewel)
 		var magic:TJewelParticles = tmagic.instance()
 		magic.position.x = jewel.position.x + 5
 		magic.position.y = jewel.position.y + 5
@@ -123,20 +123,20 @@ func on_jewel_enter(area,jewel):
 	
 func on_picker_enter(body,picker):
 	if (body==self and porting==PORTING.NONE):
-		playSound(Globals.snd_takepicker)
+		play_sound(Globals.snd_takepicker)
 		porting=PORTING.PICKER
 		picker.queue_free()
 
 func on_dagger_enter(body,dagger):
 	if (body==self and porting==PORTING.NONE):
-		playSound(Globals.snd_takepicker)
+		play_sound(Globals.snd_takepicker)
 		porting=PORTING.DAGGER
 		dagger.queue_free()
 
 func on_digger(frame:int):
 	pyramid.pickCell(pickingcells[0],frame)
 	if frame<4:
-		playSound(Globals.snd_digger)
+		play_sound(Globals.snd_digger)
 	else:
 		pickingcells.remove(0)
 		if pickingcells.size()>0:
@@ -158,8 +158,8 @@ func doDead():
 	doBrickCollision(true)
 	input_vector=Vector2.ZERO
 	motion=Vector2.ZERO
-	Globals.stopMusic()
-	Globals.playSound(Globals.snd_dead)
+	Globals.stop_music()
+	Globals.play_sound(Globals.snd_dead)
 	animator.play("die")
 	yield(animator,"animation_finished")
 	Globals.LIVES-=1

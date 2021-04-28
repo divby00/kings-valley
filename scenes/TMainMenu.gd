@@ -18,7 +18,7 @@ var state = STATE.OPTIONS
 var option_menu=0
 
 func _ready():
-	Globals.playMusic(Globals.MUSICS.MENU)
+	Globals.play_music(Globals.MUSICS.MENU)
 	update_soundset()
 		
 func _process(_delta):	
@@ -38,14 +38,14 @@ func _process(_delta):
 				match option_menu:
 					0:
 						state=STATE.OUT
-						Globals.playMusic(Globals.MUSICS.GETREADY)
+						Globals.play_music(Globals.MUSICS.GETREADY)
 						self.set_process(false)
-						yield(Globals.getMusicPlayer(),"finished")
+						yield(Globals.get_music_player(),"finished")
 						Globals.set_scene(Globals.SCENES.GAME)
 					1:
-						Globals.loadSounds(!Globals.soundset_new)
+						Globals.load_sounds(!Globals.soundset_new)
 						update_soundset()
-						Globals.playSound(Globals.snd_fall)
+						Globals.play_sound(Globals.snd_fall)
 					2:
 						state=STATE.CREDITS
 						menu_options.visible=false
@@ -56,9 +56,9 @@ func _process(_delta):
 	
 func update_soundset():
 	if Globals.soundset_new:
-		sound_sets.setText("MODERN SOUNDSET")
+		sound_sets.set_text("MODERN SOUNDSET")
 	else:
-		sound_sets.setText("CLASSIC SOUNDSET")
+		sound_sets.set_text("CLASSIC SOUNDSET")
 
 func _on_ScrollAnimator_animation_finished(_anim_name):
 	menu_options.visible=true

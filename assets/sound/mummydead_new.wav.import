@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mummydead_new.wav-c3b0b282ea5852095a55e333b7d54dde.sample"
+
+[deps]
+
+source_file="res://assets/sound/mummydead_new.wav"
+dest_files=[ "res://.import/mummydead_new.wav-c3b0b282ea5852095a55e333b7d54dde.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

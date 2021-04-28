@@ -7,9 +7,9 @@ onready var fader = $Fader
 onready var texts = $Textos
 
 func _ready():
-	Globals.playMusic(Globals.MUSICS.ENDING)
+	Globals.play_music(Globals.MUSICS.ENDING)
 	vick.self_modulate=Color.black
-	fader.fadeOut(3)
+	fader.fade_out(3)
 	yield(fader,"fade_end")
 	vick_animator.play("stop")
 	yield(vick_animator,"animation_finished")
@@ -21,8 +21,8 @@ func _ready():
 	vick_animator.play("stop")
 	yield(vick_animator,"animation_finished")
 	texts.visible=true
-	yield(Globals.getMusicPlayer(),"finished")
-	fader.fadeIn(3)
+	yield(Globals.get_music_player(),"finished")
+	fader.fade_in(3)
 	yield(fader,"fade_end")
 	Globals.set_scene(Globals.SCENES.MAINMENU)
 	

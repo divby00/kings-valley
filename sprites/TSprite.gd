@@ -49,7 +49,7 @@ var key_action:bool = false
 func isFlip() -> bool:
 	return sprite.scale.x < 0
 
-func playSound(sound):
+func play_sound(sound):
 	aplayer.stream = sound
 	aplayer.play()
 

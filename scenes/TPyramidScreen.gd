@@ -26,13 +26,13 @@ onready var giradoors_node = $DoorsGiratory
 onready var stairs_node = $Stairs
 onready var walls_node = $Walls
 onready var mummies_node = $Mummies
-onready var tjewel = preload("res://items/TJewel.tscn")
-onready var titem = preload("res://items/TItem.tscn")
-onready var tdoor = preload("res://items/TDoor.tscn")
-onready var tgdoor = preload("res://items/TDoorGiratory.tscn")
-onready var tstairdetect = preload("res://items/TStairDetect.tscn")
-onready var tstair = preload("res://items/TStair.tscn")
-onready var twall = preload("res://items/TWall.tscn")
+onready var tjewel = preload("res://scenes/items/TJewel.tscn")
+onready var titem = preload("res://scenes/items/TItem.tscn")
+onready var tdoor = preload("res://scenes/items/TDoor.tscn")
+onready var tgdoor = preload("res://scenes/items/TDoorGiratory.tscn")
+onready var tstairdetect = preload("res://scenes/items/TStairDetect.tscn")
+onready var tstair = preload("res://scenes/items/TStair.tscn")
+onready var twall = preload("res://scenes/items/TWall.tscn")
 onready var tmummy = preload("res://sprites/TMummy.tscn")
 
 var level:int=0
@@ -85,7 +85,7 @@ func readLevel(plevel):
 	var nlevel=str(plevel)
 	if nlevel.length()<2:
 		nlevel="0"+nlevel
-	file.open("res://levels/level."+nlevel, File.READ)
+	file.open("res://assets/levels/level."+nlevel, File.READ)
 	width = file.get_8()
 	height = file.get_8()
 	backBuffer = Array(file.get_buffer(width*height))
@@ -179,7 +179,7 @@ func drawPyramid():
 				door.position.x = item.x*10
 				door.position.y = item.y*10
 				door.door_type = item.p0
-				door.Vick=Vick
+				door.vick=Vick
 				doors_node.add_child(door)
 				Globals.connect_signal(door,"door_exiting",self,"on_door_exiting")
 				
@@ -193,7 +193,7 @@ func drawPyramid():
 				
 			Globals.It_wall:
 				var wall:TWall = twall.instance()
-				wall.doInit(self,item.x,item.y,item.p0,item.p1)
+				wall.init(self,item.x,item.y,item.p0,item.p1)
 				walls_node.add_child(wall)
 				
 			Globals.It_stairs:
@@ -472,16 +472,16 @@ func setVickInitialPosition():
 	for d in doors_node.get_children():
 		if (from_level <= level and d.door_type in [TDoor.TYPE.IN,TDoor.TYPE.BOTH]) or \
 			(from_level > level and d.door_type in [TDoor.TYPE.OUT,TDoor.TYPE.BOTH]):
-			Vick.position = d.position + d.vickPosition()
+			Vick.position = d.position + d.get_vick_position()
 
 func showDoors(enterlevel:bool):
 	var wait_door = null
 	for d in doors_node.get_children():
-		d.setClose(enterlevel)
+		d.set_close(enterlevel)
 		d.visible = true
 		d.ready_to_exit = not enterlevel
 		if enterlevel:
-			d.openDoor(true)
+			d.open_door(true)
 			if (from_level <= level and d.door_type in [TDoor.TYPE.IN,TDoor.TYPE.BOTH]) or \
 				(from_level > level and d.door_type in [TDoor.TYPE.OUT,TDoor.TYPE.BOTH]):
 				Vick.state = TSprite.st_init
@@ -493,7 +493,7 @@ func showDoors(enterlevel:bool):
 		timer.start(1)
 		yield(timer,"timeout")
 		for d in doors_node.get_children():
-			d.closeDoor(false)
+			d.close_door(false)
 		timer.start(1)
 		yield(timer,"timeout")
 		for d in doors_node.get_children():
@@ -501,23 +501,23 @@ func showDoors(enterlevel:bool):
 		Vick.state = TSprite.st_walk
 		timer.start(0.5)
 		yield(timer,"timeout")
-		playMusicLevel()
+		play_musicLevel()
 		mummies_node.visible=true
 		for m in mummies_node.get_children():
 			m.setState(m.st_appearing)
 
-func playMusicLevel():
+func play_musicLevel():
 	match (level % 5):
 		1:
-			Globals.playMusic(Globals.MUSICS.MUSIC1,true)
+			Globals.play_music(Globals.MUSICS.MUSIC1,true)
 		2:
-			Globals.playMusic(Globals.MUSICS.MUSIC2,true)
+			Globals.play_music(Globals.MUSICS.MUSIC2,true)
 		3:
-			Globals.playMusic(Globals.MUSICS.MUSIC3,true)
+			Globals.play_music(Globals.MUSICS.MUSIC3,true)
 		4:
-			Globals.playMusic(Globals.MUSICS.MUSIC4,true)
+			Globals.play_music(Globals.MUSICS.MUSIC4,true)
 		0:
-			Globals.playMusic(Globals.MUSICS.MUSIC5,true)
+			Globals.play_music(Globals.MUSICS.MUSIC5,true)
 		
 func doDead():
 	Vick.doDead()
@@ -539,7 +539,7 @@ func _on_TVick_sig_jewel_taken():
 		showDoors(false)
 
 func _on_TVick_sig_level_done(plevel):
-	Globals.stopMusic()
+	Globals.stop_music()
 	emit_signal("sig_next_level",level,plevel)
 	
 func _on_TVick_sig_update_score():

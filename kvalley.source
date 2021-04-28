@@ -1622,7 +1622,7 @@ Statement drawDoor{pdoor.l,offsopen.b,push.b,restoreback.b}
 
 End Statement
 
-Statement closeDoor{pdoor.l}
+Statement close_door{pdoor.l}
   SHARED pyramid
   *Pdoor.TDoor=pdoor.l
   USEPATH *Pdoor
@@ -1662,7 +1662,7 @@ Statement closeDoor{pdoor.l}
   End Select
 End Statement
 
-Statement openDoor{pdoor.l}
+Statement open_door{pdoor.l}
   *Pdoor.TDoor=pdoor.l
   USEPATH *Pdoor
   If \state=#stDoor_opening
@@ -1705,11 +1705,11 @@ Statement controlDoor{pdoor.l}
   USEPATH *Pd
   Select \state
     Case #stDoor_entering
-      closeDoor{pdoor}
+      close_door{pdoor}
     Case #stDoor_closing
-      closeDoor{pdoor}
+      close_door{pdoor}
     Case #stDoor_closed
-      closeDoor{pdoor}
+      close_door{pdoor}
     Case #stDoor_showforexit
       If \counter1<2
         drawDoor{pdoor,0,0,0}
@@ -1720,7 +1720,7 @@ Statement controlDoor{pdoor.l}
       End If
     Case #stDoor_waitingopen
     Case #stDoor_opening
-      openDoor{pdoor}
+      open_door{pdoor}
     Case #stDoor_openforexit
       cx.b = SprExplorer\x / 10
       cy.b = SprExplorer\y / 10

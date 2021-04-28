@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GetReady.ogg-c6c9f1b2111e40c896638f8155c2719b.oggstr"
+
+[deps]
+
+source_file="res://assets/music/GetReady.ogg"
+dest_files=[ "res://.import/GetReady.ogg-c6c9f1b2111e40c896638f8155c2719b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -5,7 +5,7 @@ signal sig_vick_collision
 enum COLOR {WHITE=0,BLUE=1,YELLOW=2,ORANGE=3,RED=4}
 enum MODE {MUMMY,APPEAR,DISAPPEAR}
 
-export (COLOR) var color=COLOR.WHITE setget setColor
+export (COLOR) var color=COLOR.WHITE setget set_color
 export (MODE) var mode=MODE.MUMMY setget setMode
 
 onready var timer=$Timer
@@ -31,37 +31,37 @@ func makeDecisionForJump()->bool:
 func makeDecisionForContinue()->bool:
 	return rand_range(0,1)<=0.6
 	
-func setColor(c):
+func set_color(c):
 	color=c
 	match color:
 		COLOR.WHITE:
-			texture_mummy=load("res://pics/mummy_white.png")
+			texture_mummy=load("res://assets/pics/mummy_white.png")
 			speed_walk=25
 			speed_walk_stairs=30
 			decision_factor=0.5 #03
 		COLOR.BLUE:
-			texture_mummy=load("res://pics/mummy_blue.png")
+			texture_mummy=load("res://assets/pics/mummy_blue.png")
 			speed_walk=45
 			speed_walk_stairs=50
 			decision_factor=0.5
 		COLOR.YELLOW:
-			texture_mummy=load("res://pics/mummy_yellow.png")
+			texture_mummy=load("res://assets/pics/mummy_yellow.png")
 			speed_walk=50
 			speed_walk_stairs=60
 			decision_factor=0.3
 		COLOR.ORANGE:
-			texture_mummy=load("res://pics/mummy_orange.png")
+			texture_mummy=load("res://assets/pics/mummy_orange.png")
 			speed_walk=60
 			speed_walk_stairs=70
 			decision_factor=0.4
 		COLOR.RED:
-			texture_mummy=load("res://pics/mummy_red.png")
+			texture_mummy=load("res://assets/pics/mummy_red.png")
 			speed_walk=65
 			speed_walk_stairs=75
 			decision_factor=0.5
 			
-	texture_appear=load("res://pics/mummy_appear.png")
-	texture_disappear=load("res://pics/mummy_disappear.png")
+	texture_appear=load("res://assets/pics/mummy_appear.png")
+	texture_disappear=load("res://assets/pics/mummy_disappear.png")
 	if sprite!=null:
 		sprite.texture=texture_mummy
 	update()
@@ -94,7 +94,7 @@ func setState(st):
 			setState(st_appearing)
 						
 		st_appearing:
-			Globals.playSound(Globals.snd_mummyappear)
+			Globals.play_sound(Globals.snd_mummyappear)
 			setMode(MODE.APPEAR)
 			motion=Vector2.ZERO
 			input_vector=Vector2.ZERO
@@ -183,7 +183,7 @@ func doAfterMove():
 	
 func doKill()->bool:
 	if state in [st_walk,st_waiting,st_falling,st_jump_left,st_jump_right,st_jump_top,st_onstairs]:
-		Globals.playSound(Globals.snd_mummydead)
+		Globals.play_sound(Globals.snd_mummydead)
 		vick.addScore(100)
 		setState(st_disappearing)
 		return true

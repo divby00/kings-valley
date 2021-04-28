@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/door.wav-1a410a34069eca18b05788f3b8b20cb6.sample"
+
+[deps]
+
+source_file="res://assets/sound/door.wav"
+dest_files=[ "res://.import/door.wav-1a410a34069eca18b05788f3b8b20cb6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

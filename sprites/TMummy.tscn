@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sprites/TSprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/TMummy.gd" type="Script" id=2]
-[ext_resource path="res://pics/mummy_white.png" type="Texture" id=3]
+[ext_resource path="res://assets/pics/mummy_white.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "appear"

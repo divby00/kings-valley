@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/TPyramidMap.gd" type="Script" id=1]
-[ext_resource path="res://pics/pergamino.png" type="Texture" id=2]
-[ext_resource path="res://fonts/BitmapText.tscn" type="PackedScene" id=3]
-[ext_resource path="res://pics/pergamino_items.png" type="Texture" id=4]
+[ext_resource path="res://assets/pics/pergamino.png" type="Texture" id=2]
+[ext_resource path="res://scenes/fonts/BitmapText.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/pics/pergamino_items.png" type="Texture" id=4]
 
 [node name="TPyramidMap" type="ColorRect"]
 anchor_right = 1.0
