@@ -4,3 +4,4 @@
     prompt = false
 [difftool "meld"]
     cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+.import/
