@@ -18,7 +18,7 @@ onready var com_sound = $ComSound
 onready var com_music = $ComMusic
 onready var space_state = get_world_2d().direct_space_state
 
-var tablet_mode = true or (OS.get_name() == "Android")
+var tablet_mode = (OS.get_name() == "Android")
 var soundset_new: bool = false
 
 # ---------------------------------------------
