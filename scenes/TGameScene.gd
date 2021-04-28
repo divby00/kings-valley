@@ -10,7 +10,7 @@ onready var joystick = $CanvasLayer/StickControls/TJoystick
 onready var scene_node = $Scene
 onready var canvas_layer = $CanvasLayer
 
-var level=1
+var level=16
 var last_level=0
 
 # Called when the node enters the scene tree for the first time.
@@ -130,12 +130,12 @@ func _on_TJoystick_sig_on_change(position):
 	Input.action_release("ui_left")
 	Input.action_release("ui_right")
 
-	if position.x < 0:
+	if position.x < -0.7:
 		Input.action_press("ui_left")
-	elif position.x > 0:
+	elif position.x > 0.7:
 		Input.action_press("ui_right")
 
-	if position.y < 0:
+	if position.y < -0.7:
 		Input.action_press("ui_up")
-	elif position.y > 0:
+	elif position.y > 0.7:
 		Input.action_press("ui_down")

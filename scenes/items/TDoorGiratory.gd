@@ -58,10 +58,10 @@ func do_rotation(Vick):
 	for itera in range(0, 9):
 		for i in tiles.get_children():
 			if direction == DIRECTION.RIGHT:
-				i.set_init_frame(i.getInitFrame() + 2)
+				i.set_init_frame(i.get_init_frame() + 2)
 				Vick.input_vector.x = 1
 			else:
-				i.set_init_frame(i.getInitFrame() - 2)
+				i.set_init_frame(i.get_init_frame() - 2)
 				Vick.input_vector.x = -1
 		timer.start(0.1)
 		yield(timer, "timeout")

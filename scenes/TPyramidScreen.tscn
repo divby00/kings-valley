@@ -531,3 +531,8 @@ format = 1
 
 [node name="TVick" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 140 )
+
+[connection signal="sig_jewel_taken" from="TVick" to="." method="_on_TVick_sig_jewel_taken"]
+[connection signal="sig_level_done" from="TVick" to="." method="_on_TVick_sig_level_done"]
+[connection signal="sig_update_score" from="TVick" to="." method="_on_TVick_sig_update_score"]
+[connection signal="sig_vick_dead" from="TVick" to="." method="_on_TVick_sig_vick_dead"]

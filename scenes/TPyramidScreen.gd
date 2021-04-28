@@ -526,6 +526,11 @@ func killMummies():
 	for m in mummies_node.get_children():
 		m.setState(m.st_disappearing)
 	
+func detect_push_wall(px,py):
+	var pos:Vector2 = Vector2(int(Vick.position.x / 10),int(Vick.position.y/10))
+	if pos.x == px and pos.y-1==py:
+		doDead()
+	
 func on_door_exiting():
 	killMummies()
 	
