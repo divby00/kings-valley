@@ -530,6 +530,22 @@ func detect_push_wall(px,py):
 	var pos:Vector2 = Vector2(int(Vick.position.x / 10),int(Vick.position.y/10))
 	if pos.x == px and pos.y-1==py:
 		do_dead()
+
+func do_cheat(cheat):
+	if cheat=="SHOWMETHEDOORS":
+		showDoors(false)
+	elif cheat=="GETMEMORELIVES":
+		Globals.LIVES=99
+		_on_TVick_sig_update_score()
+	elif cheat.left(12)=="GETMETOLEVEL":
+		var l=cheat.right(12)
+		if l.is_valid_integer():
+			l=int(l)
+			if l>0 and l<17:
+				Globals.stop_music()
+				emit_signal("sig_next_level",l-1,l)
+	elif cheat=="GETMEINMUNITY":
+		self.Vick.inmunity=true
 	
 func on_door_exiting():
 	killMummies()

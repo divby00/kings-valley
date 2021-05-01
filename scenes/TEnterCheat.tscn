@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/fonts/BitmapText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/TEnterCheat.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 6 )
+
+[node name="TEnterCheat" type="ColorRect"]
+margin_right = 160.0
+margin_bottom = 80.0
+rect_clip_content = true
+color = Color( 0.0823529, 0.0823529, 0.160784, 0.647059 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 160, 0, 160, 80, 0, 80, 0, 0 )
+width = 4.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="enter_cheat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 15 )
+text = "ENTER CHEAT TEXT"
+textalign = 3
+wavesize = 1.0
+
+[node name="text" type="LineEdit" parent="."]
+margin_left = 5.13516
+margin_top = 29.204
+margin_right = 154.135
+margin_bottom = 51.204
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+
+[node name="continue" parent="." instance=ExtResource( 1 )]
+position = Vector2( 45, 65 )
+text = "CONTINUE"
+textalign = 3
+wavesize = 1.0
+
+[node name="BT_continue" type="TouchScreenButton" parent="."]
+position = Vector2( 76, 65 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[connection signal="text_entered" from="text" to="." method="_on_text_text_entered"]
+[connection signal="pressed" from="BT_continue" to="." method="_on_BT_continue_pressed"]

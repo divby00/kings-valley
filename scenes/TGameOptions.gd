@@ -2,8 +2,10 @@ class_name TGameOptions extends ColorRect
 
 signal sig_option_selected(option)
 
+enum OPTION {CONTINUE=0,RESTART=1,CHEAT=2,EXIT=3}
+
 onready var selector = $selector
-onready var option_pos = [$continue.position.y, $restart.position.y, $exit.position.y]
+onready var option_pos = [$continue.position.y, $restart.position.y, $cheat.position.y, $exit.position.y]
 
 var option = 0
 
@@ -14,7 +16,7 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_down"):
-		if option < 2:
+		if option < 3:
 			option += 1
 			selector.position.y = option_pos[option]
 	elif Input.is_action_just_pressed("ui_up"):
@@ -42,12 +44,15 @@ func _on_BT_continue_pressed():
 	if set_option(0):
 		Input.action_press("ui_select")
 
-
 func _on_BT_restart_pressed():
 	if set_option(1):
 		Input.action_press("ui_select")
 
-
-func _on_BT_exit_pressed():
+func _on_BT_cheat_pressed():
 	if set_option(2):
 		Input.action_press("ui_select")
+
+func _on_BT_exit_pressed():
+	if set_option(3):
+		Input.action_press("ui_select")
+

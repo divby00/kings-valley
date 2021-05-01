@@ -5,6 +5,7 @@ onready var scores = $CanvasLayer/Scores
 onready var score_0 = $CanvasLayer/Scores/Score0
 onready var score_1 = $CanvasLayer/Scores/Score1
 onready var game_options = $CanvasLayer/TGameOptions
+onready var game_cheats = $CanvasLayer/TEnterCheat
 onready var stick_controls = $CanvasLayer/StickControls
 onready var joystick = $CanvasLayer/StickControls/TJoystick
 onready var scene_node = $Scene
@@ -13,13 +14,13 @@ onready var canvas_layer = $CanvasLayer
 var level = 1
 var last_level = 0
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	fader.set_transition(1)
 	Globals.LIVES = 4
 	Globals.SCORE = 0
 	Globals.connect_signal(game_options, "sig_option_selected", self, "on_option_selected")
+	Globals.connect_signal(game_cheats, "sig_cheat_entered", self, "on_cheat_entered")
 	show_game_options(false)
 	stick_controls.visible = Globals.is_android()
 	joystick.enabled = Globals.is_android()
@@ -83,6 +84,17 @@ func show_game_options(show: bool):
 		game_options.visible = false
 		get_tree().paused = false
 
+func show_game_cheats(show:bool):
+	if show:
+		game_cheats.set_process(true)
+		game_cheats.do_init()
+		game_cheats.visible = true
+		get_tree().paused = true
+		Globals.pause_music()
+	else:
+		game_cheats.set_process(false)
+		game_cheats.visible = false
+		get_tree().paused = false
 
 func on_update_score(score, hiscore, rest, pyramid):
 	score_0.set_text("SCORE-%06d HI-%06d REST-%02d" % [score, hiscore, rest])
@@ -117,13 +129,18 @@ func on_show_gameoptions():
 func on_option_selected(option: int):
 	show_game_options(false)
 	match option:
-		0:
+		TGameOptions.OPTION.CONTINUE:
 			Globals.resume_music()
-		1:
+		TGameOptions.OPTION.RESTART:
 			scene_node.get_child(0).do_dead()
-		2:
+		TGameOptions.OPTION.CHEAT:
+			show_game_cheats(true)
+		TGameOptions.OPTION.EXIT:
 			do_return_menu()
 
+func on_cheat_entered(cheat):
+	show_game_cheats(false)
+	scene_node.get_child(0).do_cheat(cheat)
 
 func on_restart_level():
 	if Globals.LIVES >= 0:

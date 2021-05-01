@@ -244,16 +244,15 @@ func do_on_stair_exit():
 
 func _on_VickDetect_body_entered(body):
 	if body.get_class() == "TVick" and body.state != st_dying:
-		if body.state == st_onstairs:
+		if body.inmunity:
+			return
+		elif body.state == st_onstairs:
 			if self.state == st_onstairs:
 				emit_signal("sig_vick_collision")
 		elif self.state == st_onstairs:
 			if body.state == st_onstairs:
 				emit_signal("sig_vick_collision")
-		elif (
-			self.state
-			in [st_walk, st_waiting, st_falling, st_jump_left, st_jump_right, st_jump_top]
-		):
+		elif self.state in [st_walk, st_waiting, st_falling, st_jump_left, st_jump_right, st_jump_top]:
 			emit_signal("sig_vick_collision")
 
 

@@ -13,6 +13,7 @@ var porting: int = PORTING.NONE
 var falling: bool = true
 var pyramid: TPyramidScreen = null
 var pickingcells: Array = []
+var inmunity:bool=false
 
 
 func get_class():

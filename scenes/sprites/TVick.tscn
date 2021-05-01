@@ -3,7 +3,6 @@
 [ext_resource path="res://scenes/sprites/TSprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/sprites/TVick.gd" type="Script" id=3]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "die"
 length = 2.3
