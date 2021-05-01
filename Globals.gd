@@ -61,6 +61,7 @@ var snd_dagger
 
 
 func _ready():
+	OS.set_window_title("King's Valley Remake")
 	randomize()
 	VisualServer.set_default_clear_color(Color(0, 0, 0, 1.0))
 	load_sounds(true)

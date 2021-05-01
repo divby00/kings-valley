@@ -33,6 +33,7 @@ margin_top = 29.204
 margin_right = 154.135
 margin_bottom = 51.204
 context_menu_enabled = false
+virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
 selecting_enabled = false
 

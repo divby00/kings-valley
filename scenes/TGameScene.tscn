@@ -98,9 +98,9 @@ margin_bottom = 160.0
 [node name="TEnterCheat" parent="CanvasLayer" instance=ExtResource( 8 )]
 visible = false
 margin_left = 78.0449
-margin_top = 76.3542
+margin_top = 41.3542
 margin_right = 238.045
-margin_bottom = 156.354
+margin_bottom = 121.354
 
 [connection signal="pressed" from="CanvasLayer/StickControls/stick_action" to="." method="_on_stick_action_pressed"]
 [connection signal="pressed" from="CanvasLayer/StickControls/stick_home" to="." method="_on_stick_home_pressed"]
