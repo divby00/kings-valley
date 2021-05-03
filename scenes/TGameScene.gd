@@ -37,7 +37,7 @@ func do_enter_level(plevel, update_last = true):
 		last_level = level
 	level = plevel
 	var pyramid: TPyramidScreen = Globals.load_scene(Globals.SCENES.PYRAMID).instance()
-	var _ret = pyramid.setLevel(plevel, last_level)
+	var _ret = pyramid.set_level(plevel, last_level)
 	Globals.connect_signal(pyramid, "sig_update_score", self, "on_update_score")
 	Globals.connect_signal(pyramid, "sig_next_level", self, "on_next_level")
 	Globals.connect_signal(pyramid, "sig_show_gameoptions", self, "on_show_gameoptions")
@@ -49,7 +49,7 @@ func do_enter_level(plevel, update_last = true):
 	scores.visible = true
 	fader.fade_out(1)
 	yield(fader, "fade_end")
-	pyramid.showDoors(true)
+	pyramid.show_doors(true)
 
 
 func do_game_over():

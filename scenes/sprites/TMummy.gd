@@ -172,13 +172,13 @@ func do_after_move():
 	if state == st_walk:
 		if is_on_wall():
 			input_vector.y = 0
-			if pyramid.isLocked(self):
+			if pyramid.is_locked(self):
 				do_jump()
 			else:
 				if is_flip():
 					if (
 						color != COLOR.WHITE
-						&& pyramid.canJumpLeft(self)
+						&& pyramid.can_jump_left(self)
 						&& make_decision_for_jump()
 					):
 						do_jump()
@@ -186,14 +186,14 @@ func do_after_move():
 				else:
 					if (
 						color != COLOR.WHITE
-						&& pyramid.canJumpRight(self)
+						&& pyramid.can_jump_right(self)
 						&& make_decision_for_jump()
 					):
 						do_jump()
 						return
 				input_vector.x = -input_vector.x
 		else:
-			if not pyramid.isFloorDown(self):
+			if not pyramid.is_floor_down(self):
 				if vick.position.y > self.position.y || make_decision_for_continue():
 					return
 				elif color != COLOR.WHITE && make_decision_for_jump():
@@ -208,7 +208,7 @@ func do_kill() -> bool:
 		in [st_walk, st_waiting, st_falling, st_jump_left, st_jump_right, st_jump_top, st_onstairs]
 	):
 		Globals.play_sound(Globals.snd_mummydead)
-		vick.addScore(100)
+		vick.add_score(100)
 		set_state(st_disappearing)
 		return true
 	return false

@@ -81,7 +81,7 @@ func do_control():
 						self.get_parent().add_child(dagger)
 						play_sound(Globals.snd_dagger)
 					PORTING.PICKER:
-						pickingcells = pyramid.whereCanVickPick()
+						pickingcells = pyramid.where_can_vick_pick()
 						if pickingcells.size() > 0:
 							porting = PORTING.NONE
 							state = st_picking
@@ -145,7 +145,7 @@ func on_dagger_enter(body, dagger):
 
 
 func on_digger(frame: int):
-	pyramid.pickCell(pickingcells[0], frame)
+	pyramid.pick_cell(pickingcells[0], frame)
 	if frame < 4:
 		play_sound(Globals.snd_digger)
 	else:
